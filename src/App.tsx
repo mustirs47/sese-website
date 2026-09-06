@@ -20,6 +20,7 @@ import QualifikationenPage from "./pages/Qualifikationen";
 import ArbeitsweisePage from "./pages/Arbeitsweise";
 import KarrierePage from "./pages/KarrierePage";
 import KontaktPage from "./pages/KontaktPage";
+import MagdeburgPage from "./pages/Magdeburg";
 
 const Impressum = lazy(() => import("./pages/Impressum"));
 const Datenschutz = lazy(() => import("./pages/Datenschutz"));
@@ -82,6 +83,7 @@ const App = () => (
               }
             />
 
+            <Route path="/magdeburg" element={<MagdeburgPage />} />
             <Route path="/branchen" element={<BranchenPage />} />
             <Route path="/qualifikationen" element={<QualifikationenPage />} />
             <Route path="/arbeitsweise" element={<ArbeitsweisePage />} />

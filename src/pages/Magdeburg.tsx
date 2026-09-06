@@ -264,7 +264,7 @@ const MagdeburgPage = () => {
         </div>
       </section>
 
-      <FAQSection light items={faqs} />
+      <FAQSection light faqs={faqs} title="Fragen zu Einsätzen in Magdeburg" emitJsonLd={false} />
     </PageLayout>
   );
 };
