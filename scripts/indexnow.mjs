@@ -3,15 +3,26 @@
 // Usage:
 //   node scripts/indexnow.mjs                       -> submit all URLs from sitemap.xml
 //   node scripts/indexnow.mjs /leistungen /kontakt  -> submit specific paths
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const HOST = "www.sentinel-services.de";
-const KEY = "dce3e6a4c38454d9470cb306f396c81a";
+// IndexNow-Schlüssel: bewusst öffentlich (wird unter https://HOST/<key>.txt ausgeliefert).
+// Bevorzugt aus der Umgebung, sonst aus der Key-Datei im public-Ordner.
+function resolveKey() {
+  const fromEnv = process.env.INDEXNOW_KEY?.trim();
+  if (fromEnv) return fromEnv;
+  const dir = resolve(__dirname, "../public");
+  const file = readdirSync(dir).find((f) => /^[a-f0-9]{32}\.txt$/i.test(f));
+  if (!file) throw new Error("Kein IndexNow-Key gefunden (INDEXNOW_KEY setzen oder Key-Datei in public/ ablegen).");
+  return readFileSync(resolve(dir, file), "utf8").trim();
+}
+const KEY = resolveKey();
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 const ENDPOINT = "https://api.indexnow.org/IndexNow";
+
 
 function urlsFromSitemap() {
   const sitemap = readFileSync(resolve(__dirname, "../public/sitemap.xml"), "utf8");
