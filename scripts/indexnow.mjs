@@ -3,7 +3,7 @@
 // Usage:
 //   node scripts/indexnow.mjs                       -> submit all URLs from sitemap.xml
 //   node scripts/indexnow.mjs /leistungen /kontakt  -> submit specific paths
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
