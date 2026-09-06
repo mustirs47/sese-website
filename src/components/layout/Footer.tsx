@@ -11,6 +11,7 @@ const bereiche = [
 
 const unternehmenNav = [
   { label: "Branchen", href: "/branchen" },
+  { label: "Magdeburg", href: "/magdeburg" },
   { label: "Arbeitsweise", href: "/arbeitsweise" },
   { label: "Qualifikationen", href: "/qualifikationen" },
   { label: "Karriere", href: "/karriere" },
@@ -42,7 +43,7 @@ const Footer = () => (
             Sicherheit, Reinigung, Grünanlagen und Facility Management – aus einer Hand, mit eingewiesenem Personal und dokumentierter Leistung.
           </p>
           <p className="mt-3 text-xs text-muted-foreground">
-            Einsatzgebiet: Bundesweit
+            Sitz in Magdeburg · Einsatzgebiet bundesweit
           </p>
         </div>
 

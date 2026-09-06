@@ -14,8 +14,8 @@ const Index = () => (
   <PageLayout>
     <SEOHead
       title="Sentinel Services – Objektbetreuung aus einer Hand"
-      description="Sicherheit, Gebäudereinigung, Grünanlagen und Facility Management aus einer Hand – geprüftes Personal, feste Ansprechpartner, dokumentierte Leistung."
-      keywords="Sicherheitsdienst, Gebäudereinigung, Grünanlagenpflege, Facility Management, Objektbetreuung, Wachdienst, Fensterreinigung, Winterdienst, FM Dienstleister"
+      description="Sicherheit, Gebäudereinigung, Grünanlagen und Facility Management aus einer Hand – Sitz in Magdeburg, bundesweit im Einsatz, mit festen Ansprechpartnern."
+      keywords="Gebäudereinigung Magdeburg, Sicherheitsdienst Magdeburg, Sicherheitsdienst, Gebäudereinigung, Grünanlagenpflege, Facility Management, Objektbetreuung, Wachdienst, Fensterreinigung, Winterdienst, FM Dienstleister"
     />
     <LocalBusinessJsonLd />
     <HeroSection />
