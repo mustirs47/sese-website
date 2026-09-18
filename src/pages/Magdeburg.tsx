@@ -131,7 +131,7 @@ const MagdeburgPage = () => {
       <PageHero
         badge="Standort Magdeburg"
         title="Gebäudereinigung und Sicherheitsdienst in Magdeburg"
-        subtitle="Unser Sitz liegt in der Grusonstraße in Magdeburg-Rothensee. Von dort betreuen wir Büro- und Gewerbeobjekte, Wohnanlagen, Baustellen und Außenflächen im gesamten Stadtgebiet – Reinigung, Bewachung, Grünpflege und Winterdienst über einen Ansprechpartner."
+        subtitle="Unser Sitz liegt in der Grusonstraße in Magdeburg. Von dort betreuen wir Büro- und Gewerbeobjekte, Wohnanlagen, Baustellen und Außenflächen im gesamten Stadtgebiet – Reinigung, Bewachung, Grünpflege und Winterdienst über einen Ansprechpartner."
       >
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild size="lg">
@@ -156,8 +156,8 @@ const MagdeburgPage = () => {
             <p className="prose-lead text-muted-fg">
               Die meisten unserer Magdeburger Kunden starten mit einem Bereich – meist Unterhaltsreinigung oder
               Objektschutz – und geben nach und nach weitere Aufgaben dazu. Weil Personal, Einsatzleitung und
-              Disposition in der Stadt sitzen, lassen sich Turnus, Uhrzeiten und kurzfristige Zusatzeinsätze ohne
-              lange Abstimmungswege ändern.
+              Disposition in der Stadt sitzen, lassen sich Turnus, Uhrzeiten und kurzfristige Zusatzeinsätze ohne lange
+              Abstimmungswege ändern.
             </p>
           </div>
 
@@ -204,9 +204,9 @@ const MagdeburgPage = () => {
               <h2 className="h-section mb-4">Magdeburg und Umland</h2>
               <p className="prose-body text-muted-foreground mb-6">
                 Wir fahren Touren im gesamten Stadtgebiet, von der Altstadt über Stadtfeld und Buckau bis in die
-                Gewerbegebiete im Norden. Auch Objekte in der Börde, in Schönebeck, Barleben, Wolmirstedt oder
-                Burg liegen im täglichen Radius. Für Winterdienst planen wir die Routen vor Saisonbeginn, damit
-                Räum- und Streupflichten morgens fristgerecht erfüllt und dokumentiert sind.
+                Gewerbegebiete im Norden. Auch Objekte in der Börde, in Schönebeck, Barleben, Wolmirstedt oder Burg
+                liegen im täglichen Radius. Für Winterdienst planen wir die Routen vor Saisonbeginn, damit Räum- und
+                Streupflichten morgens fristgerecht erfüllt und dokumentiert sind.
               </p>
               <ul className="flex flex-wrap gap-2">
                 {stadtteile.map((s) => (
