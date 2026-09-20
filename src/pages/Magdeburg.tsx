@@ -14,7 +14,7 @@ const leistungen = [
   {
     icon: SprayCan,
     title: "Gebäudereinigung in Magdeburg",
-    href: "/reinigung",
+    href: "/magdeburg/gebaeudereinigung",
     text: "Unterhaltsreinigung für Büros, Praxen und Wohnanlagen, Glas- und Fensterreinigung, Grund- und Bauschlussreinigung. Feste Reinigungskräfte, feste Zeiten, protokollierte Leistung.",
   },
   {
