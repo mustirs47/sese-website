@@ -21,11 +21,17 @@ const defaultConsent: CookieConsent = {
 };
 
 function applyConsent(consent: CookieConsent) {
-  const w = window as unknown as { dataLayer?: unknown[] };
+  // gtag.js verarbeitet nur echte `arguments`-Objekte, keine Arrays.
+  // Daher die in index.html definierte globale gtag-Funktion verwenden.
+  const w = window as unknown as { dataLayer?: unknown[]; gtag?: (...a: unknown[]) => void };
   w.dataLayer = w.dataLayer || [];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  function gtag(...args: any[]) { (w.dataLayer as unknown[]).push(args); }
-  gtag("consent", "update", {
+  if (typeof w.gtag !== "function") {
+    w.gtag = function () {
+      // eslint-disable-next-line prefer-rest-params
+      (w.dataLayer as unknown[]).push(arguments);
+    };
+  }
+  w.gtag("consent", "update", {
     analytics_storage: consent.analytics ? "granted" : "denied",
   });
 }
