@@ -20,6 +20,8 @@ const defaultConsent: CookieConsent = {
   timestamp: 0,
 };
 
+let analyticsGranted = false;
+
 function applyConsent(consent: CookieConsent) {
   // gtag.js verarbeitet nur echte `arguments`-Objekte, keine Arrays.
   // Daher die in index.html definierte globale gtag-Funktion verwenden.
@@ -34,6 +36,15 @@ function applyConsent(consent: CookieConsent) {
   w.gtag("consent", "update", {
     analytics_storage: consent.analytics ? "granted" : "denied",
   });
+  // Der erste Seitenaufruf lief noch ohne Einwilligung. Nach der Zustimmung
+  // einmalig erneut senden, damit der Besuch in GA zählt.
+  if (consent.analytics && !analyticsGranted) {
+    analyticsGranted = true;
+    w.gtag("event", "page_view", {
+      page_location: window.location.href,
+      page_title: document.title,
+    });
+  }
 }
 
 export function CookieBanner() {
