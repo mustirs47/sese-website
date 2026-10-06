@@ -58,10 +58,16 @@ const HeroSection = () => (
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link to="#leistungen">
+              <a
+                href="#leistungen"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("leistungen")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+              >
                 Bereiche ansehen
                 <ChevronRight className="ml-1 h-4 w-4" />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>
