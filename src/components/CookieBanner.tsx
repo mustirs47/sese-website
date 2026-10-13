@@ -107,7 +107,7 @@ export function CookieBanner() {
       aria-label="Cookie-Einstellungen"
       aria-modal="false"
     >
-      <div className="pointer-events-auto w-full max-w-3xl rounded-lg border border-border bg-background shadow-2xl animate-in fade-in slide-in-from-bottom-4 duration-300">
+      <div className="pointer-events-auto w-full max-w-3xl rounded-lg border border-border bg-background shadow-overlay animate-in fade-in slide-in-from-bottom-2 duration-300">
         <div className="max-h-[85vh] overflow-y-auto p-5 sm:p-7">
           {!showSettings ? (
             <div className="flex flex-col gap-5 sm:flex-row sm:items-start">

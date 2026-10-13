@@ -15,7 +15,7 @@ const HeroSection = () => (
     <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
       <div className="flex items-center justify-between gap-8 lg:gap-16 xl:gap-24">
         <div className="max-w-2xl xl:max-w-3xl flex-1 min-w-0">
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary mb-5">
+            <span className="inline-flex items-center gap-2 border-l border-primary/40 pl-3 py-1 text-xs font-medium uppercase text-muted-foreground mb-6">
               <Building2 className="h-3 w-3" />
               Objektbetreuung aus einer Hand
             </span>
@@ -42,7 +42,8 @@ const HeroSection = () => (
                 href="#leistungen"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.getElementById("leistungen")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+                  document.getElementById("leistungen")?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
                 }}
               >
                 Bereiche ansehen

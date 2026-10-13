@@ -13,6 +13,8 @@ export default {
       },
     },
     extend: {
+      fontFamily: { sans: ["Instrument Sans", "Helvetica Neue", "Arial", "sans-serif"] },
+      boxShadow: { refined: "var(--shadow-card)", overlay: "var(--shadow-overlay)" },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -78,8 +80,8 @@ export default {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "accordion-down": "accordion-down 0.3s var(--ease-refined)",
+        "accordion-up": "accordion-up 0.3s var(--ease-refined)",
       },
     },
   },
