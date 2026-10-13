@@ -9,6 +9,7 @@ import FAQSection from "@/components/sections/FAQSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { BreadcrumbJsonLd, FAQPageJsonLd, WebPageJsonLd } from "@/components/StructuredData";
 import { BASE_URL } from "@/lib/seo";
+import logoAsset from "@/assets/sentinel-logo.png.asset.json";
 
 const leistungen = [
   {
@@ -81,7 +82,7 @@ const localSchema = {
   description:
     "Gebäudereinigung, Sicherheitsdienst, Grünanlagenpflege und Facility Management für Objekte in Magdeburg und Umgebung.",
   url: `${BASE_URL}/magdeburg`,
-  image: `${BASE_URL}/logo.png`,
+  image: `${BASE_URL}${logoAsset.url}`,
   email: "info@sentinel-services.de",
   parentOrganization: { "@id": `${BASE_URL}/#organization` },
   address: {
