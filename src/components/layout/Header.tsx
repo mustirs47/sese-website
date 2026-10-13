@@ -34,8 +34,8 @@ const Header = () => {
       <header
         className={`sticky top-0 z-50 border-b transition-all duration-300 ${
           scrolled
-            ? "border-border/60 bg-background/95 backdrop-blur-lg shadow-lg shadow-black/20"
-            : "border-transparent bg-background/80 backdrop-blur-sm"
+            ? "border-border/60 bg-background/95 backdrop-blur-lg"
+            : "border-border/30 bg-background/95 backdrop-blur-sm"
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 sm:px-6 sm:py-3 lg:py-4">
