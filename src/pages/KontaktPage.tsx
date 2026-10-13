@@ -11,7 +11,6 @@ import FAQSection from "@/components/sections/FAQSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { BreadcrumbJsonLd, FAQPageJsonLd, WebPageJsonLd } from "@/components/StructuredData";
 import { BASE_URL } from "@/lib/seo";
-import heroIllustration from "@/assets/illustrations/hero-security.webp";
 
 const processSteps = [
   { icon: Search, title: "Analyse", desc: "Wir erfassen Ihren Bedarf" },
@@ -136,7 +135,6 @@ const KontaktPage = () => {
         badge="Kontakt"
         title="Anfrage stellen"
         subtitle="Beschreiben Sie Ihren Bedarf – wir melden uns schnellstmöglich mit einem konkreten Vorschlag."
-        illustration={heroIllustration}
       />
 
       {/* Process steps row */}

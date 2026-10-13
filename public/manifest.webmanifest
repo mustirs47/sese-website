@@ -4,8 +4,8 @@
   "description": "Sicherheit. Sauberkeit. Substanz. – Ihr Partner für Objektbetreuung bundesweit.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#1a8cff",
+  "background_color": "#0d0d0d",
+  "theme_color": "#0d0d0d",
   "icons": [
     {
       "src": "/icon-192x192.png",
