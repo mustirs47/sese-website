@@ -20,51 +20,51 @@
 
 @layer base {
   :root {
-    --background: 220 20% 10%;
-    --foreground: 210 20% 92%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 96%;
 
-    --card: 220 18% 14%;
-    --card-foreground: 210 20% 92%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 96%;
 
-    --popover: 220 18% 14%;
-    --popover-foreground: 210 20% 92%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 96%;
 
-    --primary: 205 92% 42%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 96%;
+    --primary-foreground: 0 0% 5%;
 
-    --secondary: 220 15% 20%;
-    --secondary-foreground: 210 20% 85%;
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 220 15% 18%;
-    --muted-foreground: 215 12% 65%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 42 80% 55%;
-    --accent-foreground: 220 20% 6%;
+    --accent: 0 0% 85%;
+    --accent-foreground: 0 0% 5%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 0% 22%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 220 15% 22%;
-    --input: 220 15% 22%;
-    --ring: 205 92% 42%;
+    --border: 0 0% 24%;
+    --input: 0 0% 24%;
+    --ring: 0 0% 70%;
 
     --radius: 0.5rem;
 
     /* Light section tokens */
-    --section-light-bg: 220 20% 97%;
-    --section-light-fg: 220 20% 15%;
-    --section-light-muted: 220 12% 32%;
-    --section-light-border: 220 15% 88%;
+    --section-light-bg: 0 0% 98%;
+    --section-light-fg: 0 0% 8%;
+    --section-light-muted: 0 0% 35%;
+    --section-light-border: 0 0% 85%;
     --section-light-card: 0 0% 100%;
 
-    --sidebar-background: 220 20% 8%;
-    --sidebar-foreground: 210 20% 90%;
-    --sidebar-primary: 205 92% 42%;
-    --sidebar-primary-foreground: 220 20% 6%;
-    --sidebar-accent: 220 15% 18%;
-    --sidebar-accent-foreground: 210 20% 90%;
-    --sidebar-border: 220 15% 22%;
-    --sidebar-ring: 205 92% 42%;
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 0 0% 96%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 24%;
+    --sidebar-ring: 0 0% 70%;
   }
 }
 
@@ -106,6 +106,21 @@
 
 /* Light section utility */
 .section-light {
+  --primary: 0 0% 8%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 0 0% 25%;
+  --accent-foreground: 0 0% 100%;
+  --background: 0 0% 98%;
+  --foreground: 0 0% 8%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 8%;
+  --secondary: 0 0% 92%;
+  --secondary-foreground: 0 0% 8%;
+  --muted: 0 0% 92%;
+  --muted-foreground: 0 0% 35%;
+  --border: 0 0% 85%;
+  --input: 0 0% 75%;
+  --ring: 0 0% 35%;
   background: hsl(var(--section-light-bg));
   color: hsl(var(--section-light-fg));
 }
@@ -154,7 +169,6 @@
 /* Gradient top border for cards */
 .card-accent {
   border-top: 3px solid hsl(var(--primary));
-  border-image: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent))) 1;
 }
 
 /* Stats number highlight */
@@ -162,10 +176,7 @@
   font-size: 2.5rem;
   font-weight: 800;
   line-height: 1;
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: hsl(var(--primary));
 }
 
 /* ===== Consistent reading rhythm ===== */

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoGrayscale from "@/assets/logo-grayscale-lockup.png";
+import logoGrayscale from "@/assets/sentinel-logo-white.png";
 import { reopenCookieSettings } from "@/components/CookieBanner";
 
 const bereiche = [
@@ -32,9 +32,9 @@ const Footer = () => (
             <img
               src={logoGrayscale}
               alt="Sentinel Services"
-              className="h-8 sm:h-9 w-auto mb-4"
-              width={798}
-              height={118}
+              className="h-auto w-full max-w-64 mb-4"
+              width={1377}
+              height={205}
               loading="lazy"
               decoding="async"
             />

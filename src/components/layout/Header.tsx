@@ -8,7 +8,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import MobileMenu from "./MobileMenu";
-import logoColor from "@/assets/logo-color-lockup.png";
+import logoColor from "@/assets/sentinel-logo-white.png";
 import { divisions } from "@/data/divisions";
 
 const primaryNav = [
@@ -43,9 +43,9 @@ const Header = () => {
             <img
               src={logoColor}
               alt="Sentinel Services"
-              className="h-7 sm:h-8 lg:h-10 xl:h-11 w-auto"
-              width={798}
-              height={118}
+               className="h-auto w-[min(66vw,18rem)] sm:w-72 lg:w-80 xl:w-[22rem]"
+               width={1377}
+               height={205}
               decoding="async"
               {...({ fetchpriority: "high" } as Record<string, string>)}
             />

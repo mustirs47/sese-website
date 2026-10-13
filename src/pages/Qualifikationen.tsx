@@ -8,7 +8,6 @@ import FAQSection from "@/components/sections/FAQSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { BreadcrumbJsonLd, FAQPageJsonLd, WebPageJsonLd } from "@/components/StructuredData";
 import { BASE_URL } from "@/lib/seo";
-import teamIllustration from "@/assets/illustrations/team-qualifikationen.webp";
 
 const groups = [
   {
@@ -20,7 +19,6 @@ const groups = [
       { name: "Unterrichtungsverfahren nach §34a GewO", detail: "40-stündige Grundschulung für Sicherheitsmitarbeiter" },
     ],
     relevance: "Gesetzliche Voraussetzung für gewerbliche Sicherheitstätigkeit. Ohne diese Nachweise darf in Deutschland kein Sicherheitsdienst betrieben werden.",
-    color: "205 90% 55%",
   },
   {
     icon: GraduationCap,
@@ -31,7 +29,6 @@ const groups = [
       { name: "Regelmäßige Auffrischungslehrgänge", detail: "Jährliche Updates zu Rechtsänderungen und Best Practices" },
     ],
     relevance: "Rechtssicheres Handeln und korrekte Reaktion in kritischen Situationen – minimiert Ihr Haftungsrisiko als Auftraggeber.",
-    color: "42 80% 55%",
   },
   {
     icon: HeartPulse,
@@ -42,7 +39,6 @@ const groups = [
       { name: "Deeskalationstraining", detail: "Techniken zur Konfliktvermeidung und -bewältigung" },
     ],
     relevance: "Schnelles Handeln bei Notfällen und reduziertes Eskalationsrisiko – Ihre Mitarbeiter und Gäste sind in sicheren Händen.",
-    color: "145 60% 45%",
   },
   {
     icon: Settings,
@@ -53,7 +49,6 @@ const groups = [
       { name: "Interne Qualitätskontrollen und Audits", detail: "Regelmäßige Überprüfung durch Einsatzleitung und Geschäftsführung" },
     ],
     relevance: "Transparenz und Nachvollziehbarkeit jedes Einsatzes – Sie wissen immer, was auf Ihrem Objekt passiert.",
-    color: "270 60% 55%",
   },
 ];
 
@@ -101,7 +96,6 @@ const QualifikationenPage = () => {
         badge="Qualifikationen"
         title="Qualifikationen & Nachweise unseres Personals"
         subtitle="Welche Nachweise, Schulungen und Zusatzqualifikationen unsere Einsatzkräfte in Reinigung, Pflege, Facility Management und Sicherheit mitbringen – und was das für Sie als Auftraggeber konkret bedeutet."
-        illustration={teamIllustration}
       />
 
       {/* Summary stats */}

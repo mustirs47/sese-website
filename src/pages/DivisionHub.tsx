@@ -16,7 +16,6 @@ import { BASE_URL } from "@/lib/seo";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { divisions, getDivision, type DivisionSlug } from "@/data/divisions";
 import { divisionDetails } from "@/data/divisionDetails";
-import { serviceIllustrations } from "@/data/serviceIllustrations";
 
 interface Props {
   division: DivisionSlug;
@@ -147,23 +146,12 @@ const DivisionHub = ({ division: slug }: Props) => {
                   borderColor: "hsl(var(--section-light-border))",
                 }}
               >
-                {serviceIllustrations[sSlug] ? (
-                  <img
-                    src={serviceIllustrations[sSlug]}
-                    alt={`Illustration – ${title} (${division.shortLabel})`}
-                    className="h-28 w-auto object-contain mb-4 -ml-2"
-                    loading="lazy"
-                    width={112}
-                    height={112}
-                  />
-                ) : (
                   <div
                     className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl"
                     style={{ background: "hsl(var(--primary) / 0.1)" }}
                   >
                     <Icon className="h-6 w-6 text-primary" />
                   </div>
-                )}
                 <h3
                   className="text-lg font-bold"
                   style={{ color: "hsl(var(--section-light-fg))" }}

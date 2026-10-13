@@ -10,7 +10,6 @@ import { industries } from "@/data/industries";
 import { services } from "@/data/services";
 import { FAQPageJsonLd, BreadcrumbJsonLd, ItemListJsonLd } from "@/components/StructuredData";
 import { BASE_URL } from "@/lib/seo";
-import branchenIllustration from "@/assets/illustrations/branchen.webp";
 
 const risks: Record<string, string[]> = {
   "gewerbe-und-buero": ["Einbruch außerhalb der Geschäftszeiten", "Unbefugter Zutritt", "Vandalismus"],
@@ -59,7 +58,6 @@ const BranchenPage = () => {
         badge="Branchen"
         title="Objektbetreuung nach Branche"
         subtitle="Acht Branchen, eigene Abläufe, eigene Anforderungen – wir kombinieren Reinigung, Facility Management, Grünpflege und Sicherheit passgenau für Ihren Objekttyp."
-        illustration={branchenIllustration}
       />
 
       {/* Stats */}
@@ -132,7 +130,7 @@ const BranchenPage = () => {
                           <span
                             key={risk}
                             className="rounded-md px-2 py-0.5 text-xs font-medium"
-                            style={{ background: "hsl(42 80% 55% / 0.08)", color: "hsl(var(--section-light-muted))" }}
+                            style={{ background: "hsl(var(--accent) / 0.08)", color: "hsl(var(--section-light-muted))" }}
                           >
                             {risk}
                           </span>

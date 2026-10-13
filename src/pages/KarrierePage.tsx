@@ -8,7 +8,6 @@ import FAQSection from "@/components/sections/FAQSection";
 import { FAQPageJsonLd, BreadcrumbJsonLd, WebPageJsonLd } from "@/components/StructuredData";
 import { BASE_URL } from "@/lib/seo";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import teamIllustration from "@/assets/illustrations/team-qualifikationen.webp";
 
 const requirements = [
   "Mindestalter 18 Jahre",
@@ -86,7 +85,6 @@ const KarrierePage = () => {
         badge="Karriere"
         title="Job mit Perspektive – in Reinigung, Facility, Grünanlagen oder Sicherheit"
         subtitle="Wir suchen engagierte Mitarbeitende und Nachwuchs für Gebäudereinigung, Facility Management, Garten- und Grünanlagenpflege sowie Sicherheitsdienst. Faire Bedingungen, planbare Einsätze, echte Entwicklung."
-        illustration={teamIllustration}
       />
 
       {/* 3-step application process */}

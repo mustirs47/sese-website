@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { divisions, allServices } from "@/data/divisions";
 import { BASE_URL } from "@/lib/seo";
+import logoAsset from "@/assets/sentinel-logo.png.asset.json";
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -10,8 +11,8 @@ const localBusinessSchema = {
   description:
     "Sentinel Services bietet Sicherheit & Bewachung, Gebäudereinigung, Garten- und Grünanlagenpflege sowie Facility Management aus einer Hand – bundesweit einsatzbereit.",
   url: BASE_URL,
-  logo: `${BASE_URL}/logo.png`,
-  image: `${BASE_URL}/logo.png`,
+  logo: `${BASE_URL}${logoAsset.url}`,
+  image: `${BASE_URL}${logoAsset.url}`,
   email: "info@sentinel-services.de",
   address: {
     "@type": "PostalAddress",
@@ -115,7 +116,7 @@ export const ServiceJsonLd = ({ name, description, url }: { name: string; descri
       "@id": `${BASE_URL}/#organization`,
       name: "Sentinel Services",
       url: BASE_URL,
-      image: `${BASE_URL}/logo.png`,
+      image: `${BASE_URL}${logoAsset.url}`,
       email: "info@sentinel-services.de",
       address: {
         "@type": "PostalAddress",

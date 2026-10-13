@@ -8,7 +8,6 @@ import FAQSection from "@/components/sections/FAQSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { BreadcrumbJsonLd, FAQPageJsonLd, WebPageJsonLd } from "@/components/StructuredData";
 import { BASE_URL } from "@/lib/seo";
-import arbeitweiseIllustration from "@/assets/illustrations/arbeitsweise.webp";
 
 const phases = [
   {
@@ -93,7 +92,6 @@ const ArbeitsweisePage = () => {
         badge="Arbeitsweise"
         title="So arbeiten wir – unser Betriebsmodell"
         subtitle="Reinigung, Pflege und Sicherheit sind kein Produkt, sondern ein Prozess. Vier Phasen, die jeden Einsatz tragen – egal in welchem Bereich."
-        illustration={arbeitweiseIllustration}
       />
 
       {/* Stats */}

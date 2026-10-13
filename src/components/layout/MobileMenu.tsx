@@ -6,7 +6,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import logoSymbol from "@/assets/logo-color-symbol.png";
+import logoSymbol from "@/assets/sentinel-symbol-white.png";
 import { divisions } from "@/data/divisions";
 
 interface MobileMenuProps {
@@ -38,8 +38,8 @@ const MobileMenu = ({ open, onClose }: MobileMenuProps) => (
               src={logoSymbol}
               alt="Sentinel Services"
               className="h-10 w-auto shrink-0 object-contain"
-              width={123}
-              height={118}
+              width={234}
+              height={205}
             />
           </Link>
         </SheetTitle>
