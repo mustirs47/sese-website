@@ -7,25 +7,25 @@ const phases = [
     icon: Search,
     step: "01",
     title: "Analyse vor Einsatz",
-    desc: "Bestandsaufnahme von Objekt, Risikoprofil und Kundenerwartung.",
+    desc: "Wir klären Aufgaben, Einsatzort und Rahmenbedingungen, bevor wir starten.",
   },
   {
     icon: UserCheck,
     step: "02",
     title: "Personal & Briefing",
-    desc: "Gezielte Personalauswahl nach Qualifikation und objektspezifische Einweisung.",
+    desc: "Wir wählen das Personal passend zum Auftrag aus und weisen es in die Aufgaben ein.",
   },
   {
     icon: Radio,
     step: "03",
     title: "Führung im Einsatz",
-    desc: "Feste Einsatzleitung, direkte Kommunikation und definierte Eskalationsstufen.",
+    desc: "Eine feste Ansprechperson hält die Abstimmung zusammen. Meldewege sind vorab geklärt.",
   },
   {
     icon: ClipboardCheck,
     step: "04",
     title: "Dokumentation",
-    desc: "Lückenlose Protokolle, Berichte und Nachsteuerung. Volle Transparenz.",
+    desc: "Wir halten Ergebnisse fest, melden Abweichungen und passen den Einsatz bei Bedarf an.",
   },
 ];
 
@@ -39,7 +39,7 @@ const WhyUsSection = () => {
           <span className="eyebrow">4 Phasen</span>
           <h2 className="h-section text-foreground">So arbeiten wir</h2>
           <p className="section-intro">
-            Sicherheit ist kein Produkt, sondern ein Prozess – vier Phasen, die jeden Einsatz tragen.
+            Vom ersten Auftrag bis zur Rückmeldung: Wir legen fest, wer was übernimmt und wie der Einsatz abläuft.
           </p>
         </div>
 

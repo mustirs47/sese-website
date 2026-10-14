@@ -1,24 +1,24 @@
-import { Shield, HardHat, PartyPopper, DoorOpen } from "@/lib/icons";
+import { HardHat, PartyPopper, Building2 } from "@/lib/icons";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const scenarios = [
   {
     icon: HardHat,
-    title: "Baustellensicherung – Nachtbewachung",
+    title: "Sicherheit auf der Baustelle",
     situation: "Großbaustelle mit hochwertigem Material, offener Zugang nach Baustellenschluss.",
-    einsatz: "Feste Nachtwache, dokumentierte Kontrollgänge alle 90 Min., Sofortmeldung bei Unregelmäßigkeiten.",
+    einsatz: "Nachtbewachung, vereinbarte Kontrollgänge und direkte Meldung bei Auffälligkeiten.",
   },
   {
     icon: PartyPopper,
-    title: "Firmenevent – 500 Gäste, VIP-Bereich",
-    situation: "Sommerfest mit offener Gästeliste und separatem VIP-Bereich.",
-    einsatz: "Einlasssteuerung, diskrete VIP-Präsenz, Funk-Koordination, Deeskalationsbereitschaft.",
+    title: "Event Service beim Firmenevent",
+    situation: "Gäste treffen ein, brauchen Orientierung und eine Ansprechperson vor Ort.",
+    einsatz: "Empfang und Gästebetreuung, Unterstützung im Ablauf und Abstimmung mit dem Veranstaltungsschutz.",
   },
   {
-    icon: DoorOpen,
-    title: "Empfangsservice – Bürokomplex",
-    situation: "Mehrmieterobjekt mit täglichem Besucheraufkommen, keine einheitliche Zugangskontrolle.",
-    einsatz: "Feste Empfangskraft mit Registrierung, Schlüsselverwaltung und professionellem Auftreten.",
+    icon: Building2,
+    title: "Facility im Bürogebäude",
+    situation: "Innenräume, Glasflächen und Außenanlagen müssen regelmäßig betreut werden.",
+    einsatz: "Abgestimmte Reinigung, Grünpflege und Hausmeisterleistungen mit festen Zuständigkeiten.",
   },
 ];
 
@@ -31,7 +31,7 @@ const ReferencesSection = () => {
         <div className="section-head">
           <span className="eyebrow">Praxis</span>
           <h2 className="h-section text-foreground">Typische Einsatzbilder</h2>
-          <p className="section-intro">Drei realistische Szenarien, für die wir aufgestellt sind.</p>
+          <p className="section-intro">So können unsere Leistungen im Alltag zusammenkommen – drei beispielhafte Einsätze.</p>
         </div>
 
         <div className="stagger-children grid gap-6 sm:grid-cols-3">

@@ -11,10 +11,10 @@ const ContactSection = () => {
       <div ref={ref} className="fade-in-section section-shell">
         <div className="section-head">
           <span className="eyebrow">Kontakt</span>
-          <h2 className="h-section">Sie wissen, was Sie brauchen?</h2>
+          <h2 className="h-section">Ihr Auftrag. Unser Einsatz.</h2>
           <p className="section-intro">
-            Schildern Sie kurz Objekt, Leistung und Zeitraum – wir melden uns mit einem konkreten Vorschlag,
-            in der Regel innerhalb eines Werktags.
+            Nennen Sie uns die gewünschte Leistung, den Einsatzort und den Zeitraum.
+            Wir prüfen den Umfang und melden uns mit den nächsten Schritten.
           </p>
         </div>
 
@@ -64,16 +64,16 @@ const ContactSection = () => {
 
           <div className="lg:col-span-3">
             <div className="card-accent surface-card flex flex-col h-full">
-              <h3 className="h-card text-lg !font-bold mb-2">Anfrageformular ausfüllen</h3>
+              <h3 className="h-card text-lg !font-bold mb-2">Dienstleistung anfragen</h3>
               <p className="text-sm text-muted-fg mb-6">
-                Auf der Kontaktseite finden Sie ein kurzes Formular für die wichtigsten Eckdaten –
-                wir erstellen daraus ein passendes Angebot, ohne Umwege über ein Vertriebsgespräch.
+                Ob Sicherheit, Facility oder Event Service: Schicken Sie uns die Eckdaten Ihres Auftrags.
+                Auf dieser Grundlage stimmen wir Leistungen und Aufwand mit Ihnen ab.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  "Schriftliches Angebot statt Verkaufsgespräch",
-                  "Konzept auf Ihr Objekt zugeschnitten",
-                  "Kosten klar und nachvollziehbar aufgeschlüsselt",
+                  "Gewünschte Leistungen und Aufgaben",
+                  "Einsatzort und geplanter Zeitraum",
+                  "Flächen, Gästezahl oder weitere Eckdaten zum Auftrag",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-sm text-muted-fg">
                     <FileCheck className="h-4 w-4 text-primary shrink-0 mt-0.5" />
