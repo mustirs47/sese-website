@@ -303,18 +303,11 @@ const KontaktPage = () => {
                         className="mt-0.5 rounded border-input text-primary focus:ring-primary"
                       />
                       <span>
-                        Ich willige ein, dass meine Angaben zur Bearbeitung meiner Anfrage verarbeitet und
-                        hierfür an unseren Formular-Dienstleister <strong>FormSubmit</strong> (USA) übermittelt
-                        werden (Art. 49 Abs. 1 lit. a DSGVO). Für die USA besteht kein genereller
-                        Angemessenheitsbeschluss; mögliche Risiken sind in der{" "}
+                        Ich stimme den{" "}
                         <Link to="/datenschutz" className="text-primary hover:underline">
-                          Datenschutzerklärung
-                        </Link>
-                        {" "}beschrieben. Die Einwilligung kann jederzeit per E-Mail an{" "}
-                        <a href="mailto:info@sentinel-services.de" className="text-primary hover:underline">
-                          info@sentinel-services.de
-                        </a>{" "}
-                        widerrufen werden. *
+                          Datenschutzbestimmungen
+                        </Link>{" "}
+                        zu. *
                       </span>
                     </label>
                   </div>
@@ -324,11 +317,7 @@ const KontaktPage = () => {
                       <Send className="ml-2 h-4 w-4" />
                     </Button>
                   </div>
-                  <p className="text-xs text-muted-fg leading-relaxed">
-                    Pflichtfelder sind mit * markiert. Wir verarbeiten Ihre Daten ausschließlich zur
-                    Bearbeitung Ihrer Anfrage. Zur Zustellung nutzen wir den Dienst FormSubmit (USA);
-                    Details siehe Datenschutzerklärung.
-                  </p>
+                  <p className="text-xs text-muted-fg leading-relaxed">*Pflichtfelder</p>
                 </form>
               )}
             </div>
