@@ -10,6 +10,7 @@ import {
 import MobileMenu from "./MobileMenu";
 import logoColor from "@/assets/sentinel-logo-white.png";
 import { divisions } from "@/data/divisions";
+import { homepageFields } from "@/data/homepage";
 
 const primaryNav = [
   { label: "Arbeitsweise", href: "/arbeitsweise" },
@@ -22,6 +23,8 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const isHomepage = location.pathname === "/" || location.pathname === "/index";
+  const fields = isHomepage ? homepageFields : divisions;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -72,13 +75,17 @@ const Header = () => {
                 className="w-[480px] p-2 bg-background/95 backdrop-blur-lg border-border/60"
               >
                 <div className="grid grid-cols-2 gap-1">
-                  {divisions.map((d) => {
+                  {fields.map((d) => {
                     const Icon = d.icon;
                     const active = location.pathname.startsWith(`/${d.slug}`);
                     return (
                       <Link
                         key={d.slug}
-                        to={`/${d.slug}`}
+                        to={isHomepage ? `/#${d.slug}` : `/${d.slug}`}
+                        onClick={isHomepage ? () => {
+                          const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+                          document.getElementById(d.slug)?.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
+                        } : undefined}
                         className={`group flex items-start gap-3 rounded-md p-3 transition-colors hover:bg-secondary ${
                           active ? "bg-secondary" : ""
                         }`}

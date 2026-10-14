@@ -11,9 +11,10 @@ const IndustriesSection = () => {
       <div ref={ref} className="fade-in-section section-shell">
         <div className="section-head">
           <span className="eyebrow">Branchen</span>
-          <h2 className="h-section">Wo wir typischerweise tätig sind</h2>
+          <h2 className="h-section">Für Objekte, Betriebe und Veranstaltungen</h2>
           <p className="section-intro">
-            Acht Branchen, in denen wir die Anforderungen an Objekt, Personal und Dokumentation kennen.
+            Ein Bürogebäude braucht andere Abläufe als eine Baustelle oder ein Firmenevent.
+            Wir richten Personal und Leistung nach dem Einsatz aus.
           </p>
         </div>
 

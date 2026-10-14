@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import brandSymbol from "@/assets/sentinel-symbol-white.png";
 
 const trustSignals = [
-  { icon: Building2, text: "Vier Bereiche – ein Anbieter" },
+  { icon: Building2, text: "Drei Fachgebiete – ein Anbieter" },
   { icon: Users, text: "Feste Ansprechpartner" },
   { icon: FileCheck, text: "Dokumentierte Leistung" },
   { icon: Sparkles, text: "Eingewiesenes Fachpersonal" },
@@ -17,17 +17,16 @@ const HeroSection = () => (
         <div className="max-w-2xl xl:max-w-3xl flex-1 min-w-0">
             <span className="inline-flex items-center gap-2 border-l border-primary/40 pl-3 py-1 text-xs font-medium uppercase text-muted-foreground mb-6">
               <Building2 className="h-3 w-3" />
-              Objektbetreuung aus einer Hand
+               Sicherheit · Facility · Event Service
             </span>
           <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[4.25rem] break-words hyphens-auto" style={{ lineHeight: 1.1 }}>
-            Schutz, Sauberkeit und{" "}
-            <span className="text-primary">Werterhalt</span> für Ihr Objekt.
+            Sentinel Services
           </h1>
 
           <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg lg:text-xl xl:text-[1.375rem] max-w-xl xl:max-w-2xl">
-            Gebäudereinigung, Facility Management, Grünanlagenpflege und Sicherheitsdienst – einzeln
-            buchbar oder als komplette Objektbetreuung. Mit eingewiesenem Personal, einer festen
-            Ansprechperson und Berichten, die nachvollziehbar bleiben.
+             Wir sichern Objekte, betreuen Gebäude und unterstützen Veranstaltungen.
+             Mit eingewiesenem Personal, klaren Zuständigkeiten und einer festen Ansprechperson.
+             Sie geben den Auftrag. Wir kümmern uns um die Umsetzung.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { homepageFields } from "@/data/homepage";
 import logoGrayscale from "@/assets/sentinel-logo-white.png";
 import { reopenCookieSettings } from "@/components/CookieBanner";
 
@@ -23,7 +24,13 @@ const legalNav = [
   { label: "Datenschutz", href: "/datenschutz" },
 ];
 
-const Footer = () => (
+const Footer = () => {
+  const { pathname } = useLocation();
+  const isHomepage = pathname === "/" || pathname === "/index";
+  const fields = isHomepage
+    ? homepageFields.map((field) => ({ label: field.title, href: `/#${field.slug}` }))
+    : bereiche;
+  return (
   <footer className="bg-background border-t border-border/50">
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:py-16">
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -40,7 +47,9 @@ const Footer = () => (
             />
           </Link>
           <p className="text-sm leading-relaxed text-muted-foreground max-w-xs">
-            Sicherheit, Reinigung, Grünanlagen und Facility Management – aus einer Hand, mit eingewiesenem Personal und dokumentierter Leistung.
+            {isHomepage
+              ? "Sicherheit, Facility und Event Service – mit eingewiesenem Personal, klaren Zuständigkeiten und festen Ansprechpartnern."
+              : "Sicherheit, Reinigung, Grünanlagen und Facility Management – aus einer Hand, mit eingewiesenem Personal und dokumentierter Leistung."}
           </p>
           <p className="mt-3 text-xs text-muted-foreground">
             Sitz in Magdeburg · Einsatzgebiet bundesweit
@@ -50,9 +59,12 @@ const Footer = () => (
         <div>
           <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4">Bereiche</h4>
           <ul className="space-y-1">
-            {bereiche.map((item) => (
+            {fields.map((item) => (
               <li key={item.href}>
-                <Link to={item.href} className="block py-1.5 text-sm text-muted-foreground transition-colors hover:text-primary">
+                <Link to={item.href} onClick={isHomepage ? () => {
+                  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+                  document.getElementById(item.href.split("#")[1])?.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
+                } : undefined} className="block py-1.5 text-sm text-muted-foreground transition-colors hover:text-primary">
                   {item.label}
                 </Link>
               </li>
@@ -119,6 +131,7 @@ const Footer = () => (
       </div>
     </div>
   </footer>
-);
+  );
+};
 
 export default Footer;
