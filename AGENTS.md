@@ -1,4 +1,5 @@
 ## Presentation architecture
+- Keep the homepage's new service positioning in a separate data module and apply it to homepage-only navigation and schemas until the detail pages are migrated; this avoids changing their existing taxonomy prematurely.
 - Keep monochrome surface colors in global semantic tokens, including light-section overrides, so controls retain contrast on either surface.
 - Define typography, corner radii, shadows and motion centrally; narrowly scoped main-content compatibility selectors unify legacy cards without changing their layout.
 - Serve fonts as project-hosted assets instead of runtime font-provider requests to preserve privacy and keep loading predictable.

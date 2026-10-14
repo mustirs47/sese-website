@@ -9,15 +9,16 @@ import WhyUsSection from "@/components/sections/WhyUsSection";
 import ReferencesSection from "@/components/sections/ReferencesSection";
 import ContactSection from "@/components/sections/ContactSection";
 import FAQSection from "@/components/sections/FAQSection";
+import { homepageFaqs } from "@/data/homepage";
 
 const Index = () => (
   <PageLayout>
     <SEOHead
-      title="Sentinel Services – Objektbetreuung aus einer Hand"
-      description="Sicherheit, Gebäudereinigung, Grünanlagen und Facility Management aus einer Hand – Sitz in Magdeburg, bundesweit im Einsatz, mit festen Ansprechpartnern."
-      keywords="Gebäudereinigung Magdeburg, Sicherheitsdienst Magdeburg, Sicherheitsdienst, Gebäudereinigung, Grünanlagenpflege, Facility Management, Objektbetreuung, Wachdienst, Fensterreinigung, Winterdienst, FM Dienstleister"
+      title="Sentinel Services – Sicherheit, Facility & Event Service"
+      description="Sicherheit, Facility und Event Service aus Magdeburg, bundesweit im Einsatz. Objektbewachung, Reinigung und Gästebetreuung mit festen Ansprechpartnern."
+      keywords="Sicherheitsdienst, Facility Service, Event Service, Gebäudereinigung, Sicherheitsdienst Magdeburg, Gebäudereinigung Magdeburg, Gästebetreuung"
     />
-    <LocalBusinessJsonLd />
+    <LocalBusinessJsonLd homepage />
     <HeroSection />
     <TrustBar />
     <PillarsSection />
@@ -25,7 +26,7 @@ const Index = () => (
     <IndustriesSection />
     <ReferencesSection />
     <ContactSection />
-    <FAQSection light />
+    <FAQSection light faqs={homepageFaqs} />
   </PageLayout>
 );
 
