@@ -1,4 +1,5 @@
 # Schwarz-Weiß-Umstellung
+- [ ] Startseite auf Sicherheit, Facility und operativen Event Service ausrichten; Texte, Startseiten-Navigation und Suchvorschau anpassen und prüfen. Andere Seiten bleiben zunächst unverändert.
 - [x] Monochrome Farbwerte und kontrastreiche Bedienelemente auf allen Seiten.
 - [x] Blaue Illustrationen aus Seiten und Leistungskarten entfernen.
 - [x] Neues transparentes Logo, inverse Variante und Favicon erstellen.
