@@ -1,38 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.sentinel-services.de/</loc><lastmod>2026-08-08</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.sentinel-services.de/</loc><lastmod>2026-10-15</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
 
-  <url><loc>https://www.sentinel-services.de/sicherheit</loc><lastmod>2026-08-08</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.sentinel-services.de/sicherheit/objektschutz</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sentinel-services.de/sicherheit/veranstaltungsschutz</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sentinel-services.de/sicherheit/baustellenbewachung</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sentinel-services.de/sicherheit/empfangs-und-pfortendienst</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sentinel-services.de/sicherheit/kontroll-und-streifendienst</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sentinel-services.de/sicherheit/sicherheitskonzepte</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/sicherheit</loc><lastmod>2026-10-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.sentinel-services.de/sicherheit/objektschutz</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/sicherheit/veranstaltungsschutz</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/sicherheit/baustellenbewachung</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/sicherheit/empfangs-und-pfortendienst</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/sicherheit/kontroll-und-streifendienst</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/sicherheit/sicherheitskonzepte</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <url><loc>https://www.sentinel-services.de/reinigung</loc><lastmod>2026-08-08</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.sentinel-services.de/reinigung/unterhaltsreinigung</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sentinel-services.de/reinigung/glas-und-fensterreinigung</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sentinel-services.de/reinigung/grundreinigung</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sentinel-services.de/reinigung/bauschluss-und-sonderreinigung</loc><lastmod>2026-08-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/reinigung</loc><lastmod>2026-10-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.sentinel-services.de/facility/unterhaltsreinigung</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/facility/glas-und-fensterreinigung</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/facility/grundreinigung</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/facility/bauschluss-und-sonderreinigung</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <url><loc>https://www.sentinel-services.de/gruenanlagen</loc><lastmod>2026-08-08</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.sentinel-services.de/gruenanlagen/pflege</loc><lastmod>2026-08-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sentinel-services.de/gruenanlagen/baumpflege</loc><lastmod>2026-08-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/gruenanlagen</loc><lastmod>2026-10-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.sentinel-services.de/facility/pflege</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/facility/baumpflege</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <url><loc>https://www.sentinel-services.de/facility-management</loc><lastmod>2026-08-08</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.sentinel-services.de/facility-management/winterdienst</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sentinel-services.de/facility-management/hausmeisterdienste</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sentinel-services.de/facility-management/entsorgungsmanagement</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sentinel-services.de/facility-management/parkraumbewirtschaftung</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/facility-management</loc><lastmod>2026-10-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.sentinel-services.de/facility/winterdienst</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/facility/hausmeisterdienste</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/facility/entsorgungsmanagement</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/facility/parkraumbewirtschaftung</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <url><loc>https://www.sentinel-services.de/magdeburg</loc><lastmod>2026-09-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sentinel-services.de/magdeburg/gebaeudereinigung</loc><lastmod>2026-09-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sentinel-services.de/branchen</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.sentinel-services.de/qualifikationen</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.sentinel-services.de/arbeitsweise</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.sentinel-services.de/karriere</loc><lastmod>2026-07-19</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.sentinel-services.de/kontakt</loc><lastmod>2026-08-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.sentinel-services.de/impressum</loc><lastmod>2026-07-19</lastmod><changefreq>yearly</changefreq><priority>0.1</priority></url>
-  <url><loc>https://www.sentinel-services.de/datenschutz</loc><lastmod>2026-07-19</lastmod><changefreq>yearly</changefreq><priority>0.1</priority></url>
+  <url><loc>https://www.sentinel-services.de/magdeburg</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/magdeburg/gebaeudereinigung</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/branchen</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sentinel-services.de/qualifikationen</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.sentinel-services.de/arbeitsweise</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.sentinel-services.de/karriere</loc><lastmod>2026-10-15</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.sentinel-services.de/kontakt</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.sentinel-services.de/impressum</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.1</priority></url>
+  <url><loc>https://www.sentinel-services.de/datenschutz</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.1</priority></url>
+  <url><loc>https://www.sentinel-services.de/facility</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/event-service</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/event-service/empfang-und-akkreditierung</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/event-service/gaestebetreuung</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinel-services.de/event-service/operative-eventunterstuetzung</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

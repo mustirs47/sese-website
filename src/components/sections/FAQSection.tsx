@@ -16,8 +16,8 @@ interface FAQSectionProps {
 }
 
 const defaultFaqs = [
-  { question: "Kann ich mehrere Bereiche gleichzeitig beauftragen?", answer: "Ja. Sicherheit, Reinigung, Grünanlagen und Facility Management lassen sich frei kombinieren – Sie haben in jedem Fall einen festen Ansprechpartner für das gesamte Objekt." },
-  { question: "Welche Zulassungen liegen vor?", answer: "Im Bereich Sicherheit arbeiten wir mit der gesetzlich vorgeschriebenen Bewachungserlaubnis und entsprechend geprüftem Personal. In Reinigung, Grünpflege und Facility Management setzen wir auf eingearbeitete Fachkräfte mit den jeweils üblichen Qualifikationen." },
+  { question: "Kann ich mehrere Bereiche gleichzeitig beauftragen?", answer: "Ja. Sicherheit, Facility und Event Service lassen sich frei kombinieren – Sie haben in jedem Fall einen festen Ansprechpartner für das gesamte Objekt." },
+  { question: "Welche Zulassungen liegen vor?", answer: "Im Bereich Sicherheit arbeiten wir mit der gesetzlich vorgeschriebenen Bewachungserlaubnis und entsprechend geprüftem Personal. Im Facility und Event Service richten sich Einweisung und Qualifikation nach der konkreten Aufgabe. Bewachungsaufgaben bleiben beim Sicherheitsdienst." },
   { question: "Wie schnell bekomme ich eine Rückmeldung?", answer: "In der Regel innerhalb eines Werktags. Bei kurzfristigem Bedarf melden wir uns am selben Tag und prüfen, was sich kurzfristig realisieren lässt." },
   { question: "Sind Sie auch außerhalb von Magdeburg tätig?", answer: "Ja, wir arbeiten bundesweit. Ob und in welcher Form ein Einsatz in Ihrer Region sinnvoll ist, klären wir kurz im Vorfeld." },
   { question: "Wie wird die Leistung dokumentiert?", answer: "Jeder Einsatz wird mit standardisierten Übergabe- und Meldeprotokollen festgehalten. Sie bekommen Berichte in dem Rhythmus, den wir vorab gemeinsam festlegen." },

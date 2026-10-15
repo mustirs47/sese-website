@@ -19,7 +19,7 @@ const requirements = [
 ];
 
 const benefits = [
-  "Einsätze in vier Bereichen: Reinigung, Facility, Grünanlagen, Sicherheit",
+  "Einsätze in Sicherheit, Facility und Event Service",
   "Feste Ansprechpartner und strukturierte Einarbeitung am Objekt",
   "Regelmäßige Weiterbildung – fachlich, sicherheitstechnisch, gesundheitlich",
   "Langfristige Einsatzplanung statt kurzfristiger Abrufarbeit",
@@ -29,11 +29,11 @@ const benefits = [
 
 const fields = [
   "Unterhalts-, Glas- und Sonderreinigung",
-  "Facility Management & Hausmeisterdienste",
-  "Garten-, Grünanlagen- und Winterdienst",
+  "Infrastrukturelle Objektbetreuung & Hausmeisterdienste",
+  "Grünpflege und Winterdienst im Facility Service",
   "Objektschutz, Empfang und Streifendienst",
   "Veranstaltungs- und Baustellenschutz",
-  "Individuelle Sondereinsätze",
+  "Eventempfang, Gästebetreuung und Unterstützung vor Ort",
 ];
 
 const steps = [
@@ -43,14 +43,14 @@ const steps = [
 ];
 
 const whyUs = [
-  { icon: Shield, title: "Seriöser Arbeitgeber", desc: "Feste Verträge, transparente Bedingungen, keine Subunternehmer-Ketten – in allen vier Geschäftsbereichen." },
+  { icon: Shield, title: "Seriöser Arbeitgeber", desc: "Feste Verträge, transparente Bedingungen, keine Subunternehmer-Ketten – in allen drei Fachgebieten." },
   { icon: HeartPulse, title: "Regelmäßige Schulungen", desc: "Fachliche Weiterbildung, Arbeitssicherheit, Erste Hilfe und Brandschutz – wir investieren in Ihre Qualifikation." },
   { icon: CalendarCheck, title: "Planbare Einsätze", desc: "Langfristige Planung, feste Touren oder Schichten, kein ständiges Hin und Her." },
   { icon: Star, title: "Wertschätzung", desc: "Ihre Arbeit ist wichtig – und wird bei uns auch so behandelt. Feste Ansprechpartner, offenes Ohr." },
 ];
 
 const careerFaqs = [
-  { question: "Brauche ich eine bestimmte Qualifikation, um mich zu bewerben?", answer: "Das hängt vom Bereich ab. In Reinigung und Grünpflege zählen Erfahrung und Lernbereitschaft. Im Sicherheitsdienst brauchen Sie die IHK-Sachkunde – falls noch nicht vorhanden, unterstützen wir Sie beim Nachholen." },
+  { question: "Brauche ich eine bestimmte Qualifikation, um mich zu bewerben?", answer: "Das hängt vom Bereich ab. Im Facility Service zählen Erfahrung und Lernbereitschaft, im Event Service Kommunikation und ein sicheres Auftreten. Im Sicherheitsdienst brauchen Sie die IHK-Sachkunde – falls noch nicht vorhanden, unterstützen wir Sie beim Nachholen." },
   { question: "In welchen Regionen setzen Sie Personal ein?", answer: "Wir sind bundesweit tätig. Die konkreten Einsatzorte werden im Bewerbungsgespräch besprochen." },
   { question: "Wie läuft die Einarbeitung ab?", answer: "Jede neue Einsatzkraft erhält eine strukturierte Einarbeitung: objektspezifisches Briefing, Vorstellung der Abläufe und Meldeketten sowie Begleitung durch erfahrene Kollegen in den ersten Einsätzen." },
   { question: "Gibt es auch Teilzeit- oder Nebenjob-Möglichkeiten?", answer: "Ja, wir bieten verschiedene Arbeitszeitmodelle an – von Vollzeit über Teilzeit bis hin zu flexiblen Einsatzmodellen für Früh-, Nacht- oder Wochenenddienste." },
@@ -65,7 +65,7 @@ const KarrierePage = () => {
     <PageLayout>
       <SEOHead
         title="Karriere bei Sentinel Services – Jobs bundesweit"
-        description="Jobs in Reinigung, Facility Management, Grünpflege und Sicherheit. Faire Bezahlung, planbare Einsätze, Weiterbildung. Jetzt bundesweit bewerben."
+        description="Jobs in Sicherheit, Facility und Event Service. Faire Bezahlung, planbare Einsätze, Weiterbildung. Jetzt bundesweit bewerben."
         keywords="Gebäudereiniger Job, Facility Management Job, Gärtner Job, Hausmeister Job, Security Job, Sachkunde Job, Karriere Sentinel Services"
       />
       <FAQPageJsonLd faqs={careerFaqs} />
@@ -77,14 +77,14 @@ const KarrierePage = () => {
       />
       <WebPageJsonLd
         name="Karriere bei Sentinel Services"
-        description="Stellenprofile, Anforderungen und Bewerbungsprozess im Sicherheitsdienst."
+        description="Tätigkeitsfelder, Anforderungen und Bewerbung für Sicherheit, Facility und Event Service."
         url={`${BASE_URL}/karriere`}
       />
 
       <PageHero
         badge="Karriere"
-        title="Job mit Perspektive – in Reinigung, Facility, Grünanlagen oder Sicherheit"
-        subtitle="Wir suchen engagierte Mitarbeitende und Nachwuchs für Gebäudereinigung, Facility Management, Garten- und Grünanlagenpflege sowie Sicherheitsdienst. Faire Bedingungen, planbare Einsätze, echte Entwicklung."
+        title="Arbeiten bei Sentinel Services"
+        subtitle="Sicherheit, Facility und Event Service brauchen Menschen, die ihre Aufgaben kennen und zuverlässig umsetzen. Wir bieten strukturierte Einarbeitung, klare Zuständigkeiten und planbare Einsätze."
       />
 
       {/* 3-step application process */}
@@ -187,7 +187,7 @@ const KarrierePage = () => {
               Das unterscheidet uns als Arbeitgeber
             </h2>
             <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
-              Wir wissen: Gute Sicherheitsarbeit beginnt bei zufriedenen Mitarbeitern. Deshalb setzen wir auf faire Bedingungen, 
+              Wir wissen: Gute Arbeit beginnt bei zufriedenen Mitarbeitern. Deshalb setzen wir auf faire Bedingungen, 
               Entwicklung und echte Wertschätzung.
             </p>
           </div>

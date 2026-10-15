@@ -8,6 +8,21 @@ export interface ServiceDetailBlock {
 }
 
 export const serviceDetails: Record<string, ServiceDetailBlock[]> = {
+  "empfang-und-akkreditierung": [
+    { heading: "Ankunft und Anmeldung abstimmen", body: "Vor dem Einsatz klären wir, wann Gäste ankommen, welche Anmeldepunkte besetzt werden und wer Rückfragen entscheiden kann. Vorbereitete Unterlagen, Namensschilder und Wegweiser werden an den vereinbarten Stellen bereitgehalten." },
+    { heading: "Mit Gästedaten sparsam umgehen", body: "Der Zugriff auf Anmeldedaten wird auf die vorgesehenen Kräfte und den konkreten Zweck beschränkt. Umfang, Übergabe und Löschung legen wir mit Ihnen vorab fest. Listen werden weder für eigene Werbung noch für andere Veranstaltungen verwendet." },
+    { heading: "Übergabe an den Veranstaltungsschutz", body: "Bei sicherheitsrelevanten Fragen entscheidet nicht das Empfangsteam. Die zuständigen Sicherheitskräfte werden über den vereinbarten Meldeweg hinzugezogen. So bleibt der Empfang ansprechbar, ohne Zuständigkeiten zu vermischen." },
+  ],
+  gaestebetreuung: [
+    { heading: "Orientierung mit verlässlichen Informationen", body: "Die Kräfte kennen Räume, Wege und den freigegebenen Veranstaltungsablauf. Für Fragen, die sie nicht selbst beantworten können, gibt es benannte Ansprechpersonen in Ihrer Organisation." },
+    { heading: "Änderungen abgestimmt weitergeben", body: "Wenn sich Zeiten oder Programmpunkte ändern, erhält das Team die Information von Ihrer Veranstaltungsleitung. Auskünfte bleiben dadurch einheitlich. Besondere Anliegen werden weitergeleitet, nicht improvisiert entschieden." },
+    { heading: "Einsatzpunkte und Zeiten festlegen", body: "Wir planen die Betreuung nach Ankunft, Pausen und Veranstaltungsende. Sie nennen die erwartete Gästezahl und die Bereiche, in denen Unterstützung gebraucht wird; daraus legen wir Besetzung und Übergaben fest." },
+  ],
+  "operative-eventunterstuetzung": [
+    { heading: "Aufgaben vor Ort eindeutig verteilen", body: "Service- und Informationspunkte, Übergaben und Rückmeldewege werden vor Beginn festgelegt. Das Team arbeitet nach Ihrem Ablaufplan und übernimmt die vereinbarten Tätigkeiten, nicht die Gesamtleitung der Veranstaltung." },
+    { heading: "Direkter Kontakt zur Veranstaltungsleitung", body: "Für Rückfragen und Abweichungen gibt es eine benannte Ansprechperson. Neue Aufgaben werden mit dieser abgestimmt, bevor der Leistungsumfang verändert wird." },
+    { heading: "Nach dem Einsatz", body: "Offene Punkte und besondere Vorkommnisse werden im vereinbarten Umfang übergeben. Bei wiederkehrenden Veranstaltungen fließen diese Rückmeldungen in die nächste Einsatzabstimmung ein." },
+  ],
   // ---------- Sicherheit ----------
   objektschutz: [
     {

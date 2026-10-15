@@ -7,7 +7,7 @@ const NotFound = () => (
   <PageLayout>
     <SEOHead
       title="Seite nicht gefunden | Sentinel Services"
-      description="Die angeforderte Seite wurde nicht gefunden. Über die Navigation erreichen Sie Sicherheit, Reinigung, Grünanlagen und Facility Management."
+      description="Die angeforderte Seite wurde nicht gefunden. Über die Navigation erreichen Sie Sicherheit, Facility und Event Service."
       noindex
     />
     <PageHero

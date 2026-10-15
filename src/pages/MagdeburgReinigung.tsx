@@ -13,22 +13,22 @@ import { BASE_URL } from "@/lib/seo";
 const leistungen = [
   {
     title: "Unterhaltsreinigung für Büros und Praxen",
-    href: "/reinigung/unterhaltsreinigung",
+    href: "/facility/unterhaltsreinigung",
     text: "Feste Reinigungskräfte, fester Turnus, feste Zeiten – vor Dienstbeginn, in der Mittagspause oder abends. Sanitärbereiche, Böden, Küchen und Kontaktflächen nach abgestimmtem Leistungsverzeichnis, dokumentiert je Einsatz.",
   },
   {
     title: "Glas- und Fensterreinigung",
-    href: "/reinigung/glas-und-fensterreinigung",
+    href: "/facility/glas-und-fensterreinigung",
     text: "Fensterflächen, Glastrennwände, Eingangsanlagen und Rahmen. Für höher gelegene Flächen arbeiten wir mit Teleskoptechnik oder Hubsteiger, nach Absprache auch außerhalb der Geschäftszeiten.",
   },
   {
     title: "Grundreinigung",
-    href: "/reinigung/grundreinigung",
+    href: "/facility/grundreinigung",
     text: "Wenn die Unterhaltsreinigung an ihre Grenzen kommt: Grundreinigung von Hartböden inklusive Einpflege, Teppichreinigung und Entfernung von Altbelägen – meist an Wochenenden, damit der Betrieb weiterläuft.",
   },
   {
     title: "Bauschluss- und Sonderreinigung",
-    href: "/reinigung/bauschluss-und-sonderreinigung",
+    href: "/facility/bauschluss-und-sonderreinigung",
     text: "Bauzwischen- und Bauschlussreinigung für Objekte in Magdeburg und Umland, inklusive Entfernung von Folien, Mörtelresten und Aufklebern – abgestimmt auf Übergabetermine.",
   },
 ];
@@ -76,7 +76,6 @@ const serviceSchema = {
   url: `${BASE_URL}/magdeburg/gebaeudereinigung`,
   areaServed: [
     { "@type": "City", name: "Magdeburg" },
-    { "@type": "AdministrativeArea", name: "Landkreis Börde" },
   ],
   provider: {
     "@type": "LocalBusiness",
@@ -120,7 +119,8 @@ const MagdeburgReinigungPage = () => {
       </Helmet>
 
       <PageHero
-        badge="Gebäudereinigung Magdeburg"
+        backLink={{ label: "Facility", href: "/facility" }}
+        badge="Facility · Gebäudereinigung Magdeburg"
         title="Gebäudereinigung in Magdeburg"
         subtitle="Von der Grusonstraße aus reinigen wir Büros, Praxen, Wohnanlagen und Gewerbeobjekte im gesamten Magdeburger Stadtgebiet – mit eingewiesenem Stammpersonal, festen Zeiten und einer Ansprechperson, die das Objekt kennt."
       >
@@ -195,8 +195,7 @@ const MagdeburgReinigungPage = () => {
               <h2 className="h-section mb-4">Wo wir reinigen</h2>
               <p className="prose-body text-muted-foreground mb-6">
                 Wir fahren feste Touren durch das Stadtgebiet – Altstadt, Stadtfeld, Buckau, Sudenburg, Neue Neustadt und
-                die Gewerbegebiete im Norden. Objekte in Schönebeck, Barleben, Wolmirstedt und Burg liegen ebenfalls im
-                täglichen Radius. Reinigungsmittel, Maschinen und Verbrauchsmaterial bringen wir mit; auf Wunsch
+                die Gewerbegebiete im Norden. Weitere Einsatzorte stimmen wir anhand Ihrer Anfrage ab. Reinigungsmittel, Maschinen und Verbrauchsmaterial bringen wir mit; auf Wunsch
                 übernehmen wir auch die Bestückung von Sanitärspendern.
               </p>
               <ul className="grid gap-2.5 sm:grid-cols-2">

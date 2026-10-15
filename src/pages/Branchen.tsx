@@ -7,7 +7,7 @@ import SEOHead from "@/components/SEOHead";
 import FAQSection from "@/components/sections/FAQSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { industries } from "@/data/industries";
-import { services } from "@/data/services";
+import { findServiceAnywhere } from "@/data/divisions";
 import { FAQPageJsonLd, BreadcrumbJsonLd, ItemListJsonLd } from "@/components/StructuredData";
 import { BASE_URL } from "@/lib/seo";
 
@@ -23,7 +23,7 @@ const risks: Record<string, string[]> = {
 };
 
 const branchenFaqs = [
-  { question: "Arbeiten Sie nur in bestimmten Branchen?", answer: "Nein, wir sind branchenübergreifend aufgestellt. Die aufgeführten Branchen sind Schwerpunkte – Reinigung, Facility Management, Grünpflege und Sicherheit lassen sich auch für andere Bereiche kombinieren." },
+  { question: "Arbeiten Sie nur in bestimmten Branchen?", answer: "Nein, wir sind branchenübergreifend aufgestellt. Die aufgeführten Branchen sind Schwerpunkte – Sicherheit, Facility und Event Service lassen sich auch für andere Bereiche kombinieren." },
   { question: "Wie passen Sie Ihre Leistungen an die Branche an?", answer: "Jede Branche hat eigene Abläufe und Hygiene-, Pflege- oder Sicherheitsanforderungen. Wir führen eine objektspezifische Analyse durch und stimmen Personal, Frequenzen und Maßnahmen darauf ab." },
   { question: "Können Sie mehrere Standorte gleichzeitig betreuen?", answer: "Ja, wir betreuen auch Kunden mit mehreren Standorten – mit einheitlichen Standards, zentraler Koordination und einem Ansprechpartner über alle Leistungsbereiche hinweg." },
 ];
@@ -36,7 +36,7 @@ const BranchenPage = () => {
     <PageLayout>
       <SEOHead
         title="Objektbetreuung nach Branche – 8 Einsatzbereiche | Sentinel Services"
-        description="Reinigung, Facility Management, Grünpflege und Sicherheit nach Branche: Gewerbe, Industrie, Baustelle, Handel, Events, Hotel, Wohnanlagen, Behörden."
+        description="Sicherheit, Facility und Event Service nach Branche: Gewerbe, Industrie, Baustelle, Handel, Events, Hotel, Wohnanlagen, Behörden."
         keywords="Gebäudereinigung Branche, Facility Management Branche, Grünanlagenpflege gewerblich, Werkschutz Logistik, Eventsecurity, Hotelobjektbetreuung, Wohnanlagen Service"
       />
       <BreadcrumbJsonLd
@@ -57,7 +57,7 @@ const BranchenPage = () => {
       <PageHero
         badge="Branchen"
         title="Objektbetreuung nach Branche"
-        subtitle="Acht Branchen, eigene Abläufe, eigene Anforderungen – wir kombinieren Reinigung, Facility Management, Grünpflege und Sicherheit passgenau für Ihren Objekttyp."
+        subtitle="Büro, Baustelle oder Veranstaltung: Wir richten Sicherheit, Facility und Event Service nach den tatsächlichen Aufgaben aus. Klare Zuständigkeiten, passende Einsatzzeiten und ein abgestimmter Umfang."
       />
 
       {/* Stats */}
@@ -69,8 +69,8 @@ const BranchenPage = () => {
               <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Branchen-Schwerpunkte</p>
             </div>
             <div>
-              <p className="stat-number">6</p>
-              <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Leistungsbereiche</p>
+              <p className="stat-number">3</p>
+              <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Fachgebiete</p>
             </div>
             <div>
               <p className="stat-number">100%</p>
@@ -88,11 +88,11 @@ const BranchenPage = () => {
         <div ref={ref} className="fade-in-section mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
           <div className="max-w-2xl mb-12">
             <h2 className="h-section mb-4" style={{ color: "hsl(var(--section-light-fg))" }}>
-              Branchenspezifische Servicepakete
+              Leistungen nach Einsatzbereich
             </h2>
             <p className="prose-lead text-muted-fg">
               Ein Bürogebäude hat andere Anforderungen als eine Baustelle, ein Hotel oder eine Wohnanlage. Wir analysieren 
-              die branchentypischen Abläufe und stellen Reinigung, Pflege und Sicherheit so zusammen, dass Frequenzen, 
+              die branchentypischen Abläufe und stellen Sicherheit, Facility und Event Service so zusammen, dass Frequenzen, 
               Personal und Dokumentation exakt zum Objekt passen.
             </p>
           </div>
@@ -101,6 +101,7 @@ const BranchenPage = () => {
             {industries.map(({ icon: Icon, title, detail, relatedServices, slug }) => (
               <div
                 key={slug}
+                id={slug}
                 className="group relative rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg overflow-hidden"
                 style={{
                   background: "hsl(var(--section-light-card))",
@@ -108,7 +109,6 @@ const BranchenPage = () => {
                 }}
               >
                 {/* Left accent stripe */}
-                <div className="absolute left-0 top-0 bottom-0 w-1 rounded-l-xl bg-gradient-to-b from-primary to-accent" />
 
                 <div className="pl-3">
                   <div className="flex items-center gap-3 mb-4">
@@ -145,12 +145,13 @@ const BranchenPage = () => {
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {relatedServices.map((rs) => {
-                        const svc = services.find((s) => s.slug === rs);
-                        if (!svc) return null;
+                        const pair = findServiceAnywhere(rs);
+                        const svc = pair?.service;
+                        if (!svc || !pair) return null;
                         return (
                           <Link
                             key={rs}
-                            to={`/sicherheit/${rs}`}
+                            to={`/${pair.division.slug}/${rs}`}
                             className="rounded-md px-2.5 py-1 text-xs font-medium transition-colors hover:text-primary hover:border-primary/40"
                             style={{
                               border: "1px solid hsl(var(--section-light-border))",
@@ -183,7 +184,7 @@ const BranchenPage = () => {
             {[
               { icon: Shield, title: "Branchenerfahrung", desc: "Unsere Einsatzkräfte werden branchenspezifisch geschult – nicht pauschal eingesetzt." },
               { icon: CheckCircle, title: "Individuelle Konzepte", desc: "Kein Standardpaket: Jede Branchenlösung wird objektspezifisch entwickelt und regelmäßig angepasst." },
-              { icon: Zap, title: "Schnelle Umsetzung", desc: "Von der Anfrage zum Einsatz in wenigen Tagen – auch bei Akutbedarf zügig einsatzbereit." },
+              { icon: Zap, title: "Schnelle Umsetzung", desc: "Wir prüfen Zeiten und Personalverfügbarkeit konkret, bevor wir einen Einsatz zusagen." },
             ].map(({ icon: DiffIcon, title: diffTitle, desc }) => (
               <div key={diffTitle} className="text-center p-6">
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 mb-4">
@@ -204,12 +205,12 @@ const BranchenPage = () => {
             Branchenlösung für Ihr Unternehmen
           </h2>
           <p className="text-muted-fg max-w-xl mx-auto mb-8">
-            Wir analysieren die Anforderungen Ihrer Branche und stellen Reinigung, Facility Management, Grünpflege und Sicherheit passgenau zusammen.
+            Wir analysieren die Anforderungen Ihrer Branche und stellen Sicherheit, Facility und Event Service passgenau zusammen.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Button asChild size="lg">
               <Link to="/kontakt">
-                Jetzt Branchenlösung anfragen
+                Leistung anfragen
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

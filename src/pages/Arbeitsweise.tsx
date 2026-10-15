@@ -14,14 +14,14 @@ const phases = [
     icon: Search,
     step: "01",
     title: "Analyse vor Einsatz",
-    desc: "Jeder Auftrag beginnt mit einer Bestandsaufnahme: Objekt, Risikoprofil, betriebliche Abläufe, Kundenerwartung.",
-    detail: "Wir bewerten Ihr Objekt hinsichtlich Lage, Zugänge, Betriebszeiten, bekannter Risiken und vorhandener Schutzmaßnahmen. Das Ergebnis ist eine strukturierte Grundlage für den Einsatzplan.",
-    deliverables: ["Objektbegehung vor Ort", "Risikobewertung und Schwachstellenanalyse", "Abstimmung mit Ihrem Ansprechpartner"],
+    desc: "Jeder Auftrag beginnt mit einer Bestandsaufnahme: Einsatzort, Aufgaben, Zeitraum und betriebliche Abläufe.",
+    detail: "Wir erfassen Flächen und Zugänge, Reinigungs- oder Pflegeintervalle sowie bei Veranstaltungen Gästezahl und Ablauf. Für Sicherheitsaufgaben bewerten wir zusätzlich Risiken und vorhandene Schutzmaßnahmen. Daraus erstellen wir den Einsatzplan.",
+    deliverables: ["Objektbegehung vor Ort", "Aufgaben und Einsatzbedingungen festhalten", "Abstimmung mit Ihrem Ansprechpartner"],
   },
   {
     icon: UserCheck,
     step: "02",
-    title: "Auswahl & Briefing Personal",
+    title: "Personalauswahl & Einweisung",
     desc: "Wir setzen gezielt Personal ein, das zum Einsatz passt – nach Qualifikation, Erfahrung und Auftreten.",
     detail: "Personalauswahl nach Fachkompetenz, Sprachkenntnissen und Einsatzpassung. Vor Einsatzbeginn erfolgt ein objektspezifisches Briefing mit allen relevanten Informationen.",
     deliverables: ["Profilabgleich mit Einsatzanforderungen", "Objektspezifisches Briefing", "Vorstellung beim Auftraggeber"],
@@ -31,7 +31,7 @@ const phases = [
     step: "03",
     title: "Führung im Einsatz",
     desc: "Feste Einsatzleitung, direkte Kommunikationswege und definierte Eskalationsstufen.",
-    detail: "Ein fester Einsatzleiter koordiniert vor Ort, hält den Kontakt zum Auftraggeber und steuert bei Abweichungen sofort nach.",
+    detail: "Eine benannte Ansprechperson koordiniert den Einsatz. Objektleitung oder Veranstaltungsleitung erhalten Rückmeldungen über vereinbarte Wege; Abweichungen werden gezielt geklärt.",
     deliverables: ["Fester Einsatzleiter als Ansprechpartner", "Definierte Eskalationsstufen", "Sofortmaßnahmen bei Abweichungen"],
   },
   {
@@ -47,7 +47,7 @@ const phases = [
 const teamCompetencies = [
   { icon: Shield, title: "Geprüftes Fachpersonal", desc: "Im Sicherheitsdienst gehört die IHK-Sachkundeprüfung zur Grundvoraussetzung – in den übrigen Bereichen arbeiten wir mit eingearbeiteten Fachkräften." },
   { icon: Users, title: "Feste Teams", desc: "Kontinuität statt Rotation – Sie bekommen feste Ansprechpartner und ein Team, das Ihr Objekt kennt." },
-  { icon: HeartPulse, title: "Regelmäßige Weiterbildung", desc: "Mindestens zweimal jährlich: Deeskalation, Erste Hilfe, Brandschutz und objektspezifische Schulungen." },
+  { icon: HeartPulse, title: "Regelmäßige Weiterbildung", desc: "Schulungen richten sich nach der Aufgabe: Arbeitssicherheit und Verfahren im Facility Service, Kommunikation im Event Service, Deeskalation und Erste Hilfe im Sicherheitsdienst." },
 ];
 
 const principles = [
@@ -60,7 +60,7 @@ const arbeitsweiseFaqs = [
   { question: "Wie schnell kann ein Einsatz starten?", answer: "Bei kurzfristigem Bedarf können wir zügig einsatzbereit sein. Für planbare Einsätze empfehlen wir eine Vorlaufzeit von mindestens einer Woche." },
   { question: "Wer ist mein Ansprechpartner?", answer: "Sie erhalten einen festen Einsatzleiter als direkten Ansprechpartner. Dieser koordiniert den Einsatz, hält Sie informiert und ist bei Fragen oder Änderungen direkt erreichbar." },
   { question: "Wie oft erhalte ich Berichte?", answer: "Die Berichtsfrequenz wird individuell vereinbart – von täglichen Schichtprotokollen bis zu wöchentlichen oder monatlichen Zusammenfassungen." },
-  { question: "Kann ich den Einsatz kurzfristig ändern?", answer: "Ja, wir sind flexibel. Änderungen an Einsatzzeiten, -umfang oder Personal können kurzfristig umgesetzt werden." },
+  { question: "Kann ich den Einsatz kurzfristig ändern?", answer: "Änderungen prüfen wir anhand der verfügbaren Kräfte und des vereinbarten Umfangs. Wir bestätigen die Umsetzung, bevor der Einsatzplan angepasst wird." },
 ];
 
 const ArbeitsweisePage = () => {
@@ -72,7 +72,7 @@ const ArbeitsweisePage = () => {
     <PageLayout>
       <SEOHead
         title="Unsere Arbeitsweise – Ablauf in 4 Phasen | Sentinel Services"
-        description="Unser Vier-Phasen-Modell für Reinigung, FM, Grünpflege und Sicherheit: Analyse, Personal, Einsatz, Reporting – transparent und mit fester Einsatzleitung."
+        description="Unser Vier-Phasen-Modell für Sicherheit, Facility und Event Service: Analyse, Personal, Einsatz, Reporting – transparent und mit fester Einsatzleitung."
       />
       <BreadcrumbJsonLd
         items={[
@@ -90,14 +90,14 @@ const ArbeitsweisePage = () => {
 
       <PageHero
         badge="Arbeitsweise"
-        title="So arbeiten wir – unser Betriebsmodell"
-        subtitle="Reinigung, Pflege und Sicherheit sind kein Produkt, sondern ein Prozess. Vier Phasen, die jeden Einsatz tragen – egal in welchem Bereich."
+        title="Unsere Arbeitsweise"
+        subtitle="Sicherheit, Facility und Event Service folgen demselben Anspruch: Aufgaben vorab klären, Personal einweisen, den Einsatz führen und Ergebnisse nachvollziehbar übergeben."
       />
 
       {/* Stats */}
       <section className="section-light border-b" style={{ borderColor: "hsl(var(--section-light-border))" }}>
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-3 gap-6 text-center">
             <div>
               <p className="stat-number">4</p>
               <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Phasen pro Einsatz</p>

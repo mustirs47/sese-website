@@ -7,7 +7,7 @@
 /leistungen/kontroll-und-streifendienst   /sicherheit/kontroll-und-streifendienst      301
 /leistungen/sicherheitskonzepte           /sicherheit/sicherheitskonzepte              301
 /leistungen/*                             /sicherheit                                  301
-/gruenanlagen/winterdienst                /facility-management/winterdienst            301
+/gruenanlagen/winterdienst                /facility/winterdienst            301
 /facility-management/technische-objektbetreuung  /facility-management                  301
 /facility-management/technisches-fm       /facility-management                         301
 /facility-management/infrastrukturelles-fm /facility-management                        301

@@ -22,9 +22,9 @@ export const legacyRoutes: LegacyRoute[] = [
     to: "/sicherheit",
     title: "Leistungen – neue Struktur | Sentinel Services",
     description:
-      "Unsere Leistungen sind jetzt in vier Bereiche gegliedert: Sicherheit, Gebäudereinigung, Grünanlagenpflege und infrastrukturelles Facility Management.",
+      "Unsere Leistungen sind jetzt in drei Fachgebiete gegliedert: Sicherheit, Facility und Event Service.",
     intro:
-      "Die frühere Sammelseite „Leistungen“ ist in vier Bereiche aufgeteilt. Am nächsten kommt Ihrem Anliegen der Bereich Sicherheit & Bewachung.",
+      "Die frühere Sammelseite „Leistungen“ ist in drei Fachgebiete aufgeteilt. Am nächsten kommt Ihrem Anliegen der Bereich Sicherheit & Bewachung.",
     linkLabel: "Zu Sicherheit & Bewachung",
   },
   sec("objektschutz", "Objektschutz", "Objektschutz für Gewerbe, Industrie und Wohnanlagen – die Seite finden Sie jetzt im Bereich Sicherheit & Bewachung."),
@@ -35,7 +35,7 @@ export const legacyRoutes: LegacyRoute[] = [
   sec("sicherheitskonzepte", "Sicherheitskonzepte", "Sicherheitskonzepte und Gefährdungsanalysen – die Seite finden Sie jetzt im Bereich Sicherheit & Bewachung."),
   {
     path: "/gruenanlagen/winterdienst",
-    to: "/facility-management/winterdienst",
+    to: "/facility/winterdienst",
     title: "Winterdienst – neue Adresse | Sentinel Services",
     description:
       "Der Winterdienst gehört jetzt zum infrastrukturellen Facility Management: Räum- und Streupflicht, Dokumentation und Bereitschaft rund um die Uhr.",
@@ -50,7 +50,7 @@ export const legacyRoutes: LegacyRoute[] = [
     "kaufmaennisches-fm",
   ].map((slug) => ({
     path: `/facility-management/${slug}`,
-    to: "/facility-management",
+    to: "/facility",
     title: "Infrastrukturelles Facility Management | Sentinel Services",
     description:
       "Winterdienst, Hausmeisterdienste, Entsorgungsmanagement und Parkraumbewirtschaftung – gebündelt im infrastrukturellen Facility Management.",
