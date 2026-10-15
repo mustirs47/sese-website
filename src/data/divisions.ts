@@ -18,6 +18,7 @@ import {
   Wrench,
   MapPin,
   ClipboardList,
+  Users,
   type LucideIcon,
 } from "@/lib/icons";
 
