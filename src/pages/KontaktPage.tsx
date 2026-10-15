@@ -115,7 +115,7 @@ const KontaktPage = () => {
     <PageLayout>
       <SEOHead
         title="Anfrage stellen – Kontakt | Sentinel Services"
-        description="Reinigung, Facility Management, Grünpflege oder Sicherheit anfragen: Bedarf, Einsatzort und Zeitraum nennen – wir melden uns mit einem konkreten Angebot."
+        description="Sicherheit, Facility oder Event Service anfragen: Bedarf, Einsatzort und Zeitraum nennen – wir melden uns mit einem konkreten Angebot."
       />
       <BreadcrumbJsonLd
         items={[
@@ -134,7 +134,7 @@ const KontaktPage = () => {
       <PageHero
         badge="Kontakt"
         title="Anfrage stellen"
-        subtitle="Beschreiben Sie Ihren Bedarf – wir melden uns schnellstmöglich mit einem konkreten Vorschlag."
+        subtitle="Nennen Sie Leistung, Einsatzort und Zeitraum. Wir prüfen Ihre Anfrage und melden uns mit einer konkreten Einschätzung zur Umsetzung."
       />
 
       {/* Process steps row */}
@@ -188,7 +188,7 @@ const KontaktPage = () => {
 
               {/* Guarantees */}
               <div className="rounded-xl p-5" style={{ background: "hsl(var(--primary) / 0.05)", border: "1px solid hsl(var(--section-light-border))" }}>
-                <p className="text-xs font-bold text-primary mb-3 uppercase tracking-wider">Unsere Garantie</p>
+                <p className="text-xs font-bold text-primary mb-3 uppercase tracking-wider">Was Sie von uns erhalten</p>
                 <ul className="space-y-2.5">
                   {guarantees.map((g) => (
                     <li key={g} className="flex items-start gap-2.5 text-sm text-muted-fg">
@@ -260,7 +260,7 @@ const KontaktPage = () => {
                   </div>
                   <div>
                     <label htmlFor={id("service")} className="text-xs font-medium mb-1.5 block" style={{ color: "hsl(var(--section-light-fg))" }}>Gewünschte Leistung</label>
-                    <Input id={id("service")} name="service" maxLength={150} placeholder="z.B. Unterhaltsreinigung, Facility Management, Grünpflege, Objektschutz" />
+                    <Input id={id("service")} name="service" maxLength={150} placeholder="z.B. Objektschutz, Gebäudereinigung oder Gästebetreuung" />
                   </div>
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div>
@@ -269,7 +269,7 @@ const KontaktPage = () => {
                     </div>
                     <div>
                       <label htmlFor={id("period")} className="text-xs font-medium mb-1.5 block" style={{ color: "hsl(var(--section-light-fg))" }}>Zeitraum</label>
-                      <Input id={id("period")} name="period" maxLength={80} placeholder="z.B. ab sofort, Q2 2026" />
+                      <Input id={id("period")} name="period" maxLength={80} placeholder="z.B. ab November oder am Veranstaltungstag" />
                     </div>
                   </div>
                   <div>
@@ -340,8 +340,8 @@ const KontaktPage = () => {
           <div className="grid gap-6 sm:grid-cols-2 lg:gap-8">
             {[
               {
-                heading: "Objekt und Fläche",
-                body: "Art des Objekts, ungefähre Größe und Nutzung sagen mehr als jede Leistungsbezeichnung. Ein Bürogebäude mit Publikumsverkehr braucht andere Intervalle als eine Lagerhalle, eine Wohnanlage andere Zeiten als eine Produktion im Dreischichtbetrieb.",
+                heading: "Objekt oder Veranstaltung",
+                body: "Bei Veranstaltungen nennen Sie Gästezahl, Veranstaltungsort und Aufgaben vor Ort. Bei Gebäuden helfen Objektart, ungefähre Fläche und Nutzung. Ein Bürogebäude mit Publikumsverkehr braucht andere Intervalle als eine Lagerhalle, eine Wohnanlage andere Zeiten als eine Produktion im Dreischichtbetrieb.",
               },
               {
                 heading: "Zeitraum und Turnus",
@@ -353,15 +353,15 @@ const KontaktPage = () => {
               },
               {
                 heading: "Was danach passiert",
-                body: "Nach Ihrer Anfrage melden wir uns in der Regel innerhalb eines Werktags. Bei größeren Objekten vereinbaren wir eine Begehung, sonst reicht meist ein kurzes Telefonat. Sie erhalten anschließend ein schriftliches Angebot mit Leistungsverzeichnis, Intervallen und Preisen – ohne automatische Verlängerung im Kleingedruckten.",
+                body: "Nach Ihrer Anfrage prüfen wir Umfang und Verfügbarkeit und melden uns bei Ihnen. Bei größeren Objekten vereinbaren wir eine Begehung, sonst reicht meist ein kurzes Telefonat. Sie erhalten anschließend ein schriftliches Angebot mit Leistungsverzeichnis, Intervallen und Preisen – mit klar benannten Vertragsbedingungen.",
               },
               {
                 heading: "Mehrere Bereiche gleichzeitig",
-                body: "Wenn Sie Sicherheit, Reinigung, Grünpflege oder Facility Management für dasselbe Objekt brauchen, schreiben Sie das gleich mit dazu. Wir bündeln die Leistungen dann in einem Angebot und einer Objektleitung – das spart Ihnen Schnittstellen und macht Zuständigkeiten im Alltag eindeutig.",
+                body: "Wenn Sie Sicherheit, Facility oder Event Service zusammen benötigen, nennen Sie uns die gewünschten Aufgaben. Wir bündeln die Leistungen dann in einem Angebot und einer Objektleitung – das spart Ihnen Schnittstellen und macht Zuständigkeiten im Alltag eindeutig.",
               },
               {
                 heading: "Datenschutz",
-                body: "Wir verarbeiten Ihre Angaben ausschließlich zur Bearbeitung der Anfrage und geben sie nicht an Dritte weiter. Details dazu stehen in unserer Datenschutzerklärung. Wenn Sie lieber ohne Formular starten: eine kurze E-Mail mit Objekt und Bedarf genügt.",
+                body: "Wir verwenden Ihre Angaben zur Bearbeitung der Anfrage. Die technische Formularzustellung erfolgt über FormSubmit; Hinweise dazu stehen in der Datenschutzerklärung. Details dazu stehen in unserer Datenschutzerklärung. Wenn Sie lieber ohne Formular starten: eine kurze E-Mail mit Objekt und Bedarf genügt.",
               },
             ].map(({ heading, body }) => (
               <article key={heading} className="min-w-0">
@@ -383,7 +383,7 @@ const KontaktPage = () => {
         <div ref={ref2} className="fade-in-section mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
           <div className="text-center mb-10">
             <h2 className="h-section mb-3">
-              Noch unsicher? Informieren Sie sich weiter
+              Leistungen und Abläufe im Überblick
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
               Erfahren Sie mehr über unsere Leistungen, Qualifikationen und Arbeitsweise – oder schreiben Sie uns eine Nachricht.
@@ -391,7 +391,7 @@ const KontaktPage = () => {
           </div>
           <div className="stagger-children grid gap-4 sm:grid-cols-3">
             {[
-              { title: "Unsere Bereiche", desc: "Sicherheit, Reinigung, Grünanlagen, Facility Management", href: "/#leistungen" },
+              { title: "Unsere Bereiche", desc: "Sicherheit, Facility und Event Service", href: "/#leistungen" },
               { title: "Qualifikationen", desc: "Nachweise und Zertifizierungen unseres Personals", href: "/qualifikationen" },
               { title: "Arbeitsweise", desc: "Unser strukturierter 4-Phasen-Prozess", href: "/arbeitsweise" },
             ].map(({ title, desc, href }) => (

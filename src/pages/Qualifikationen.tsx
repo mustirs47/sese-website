@@ -12,7 +12,7 @@ import { BASE_URL } from "@/lib/seo";
 const groups = [
   {
     icon: Scale,
-    title: "Gewerberechtliche Grundlage",
+    title: "Sicherheit: rechtliche Grundlage",
     items: [
       { name: "Gewerbeerlaubnis nach §34a GewO", detail: "Offizielle Zulassung für gewerbliche Bewachung" },
       { name: "Sachkundeprüfung nach §34a GewO (IHK)", detail: "Umfassende Fachprüfung bei der Industrie- und Handelskammer" },
@@ -22,23 +22,23 @@ const groups = [
   },
   {
     icon: GraduationCap,
-    title: "Fachliche Qualifikation",
+    title: "Facility: fachliche Einweisung",
     items: [
-      { name: "Geprüfte Schutz- und Sicherheitskräfte", detail: "IHK-zertifizierte Weiterbildung mit Abschlussprüfung" },
-      { name: "Schulung in Rechtsgrundlagen und Eingriffsrecht", detail: "Kenntnisse in Notwehr, Jedermannsrecht, Hausrecht" },
-      { name: "Regelmäßige Auffrischungslehrgänge", detail: "Jährliche Updates zu Rechtsänderungen und Best Practices" },
+      { name: "Material- und Verfahrenskenntnis", detail: "Einweisung in Reinigungsmittel, Dosierung und geeignete Arbeitsverfahren" },
+      { name: "Arbeitssicherheit am Objekt", detail: "Zugänge, Maschinen und Schutzmaßnahmen nach Tätigkeit" },
+      { name: "Abgestimmter Pflege- und Leistungsplan", detail: "Flächen, Turnus und Qualitätskontrollen vor Beginn klären" },
     ],
-    relevance: "Rechtssicheres Handeln und korrekte Reaktion in kritischen Situationen – minimiert Ihr Haftungsrisiko als Auftraggeber.",
+    relevance: "Passende Verfahren und eine konkrete Einweisung bilden die Grundlage für die vereinbarte Facility-Leistung.",
   },
   {
     icon: HeartPulse,
-    title: "Zusatzqualifikationen",
+    title: "Event Service: Einsatzvorbereitung",
     items: [
-      { name: "Erste-Hilfe-Ausbildung", detail: "16-stündige Ausbildung, alle 2 Jahre aufgefrischt" },
-      { name: "Brandschutzhelfer-Ausbildung", detail: "Theoretische und praktische Schulung inkl. Feuerlöschübung" },
-      { name: "Deeskalationstraining", detail: "Techniken zur Konfliktvermeidung und -bewältigung" },
+      { name: "Gästekommunikation", detail: "Klare Auskünfte und geordnete Weiterleitung von Anliegen" },
+      { name: "Einweisung in den Veranstaltungsablauf", detail: "Räume, Servicepunkte und Ansprechpersonen kennen" },
+      { name: "Getrennte Service- und Sicherheitsaufgaben", detail: "Meldewege und Zuständigkeiten vorab festlegen" },
     ],
-    relevance: "Schnelles Handeln bei Notfällen und reduziertes Eskalationsrisiko – Ihre Mitarbeiter und Gäste sind in sicheren Händen.",
+    relevance: "Gäste erhalten verlässliche Auskünfte, während sicherheitsrelevante Fragen an die zuständigen Kräfte weitergegeben werden.",
   },
   {
     icon: Settings,
@@ -53,14 +53,14 @@ const groups = [
 ];
 
 const qualFaqs = [
-  { question: "Sind alle Mitarbeiter §34a-geprüft?", answer: "Ja, alle unsere Einsatzkräfte verfügen über die Sachkundeprüfung nach §34a GewO (IHK). Dies ist bei uns eine zwingende Einstellungsvoraussetzung." },
+  { question: "Gilt die Sachkundeanforderung für alle Fachgebiete?", answer: "Die Sachkundeprüfung nach §34a GewO (IHK) ist unsere Voraussetzung für Kräfte im Sicherheitsdienst. Facility und Event Service haben eigene, auf die Tätigkeit abgestimmte Anforderungen. Servicepersonal übernimmt keine Bewachungsaufgaben." },
   { question: "Wie stellen Sie die Qualität dauerhaft sicher?", answer: "Durch regelmäßige interne Audits, verpflichtende Auffrischungsschulungen und standardisierte Einsatzdokumentation. Zusätzlich führen wir Kundenzufriedenheitsbefragungen durch." },
   { question: "Welche Zusatzausbildungen hat Ihr Personal?", answer: "Erste-Hilfe, Brandschutzhelfer und Deeskalationstraining – alles regelmäßig aufgefrischt. Je nach Einsatz kommen weitere Qualifikationen hinzu." },
   { question: "Wie oft werden Schulungen durchgeführt?", answer: "Wir schulen unser Personal mindestens zweimal jährlich in den Kernbereichen. Zusätzlich gibt es objektspezifische Einweisungen vor jedem neuen Einsatz." },
 ];
 
 const certProcess = [
-  { icon: BookOpen, title: "Grundausbildung", desc: "Sachkundeprüfung §34a GewO bei der IHK" },
+  { icon: BookOpen, title: "Grundausbildung", desc: "Nachweise entsprechend der Tätigkeit prüfen" },
   { icon: GraduationCap, title: "Fachschulung", desc: "Spezialisierung nach Einsatzbereich" },
   { icon: RefreshCw, title: "Auffrischung", desc: "Regelmäßige Weiterbildung und Re-Zertifizierung" },
   { icon: Shield, title: "Qualitätskontrolle", desc: "Interne Audits und Leistungsbewertung" },
@@ -75,7 +75,7 @@ const QualifikationenPage = () => {
     <PageLayout>
       <SEOHead
         title="Qualifikationen & Nachweise unseres Personals | Sentinel Services"
-        description="Qualifikationen je Bereich: Reinigung (DIN 13549), Grünpflege (FLL), Facility Management und Sicherheit (§34a GewO). Geprüftes Fachpersonal."
+        description="Qualifikationen für Sicherheit, Facility und Event Service: gesetzliche Nachweise im Sicherheitsdienst, fachliche Einweisung und klar getrennte Aufgaben."
         keywords="Gebäudereinigung Qualifikation, FLL Baumpflege, Facility Management Nachweise, Sachkundeprüfung 34a, §34a GewO, Fachpersonal Objektbetreuung"
       />
       <BreadcrumbJsonLd
@@ -87,7 +87,7 @@ const QualifikationenPage = () => {
       <WebPageJsonLd
         type="AboutPage"
         name="Qualifikationen und Nachweise – Sentinel Services"
-        description="Rechtliche, fachliche und betriebliche Qualifikationen unseres Personals in Reinigung, Facility Management, Grünpflege und Sicherheit."
+        description="Rechtliche, fachliche und betriebliche Qualifikationen unseres Personals in Sicherheit, Facility und Event Service."
         url={`${BASE_URL}/qualifikationen`}
       />
       <FAQPageJsonLd faqs={qualFaqs} />
@@ -95,7 +95,7 @@ const QualifikationenPage = () => {
       <PageHero
         badge="Qualifikationen"
         title="Qualifikationen & Nachweise unseres Personals"
-        subtitle="Welche Nachweise, Schulungen und Zusatzqualifikationen unsere Einsatzkräfte in Reinigung, Pflege, Facility Management und Sicherheit mitbringen – und was das für Sie als Auftraggeber konkret bedeutet."
+        subtitle="Welche Nachweise, Schulungen und Zusatzqualifikationen unsere Einsatzkräfte in Sicherheit, Facility und Event Service mitbringen – und was das für Sie als Auftraggeber konkret bedeutet."
       />
 
       {/* Summary stats */}
@@ -107,12 +107,12 @@ const QualifikationenPage = () => {
               <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Qualifikationsgruppen</p>
             </div>
             <div>
-              <p className="stat-number">12+</p>
-              <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Einzelnachweise</p>
+              <p className="stat-number">12</p>
+              <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Anforderungen im Überblick</p>
             </div>
             <div>
-              <p className="stat-number">100%</p>
-              <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>§34a-geprüft</p>
+              <p className="stat-number">3</p>
+              <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Fachgebiete</p>
             </div>
             <div>
               <p className="stat-number">2×</p>
@@ -130,10 +130,7 @@ const QualifikationenPage = () => {
               Warum Qualifikation zählt
             </h2>
             <p className="prose-lead text-muted-fg">
-              Ob Hygienestandard in der Unterhaltsreinigung, FLL-konforme Baumkontrolle, Betreiberpflichten im Facility 
-              Management oder §34a-geprüfter Sicherheitsdienst – die Qualifikation des Personals entscheidet über Qualität, 
-              Ergebnis und Ihr Haftungsrisiko als Auftraggeber. Wir investieren kontinuierlich in Aus- und Weiterbildung, 
-              dokumentieren jeden Nachweis und frischen jede Schulung regelmäßig auf.
+              Wir unterscheiden konsequent zwischen den Fachgebieten. Sicherheitskräfte benötigen die einschlägigen gesetzlichen Nachweise. Im Facility Service zählen Verfahren, Materialkenntnis und Arbeitssicherheit. Eventpersonal wird in Gästekommunikation, Ablauf und Meldewege eingewiesen. Welche Nachweise für Ihren Auftrag erforderlich sind, klären wir vor dem Einsatz.
             </p>
           </div>
         </div>
@@ -188,7 +185,7 @@ const QualifikationenPage = () => {
           <div className="text-center mb-12">
             <p className="eyebrow">Unser Qualifizierungsprozess</p>
             <h2 className="h-section">
-              Vom Nachwuchs zur zertifizierten Einsatzkraft
+              Vorbereitet auf die konkrete Aufgabe
             </h2>
             <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
               Jede Einsatzkraft durchläuft einen strukturierten Qualifizierungsprozess – von der Grundausbildung bis zur laufenden Weiterbildung.
@@ -255,7 +252,7 @@ const QualifikationenPage = () => {
             Überzeugt von unserer Qualifikation?
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto mb-8">
-            Stellen Sie Ihre Anfrage – wir zeigen Ihnen, wie wir Ihre Anforderungen in Reinigung, Pflege, Facility Management oder Sicherheit konkret umsetzen.
+            Stellen Sie Ihre Anfrage – wir zeigen Ihnen, wie wir Ihre Anforderungen in Sicherheit, Facility oder Event Service konkret umsetzen.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Button asChild size="lg">

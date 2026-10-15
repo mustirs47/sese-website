@@ -8,6 +8,17 @@ export interface DivisionDetailBlock {
 }
 
 export const divisionDetails: Record<string, DivisionDetailBlock[]> = {
+  facility: [
+    { heading: "Ein Umfang, klare Zuständigkeiten", body: "Wir halten fest, welche Gebäude- und Außenflächenleistungen Sie abgeben möchten. Reinigung, Grünpflege, Hausmeister- und Winterdienst erhalten jeweils einen eigenen Umfang und Turnus. Eine feste Ansprechperson führt die Rückmeldungen zusammen." },
+    { heading: "Reinigung nach Nutzung", body: "Büros, Sanitärbereiche und Glasflächen brauchen unterschiedliche Verfahren und Intervalle. Wir legen Flächen, Materialien und Zugangszeiten vor dem ersten Einsatz fest. Die Qualitätskontrolle orientiert sich am vereinbarten Leistungsverzeichnis." },
+    { heading: "Außenflächen über die Saison", body: "Rasen, Hecken, Beete und Wege betreuen wir nach einem abgestimmten Pflegeplan. Der Winterdienst bleibt ein eigener, vorrangig geplanter Leistungsbaustein: Flächen, Auslösung, Streumittel und Nachweise werden vor Saisonbeginn geregelt." },
+    { heading: "Die Grenze zur Facharbeit", body: "Infrastrukturelle Objektbetreuung ersetzt keine technische oder kaufmännische Gebäudeverwaltung. Aufgaben, die einem zugelassenen Fachbetrieb vorbehalten sind, übernehmen wir nicht selbst; wir melden den Bedarf und stimmen die weitere Bearbeitung mit Ihnen ab." },
+  ],
+  "event-service": [
+    { heading: "Vor Beginn ist der Ablauf geklärt", body: "Wir stimmen Ankunftszeiten, erwartete Gästezahl, Servicepunkte und Ansprechpersonen mit Ihrer Veranstaltungsleitung ab. Die eingesetzten Kräfte kennen ihre Aufgaben und Meldewege, bevor die ersten Gäste eintreffen." },
+    { heading: "Service bleibt Service", body: "Empfang und Gästebetreuung sorgen für Orientierung und geordnete Abläufe. Bewachung und sicherheitsrelevante Zutrittskontrollen sind Aufgaben des Veranstaltungsschutzes. Bei einer kombinierten Beauftragung bleiben Verantwortlichkeiten und Qualifikationen getrennt." },
+    { heading: "Unterstützung statt Gesamtplanung", body: "Sie geben den Veranstaltungsrahmen vor. Wir übernehmen vereinbarte operative Aufgaben vor Ort. Programmplanung, Locationbuchung, technische Facharbeiten und Catering gehören nicht zu diesem Leistungsumfang." },
+  ],
   sicherheit: [
     {
       heading: "Wie ein Auftrag bei uns beginnt",
@@ -15,7 +26,7 @@ export const divisionDetails: Record<string, DivisionDetailBlock[]> = {
     },
     {
       heading: "Wer bei Ihnen im Dienst steht",
-      body: "Jede Kraft ist vor dem ersten Dienst am Objekt eingewiesen. Wir arbeiten mit festen Teams je Standort, weil eine Kraft, die das Objekt kennt, Abweichungen bemerkt, die einem Wechselkopf entgehen. Urlaub und Krankheit decken benannte Vertretungen ab, die vorher mitgelaufen sind.",
+      body: "Jede Kraft ist vor dem ersten Dienst am Objekt eingewiesen. Wir arbeiten mit festen Teams je Standort, weil eine Kraft, die das Objekt kennt, Abweichungen bemerkt, die einem wechselnden Mitarbeitenden entgehen. Urlaub und Krankheit decken benannte Vertretungen ab, die vorher mitgelaufen sind.",
     },
     {
       heading: "Was Sie schriftlich zurückbekommen",

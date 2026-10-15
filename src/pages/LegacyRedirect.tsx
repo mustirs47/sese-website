@@ -16,10 +16,9 @@ interface LegacyRedirectProps {
 }
 
 const relatedLinks = [
-  { href: "/sicherheit", label: "Sicherheit & Bewachung" },
-  { href: "/reinigung", label: "Gebäudereinigung" },
-  { href: "/gruenanlagen", label: "Garten- & Grünanlagenpflege" },
-  { href: "/facility-management", label: "Infrastrukturelles Facility Management" },
+  { href: "/sicherheit", label: "Sicherheit" },
+  { href: "/facility", label: "Facility" },
+  { href: "/event-service", label: "Event Service" },
   { href: "/kontakt", label: "Anfrage stellen" },
 ];
 
@@ -57,12 +56,7 @@ const LegacyRedirect = ({ to, title, description, intro, linkLabel }: LegacyRedi
           <div className="max-w-3xl">
             <h2 className="h-section text-foreground">Warum diese Seite umgezogen ist</h2>
             <p className="mt-5 text-muted-foreground">
-              Sentinel Services betreut Objekte inzwischen über vier Leistungsbereiche hinweg:
-              Sicherheit und Bewachung, Gebäudereinigung, Garten- und Grünanlagenpflege sowie
-              infrastrukturelles Facility Management. Damit Sie schneller finden, was Sie suchen,
-              haben wir die früher einzeln geführten Seiten in diese vier Bereiche einsortiert.
-              Jeder Bereich fasst die zugehörigen Leistungen, typische Einsatzsituationen, den
-              Ablauf einer Beauftragung und die Dokumentation zusammen.
+              Sentinel Services arbeitet in drei Fachgebieten: Sicherheit, Facility und Event Service. Reinigung, Grünpflege und infrastrukturelle Objektleistungen gehören zu Facility. Empfang, Gästebetreuung und operative Veranstaltungsunterstützung finden Sie unter Event Service. Die Zielseite zeigt den jeweiligen Umfang und die Zuständigkeiten.
             </p>
             <p className="mt-4 text-muted-foreground">
               An der Leistung selbst ändert sich dadurch nichts. Ansprechpartner, Qualifikation der

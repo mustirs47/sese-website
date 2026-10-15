@@ -6,11 +6,12 @@ import PageHero from "@/components/layout/PageHero";
 import SEOHead from "@/components/SEOHead";
 import FAQSection from "@/components/sections/FAQSection";
 import { ServiceJsonLd, FAQPageJsonLd, BreadcrumbJsonLd } from "@/components/StructuredData";
-import { BASE_URL } from "@/lib/seo";
+import { BASE_URL, buildCanonical } from "@/lib/seo";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
   getDivision,
   getDivisionAndService,
+  findServiceAnywhere,
   type DivisionSlug,
 } from "@/data/divisions";
 import { serviceDetails } from "@/data/serviceDetails";
@@ -20,14 +21,14 @@ interface Props {
 }
 
 const trustItems = [
-  { icon: Shield, text: "Geprüftes Fachpersonal" },
+  { icon: Shield, text: "Aufgabenspezifisch eingewiesenes Personal" },
   { icon: Users, text: "Feste Ansprechpartner" },
   { icon: FileCheck, text: "Nachvollziehbare Dokumentation" },
-  { icon: CheckCircle, text: "Auf Ihr Objekt zugeschnitten" },
+  { icon: CheckCircle, text: "Auf Ihren Einsatz abgestimmt" },
 ];
 
 const processSteps = [
-  { icon: Target, title: "Analyse", desc: "Bestandsaufnahme Ihres Objekts und Ihrer Anforderungen" },
+  { icon: Target, title: "Analyse", desc: "Aufgaben, Einsatzort und Zeitraum festlegen" },
   { icon: Users, title: "Konzept", desc: "Individuelle Maßnahmenplanung und Personalauswahl" },
   { icon: Zap, title: "Einsatz", desc: "Strukturierter Start mit Einweisung und Führung" },
   { icon: FileCheck, title: "Reporting", desc: "Laufende Dokumentation und regelmäßige Berichte" },
@@ -45,14 +46,15 @@ const ServiceDetail = ({ division: divisionSlug }: Props) => {
   if (!pair) return <Navigate to={`/${division.slug}`} replace />;
 
   const { service } = pair;
+  const canonicalDivision = findServiceAnywhere(service.slug)?.division ?? division;
   const { icon: Icon, title, h1, metaTitle, metaDescription, longDesc, typicalClients, points, context, faqs } = service;
-  const detailUrl = `${BASE_URL}/${division.slug}/${slug}`;
-  const siblings = division.services.filter((s) => s.slug !== slug);
+  const detailUrl = `${BASE_URL}/${canonicalDivision.slug}/${slug}`;
+  const siblings = canonicalDivision.services.filter((s) => s.slug !== slug).slice(0, 6);
   const details = serviceDetails[slug || ""] ?? [];
 
   return (
     <PageLayout>
-      <SEOHead title={metaTitle} description={metaDescription} ogType="article" />
+      <SEOHead title={metaTitle} description={metaDescription} canonical={buildCanonical(`/${canonicalDivision.slug}/${service.slug}`)} ogType="article" />
       <ServiceJsonLd
         name={title}
         description={metaDescription}
@@ -62,13 +64,13 @@ const ServiceDetail = ({ division: divisionSlug }: Props) => {
       <BreadcrumbJsonLd
         items={[
           { name: "Startseite", url: `${BASE_URL}/` },
-          { name: division.title, url: `${BASE_URL}/${division.slug}` },
+          { name: canonicalDivision.title, url: `${BASE_URL}/${canonicalDivision.slug}` },
           { name: title, url: detailUrl },
         ]}
       />
 
       <PageHero
-        backLink={{ label: division.title, href: `/${division.slug}` }}
+        backLink={{ label: canonicalDivision.title, href: `/${canonicalDivision.slug}` }}
         title={h1}
         subtitle={context}
       >
@@ -88,7 +90,7 @@ const ServiceDetail = ({ division: divisionSlug }: Props) => {
             <div className="lg:col-span-2 min-w-0 space-y-8">
               <div>
                 <h2 className="text-xl font-bold mb-4" style={{ color: "hsl(var(--section-light-fg))" }}>
-                  Über diese Leistung
+                  Was wir übernehmen
                 </h2>
                 <p className="text-base leading-relaxed text-muted-fg">
                   {longDesc}
@@ -155,7 +157,7 @@ const ServiceDetail = ({ division: divisionSlug }: Props) => {
                   <p className="text-xs font-semibold mb-3" style={{ color: "hsl(var(--section-light-fg))" }}>Vertrauen Sie auf</p>
                   <ul className="space-y-2.5">
                     {trustItems.map(({ icon: TrustIcon, text }) => (
-                      <li key={text} className="flex items-center gap-2.5">
+                      <li key={text} className="flex items-start gap-2.5">
                         <TrustIcon className="h-4 w-4 text-primary shrink-0" />
                         <span className="text-sm text-muted-fg">{text}</span>
                       </li>
@@ -212,13 +214,13 @@ const ServiceDetail = ({ division: divisionSlug }: Props) => {
       <section ref={ref3} className="fade-in-section section-light border-t" style={{ borderColor: "hsl(var(--section-light-border))" }}>
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
           <h2 className="text-lg font-bold mb-6" style={{ color: "hsl(var(--section-light-fg))" }}>
-            Weitere Leistungen aus {division.title}
+            Weitere Leistungen aus {canonicalDivision.title}
           </h2>
-          <div className="grid gap-4 grid-cols-2 sm:grid-cols-5">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {siblings.map((s) => (
                 <Link
                   key={s.slug}
-                  to={`/${division.slug}/${s.slug}`}
+                  to={`/${canonicalDivision.slug}/${s.slug}`}
                   className="group rounded-xl border p-4 text-center transition-all hover:border-primary/30 hover:shadow-md hover:-translate-y-0.5"
                   style={{ borderColor: "hsl(var(--section-light-border))", background: "hsl(var(--section-light-card))" }}
                 >

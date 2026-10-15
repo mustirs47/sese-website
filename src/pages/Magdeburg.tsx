@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, MapPin, Shield, SprayCan, Leaf, Building2, CheckCircle } from "@/lib/icons";
+import { ArrowRight, MapPin, Shield, SprayCan, Leaf, Building2, Users, CheckCircle } from "@/lib/icons";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import PageHero from "@/components/layout/PageHero";
@@ -12,30 +12,9 @@ import { BASE_URL } from "@/lib/seo";
 import logoAsset from "@/assets/sentinel-logo.png.asset.json";
 
 const leistungen = [
-  {
-    icon: SprayCan,
-    title: "Gebäudereinigung in Magdeburg",
-    href: "/magdeburg/gebaeudereinigung",
-    text: "Unterhaltsreinigung für Büros, Praxen und Wohnanlagen, Glas- und Fensterreinigung, Grund- und Bauschlussreinigung. Feste Reinigungskräfte, feste Zeiten, protokollierte Leistung.",
-  },
-  {
-    icon: Shield,
-    title: "Sicherheitsdienst in Magdeburg",
-    href: "/sicherheit",
-    text: "Objektschutz, Baustellenbewachung, Empfangs- und Pfortendienst sowie Kontrollgänge – auch nachts, am Wochenende und kurzfristig für einzelne Veranstaltungen.",
-  },
-  {
-    icon: Leaf,
-    title: "Grünanlagenpflege in Magdeburg",
-    href: "/gruenanlagen",
-    text: "Rasen-, Hecken- und Beetpflege sowie Baumpflege auf Firmengeländen, in Wohnquartieren und an öffentlichen Flächen – nach festem Pflegeplan über die Saison.",
-  },
-  {
-    icon: Building2,
-    title: "Facility Management & Winterdienst",
-    href: "/facility-management",
-    text: "Hausmeisterdienste, Entsorgungs- und Abfallmanagement, Parkraumbewirtschaftung und Winterdienst mit Räum- und Streupflicht-Dokumentation für Magdeburger Objekte.",
-  },
+  { icon: Shield, title: "Sicherheit in Magdeburg", href: "/sicherheit", text: "Objektschutz, Baustellenbewachung, Empfangs- und Pfortendienst sowie Kontrollgänge – mit abgestimmten Dienstzeiten und Meldewegen." },
+  { icon: Building2, title: "Facility in Magdeburg", href: "/facility", text: "Gebäude- und Fensterreinigung, Grünpflege, Hausmeister- und Winterdienst. Wir bündeln den vereinbarten Umfang und stimmen Turnus, Zugang und Dokumentation ab." },
+  { icon: Users, title: "Event Service in Magdeburg", href: "/event-service", text: "Empfang, Gästebetreuung und operative Unterstützung bei Veranstaltungen. Aufgaben vor Ort werden mit Ihrer Veranstaltungsleitung festgelegt; Veranstaltungsschutz wird getrennt beauftragt." },
 ];
 
 const stadtteile = [
@@ -65,12 +44,12 @@ const faqs = [
   {
     question: "Arbeiten Sie nur in Magdeburg?",
     answer:
-      "Magdeburg und die Börde sind unser Heimatgebiet, hier sitzen Disposition und Personal. Darüber hinaus betreuen wir Objekte bundesweit, unter anderem für Kunden mit mehreren Standorten.",
+      "Unser Sitz ist Magdeburg. Darüber hinaus betreuen wir Objekte bundesweit, unter anderem für Kunden mit mehreren Standorten.",
   },
   {
     question: "Kann ich Reinigung, Winterdienst und Sicherheit zusammen beauftragen?",
     answer:
-      "Ja, und das ist für Magdeburger Objekte der Regelfall. Sie bekommen eine Ansprechperson, einen Vertrag und eine Abrechnung statt drei Firmen, die sich gegenseitig die Zuständigkeit zuschieben.",
+      "Ja. Wir stimmen die gewünschten Facility- und Sicherheitsleistungen gemeinsam ab. Umfang, Vertragsbedingungen und Ansprechpersonen werden vor Beginn festgelegt.",
   },
 ];
 
@@ -80,7 +59,7 @@ const localSchema = {
   "@id": `${BASE_URL}/magdeburg#localbusiness`,
   name: "Sentinel Services – Magdeburg",
   description:
-    "Gebäudereinigung, Sicherheitsdienst, Grünanlagenpflege und Facility Management für Objekte in Magdeburg und Umgebung.",
+    "Sicherheit, Facility und operativer Event Service in Magdeburg. Gebäudereinigung, Bewachung und Gästebetreuung mit klaren Zuständigkeiten.",
   url: `${BASE_URL}/magdeburg`,
   image: `${BASE_URL}${logoAsset.url}`,
   email: "info@sentinel-services.de",
@@ -96,8 +75,7 @@ const localSchema = {
   geo: { "@type": "GeoCoordinates", latitude: 52.1053, longitude: 11.6621 },
   areaServed: [
     { "@type": "City", name: "Magdeburg" },
-    { "@type": "AdministrativeArea", name: "Landkreis Börde" },
-    { "@type": "AdministrativeArea", name: "Sachsen-Anhalt" },
+
   ],
   priceRange: "€€",
 };
@@ -132,7 +110,7 @@ const MagdeburgPage = () => {
       <PageHero
         badge="Standort Magdeburg"
         title="Gebäudereinigung und Sicherheitsdienst in Magdeburg"
-        subtitle="Unser Sitz liegt in der Grusonstraße in Magdeburg. Von dort betreuen wir Büro- und Gewerbeobjekte, Wohnanlagen, Baustellen und Außenflächen im gesamten Stadtgebiet – Reinigung, Bewachung, Grünpflege und Winterdienst über einen Ansprechpartner."
+        subtitle="Unser Sitz liegt in der Grusonstraße in Magdeburg. Von dort betreuen wir Büro- und Gewerbeobjekte, Wohnanlagen, Baustellen und Außenflächen im gesamten Stadtgebiet – Sicherheit, Facility und Event Service mit festen Zuständigkeiten."
       >
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild size="lg">
@@ -162,7 +140,8 @@ const MagdeburgPage = () => {
             </p>
           </div>
 
-          <div className="stagger-children grid gap-6 sm:grid-cols-2">
+          <Link to="/magdeburg/gebaeudereinigung" className="link-arrow mb-8">Gebäudereinigung in Magdeburg im Detail <ArrowRight /></Link>
+          <div className="stagger-children grid gap-6 md:grid-cols-3">
             {leistungen.map(({ icon: Icon, title, href, text }) => (
               <div
                 key={href}
@@ -205,8 +184,7 @@ const MagdeburgPage = () => {
               <h2 className="h-section mb-4">Magdeburg und Umland</h2>
               <p className="prose-body text-muted-foreground mb-6">
                 Wir fahren Touren im gesamten Stadtgebiet, von der Altstadt über Stadtfeld und Buckau bis in die
-                Gewerbegebiete im Norden. Auch Objekte in der Börde, in Schönebeck, Barleben, Wolmirstedt oder Burg
-                liegen im täglichen Radius. Für Winterdienst planen wir die Routen vor Saisonbeginn, damit Räum- und
+                Gewerbegebiete im Norden. Weitere Einsatzorte prüfen wir anhand Ihres Auftrags und der verfügbaren Kräfte. Für Winterdienst planen wir die Routen vor Saisonbeginn, damit Räum- und
                 Streupflichten morgens fristgerecht erfüllt und dokumentiert sind.
               </p>
               <ul className="flex flex-wrap gap-2">

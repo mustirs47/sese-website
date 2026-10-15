@@ -7,8 +7,20 @@
 /leistungen/kontroll-und-streifendienst   /sicherheit/kontroll-und-streifendienst      301
 /leistungen/sicherheitskonzepte           /sicherheit/sicherheitskonzepte              301
 /leistungen/*                             /sicherheit                                  301
-/gruenanlagen/winterdienst                /facility-management/winterdienst            301
-/facility-management/technische-objektbetreuung  /facility-management                  301
-/facility-management/technisches-fm       /facility-management                         301
-/facility-management/infrastrukturelles-fm /facility-management                        301
-/facility-management/kaufmaennisches-fm   /facility-management                         301
+/gruenanlagen/winterdienst                /facility/winterdienst            301
+/facility-management/technische-objektbetreuung  /facility                             301
+/facility-management/technisches-fm       /facility                                    301
+/facility-management/infrastrukturelles-fm /facility                                   301
+/facility-management/kaufmaennisches-fm   /facility                                    301
+
+# Bestehende Leistungsadressen direkt zum neuen Fachgebiet
+/reinigung/unterhaltsreinigung /facility/unterhaltsreinigung 301
+/reinigung/glas-und-fensterreinigung /facility/glas-und-fensterreinigung 301
+/reinigung/grundreinigung /facility/grundreinigung 301
+/reinigung/bauschluss-und-sonderreinigung /facility/bauschluss-und-sonderreinigung 301
+/gruenanlagen/pflege /facility/pflege 301
+/gruenanlagen/baumpflege /facility/baumpflege 301
+/facility-management/winterdienst /facility/winterdienst 301
+/facility-management/hausmeisterdienste /facility/hausmeisterdienste 301
+/facility-management/entsorgungsmanagement /facility/entsorgungsmanagement 301
+/facility-management/parkraumbewirtschaftung /facility/parkraumbewirtschaftung 301

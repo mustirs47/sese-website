@@ -18,6 +18,7 @@ import {
   Wrench,
   MapPin,
   ClipboardList,
+  Users,
   type LucideIcon,
 } from "@/lib/icons";
 
@@ -40,10 +41,13 @@ export type DivisionSlug =
   | "sicherheit"
   | "reinigung"
   | "gruenanlagen"
-  | "facility-management";
+  | "facility-management"
+  | "facility"
+  | "event-service";
 
 export interface DivisionData {
   slug: DivisionSlug;
+  parent?: "facility";
   shortLabel: string;
   title: string;
   claim: string;
@@ -390,17 +394,17 @@ const facilityServices: ServiceData[] = [
   },
 ];
 
-export const divisions: DivisionData[] = [
+const existingDivisions: DivisionData[] = [
   {
     slug: "sicherheit",
     shortLabel: "Sicherheit",
-    title: "Sicherheit & Bewachung",
+    title: "Sicherheit",
     claim: "Geprüftes Personal, klare Konzepte, dokumentierte Einsätze.",
     icon: Shield,
     primaryKeyword: "Sicherheitsdienst",
     intro:
-      "Sicherheitsdienst und Wachdienst mit geprüftem Personal: Objektschutz, Veranstaltungsschutz, Baustellenbewachung, Empfangs- und Streifendienst sowie individuelle Sicherheitskonzepte – aus einer Hand, mit fester Einsatzleitung.",
-    h1: "Sicherheit & Bewachung",
+      "Wir schützen Gebäude, Baustellen und Veranstaltungen. Zugangskontrollen, Bewachung und Streifendienste folgen einem klaren Einsatzplan – mit eingewiesenem Personal und einer festen Einsatzleitung.",
+    h1: "Sicherheit",
     metaTitle: "Sicherheitsdienst & Wachdienst | Sentinel Services",
     metaDescription:
       "Sicherheitsdienst & Wachdienst: Objektschutz, Veranstaltungsschutz, Baustellenbewachung, Empfangs- und Streifendienst – geprüftes Personal, bundesweit.",
@@ -457,29 +461,83 @@ export const divisions: DivisionData[] = [
   },
 ];
 
-export const getDivision = (slug: string): DivisionData | undefined =>
-  divisions.find((d) => d.slug === slug);
+const eventServices: ServiceData[] = [
+  {
+    slug: "empfang-und-akkreditierung", icon: DoorOpen, title: "Empfang & Akkreditierung",
+    context: "Für Firmenevents, Messen und Veranstaltungen mit angemeldeten Gästen.",
+    desc: "Gäste begrüßen, Anmeldungen abgleichen und Orientierung geben – abgestimmt auf Ihren Veranstaltungsablauf.",
+    points: ["Gästeempfang und Anmeldung", "Ausgabe vorbereiteter Namensschilder", "Wegweisung und Information"],
+    longDesc: "Am Empfang entscheidet sich, wie geordnet eine Veranstaltung beginnt. Wir begrüßen Ihre Gäste, gleichen Anmeldungen mit den von Ihnen bereitgestellten Listen ab und geben vorbereitete Ausweise oder Namensschilder aus. Vor dem Einsatz klären wir Ankunftszeiten, Ansprechpersonen, Zugänge und den Umgang mit Rückfragen. Sicherheitsrelevante Zutrittsentscheidungen bleiben beim beauftragten Veranstaltungsschutz.",
+    typicalClients: "Unternehmen, Veranstalter, Messeaussteller und Eventagenturen.",
+    h1: "Empfang & Akkreditierung für Veranstaltungen", metaTitle: "Eventempfang & Akkreditierung | Sentinel Services",
+    metaDescription: "Empfang und Akkreditierung für Firmenevents und Messen: Gäste begrüßen, Anmeldungen abgleichen und Orientierung geben. Klar abgestimmter Einsatz vor Ort.",
+    faqs: [{ question: "Ist das zugleich eine Sicherheitskontrolle?", answer: "Nein. Anmeldung und Akkreditierung sind Serviceaufgaben. Bewachung, Taschenkontrollen und sicherheitsrelevante Zutrittsprüfungen gehören zum Veranstaltungsschutz und werden getrennt beauftragt." }, { question: "Was brauchen Sie vor dem Einsatz?", answer: "Veranstaltungsort, Zeitfenster, erwartete Gästezahl und Ablauf. Gästelisten erhalten ausschließlich die dafür vorgesehenen Kräfte und nur für den vereinbarten Anmeldeprozess; der Umgang und die Löschung werden vorab festgelegt." }],
+  },
+  {
+    slug: "gaestebetreuung", icon: Users, title: "Gästebetreuung",
+    context: "Für Veranstaltungen, bei denen Gäste eine erreichbare Ansprechperson brauchen.",
+    desc: "Gäste informieren, Wege erklären und Anliegen an die richtige Stelle weitergeben.",
+    points: ["Ansprechpersonen für Gäste", "Orientierung am Veranstaltungsort", "Weiterleitung von Fragen und Anliegen"],
+    longDesc: "Unsere Gästebetreuung hält den Kontakt zwischen Gästen und Veranstaltungsorganisation. Wir erklären Wege, informieren über den von Ihnen freigegebenen Ablauf und leiten Anliegen gezielt weiter. Die Kräfte kennen vor Beginn die Räumlichkeiten, Programmpunkte und zuständigen Ansprechpersonen. Bei Änderungen erhalten sie eine abgestimmte Information, damit Gäste verlässliche Auskünfte bekommen.",
+    typicalClients: "Veranstalter, Unternehmen, Tagungsorte und Eventagenturen.",
+    h1: "Gästebetreuung für Events & Firmenevents", metaTitle: "Gästebetreuung für Veranstaltungen | Sentinel Services",
+    metaDescription: "Gästebetreuung für Firmenevents, Tagungen und Messen: Orientierung, Information und persönliche Ansprechpartner vor Ort – abgestimmt auf Ihren Ablauf.",
+    faqs: [{ question: "Übernehmen Sie auch die Veranstaltungsplanung?", answer: "Nein. Wir unterstützen die Durchführung vor Ort. Programmplanung, Buchungen und die Gesamtorganisation bleiben beim Veranstalter." }, { question: "Wie wird das Personal eingewiesen?", answer: "Vor dem Einsatz stimmen wir Programm, Räumlichkeiten, Aufgaben und Meldewege ab. Änderungen laufen über eine benannte Ansprechperson." }],
+  },
+  {
+    slug: "operative-eventunterstuetzung", icon: ClipboardList, title: "Operative Eventunterstützung",
+    context: "Für Veranstalter, die zusätzliche Unterstützung in der Durchführung benötigen.",
+    desc: "Abgestimmte Aufgaben vor Ort übernehmen und Rückmeldungen direkt an Ihre Veranstaltungsleitung geben.",
+    points: ["Unterstützung an Service- und Infopunkten", "Abstimmung mit der Veranstaltungsleitung", "Koordination vereinbarter Übergaben"],
+    longDesc: "Wir unterstützen Ihr Veranstaltungsteam bei klar definierten Aufgaben vor Ort: Servicepunkte besetzen, Informationen weitergeben und vereinbarte Übergaben begleiten. Umfang und Einsatzzeiten legen wir vorab fest. Unsere Kräfte arbeiten entlang Ihres Ablaufplans und melden Abweichungen an die benannte Veranstaltungsleitung. Technische Facharbeiten, Catering und die vollständige Veranstaltungsorganisation sind nicht Teil dieses Angebots.",
+    typicalClients: "Eventagenturen, Unternehmen, Messeveranstalter und Veranstaltungsstätten.",
+    h1: "Operative Unterstützung bei Veranstaltungen", metaTitle: "Operative Eventunterstützung | Sentinel Services",
+    metaDescription: "Operative Unterstützung bei Veranstaltungen: Servicepunkte, Informationswege und abgestimmte Aufgaben vor Ort. Klare Zuständigkeiten statt Eventplanung.",
+    faqs: [{ question: "Welche Aufgaben können wir abgeben?", answer: "Beschreiben Sie die konkreten Tätigkeiten, Zeiten und Einsatzbereiche. Wir prüfen, welche Serviceaufgaben wir übernehmen können, und halten den Umfang schriftlich fest." }, { question: "Lässt sich Event Service mit Veranstaltungsschutz kombinieren?", answer: "Ja. Service und Sicherheit können gemeinsam geplant werden. Aufgaben, Qualifikationen und Zuständigkeiten bleiben dabei eindeutig getrennt." }],
+  },
+];
 
-export const getDivisionAndService = (
-  divisionSlug: string,
-  serviceSlug: string,
-): { division: DivisionData; service: ServiceData } | undefined => {
+export const facilityCategories: DivisionData[] = existingDivisions.filter(d => d.slug !== "sicherheit").map(d => ({ ...d, parent: "facility" }));
+
+export const divisions: DivisionData[] = [
+  existingDivisions[0],
+  {
+    slug: "facility", shortLabel: "Facility", title: "Facility", icon: Building2,
+    claim: "Gebäude und Außenflächen betreuen – mit abgestimmten Leistungen und festen Zuständigkeiten.",
+    intro: "Wir halten Gebäude und Außenflächen in Ordnung. Gebäudereinigung, Fensterreinigung, Grünpflege und infrastrukturelle Objektleistungen laufen bei uns zusammen. Sie bestimmen den Umfang; wir regeln Personal, Turnus und Rückmeldungen.",
+    h1: "Facility", metaTitle: "Facility Service – Reinigung & Objektbetreuung | Sentinel Services",
+    metaDescription: "Facility Service für Gebäude und Außenflächen: Reinigung, Fensterreinigung, Grünpflege, Hausmeister- und Winterdienst. Einzeln oder kombiniert beauftragen.",
+    keywords: "Facility Service, Gebäudereinigung, Fensterreinigung, Grünpflege, Hausmeisterdienst, Winterdienst, infrastrukturelles Facility Management",
+    primaryKeyword: "Facility Service", services: [...facilityServices, ...reinigungServices, ...gruenServices],
+  },
+  {
+    slug: "event-service", shortLabel: "Event Service", title: "Event Service", icon: PartyPopper,
+    claim: "Empfang, Gästebetreuung und operative Unterstützung bei Ihrer Veranstaltung.",
+    intro: "Wir unterstützen Ihre Veranstaltung dort, wo Menschen und Abläufe zusammenkommen: am Empfang, in der Gästebetreuung und an Servicepunkten vor Ort. Mit klaren Aufgaben und direkter Abstimmung mit Ihrer Veranstaltungsleitung – keine vollständige Eventplanung.",
+    h1: "Event Service", metaTitle: "Event Service – Empfang & Gästebetreuung | Sentinel Services",
+    metaDescription: "Event Service für Firmenevents, Messen und Tagungen: Empfang, Gästebetreuung und operative Unterstützung vor Ort. Klar getrennt vom Veranstaltungsschutz.",
+    keywords: "Event Service, Eventpersonal, Gästebetreuung, Eventempfang, Akkreditierung, operative Eventunterstützung",
+    primaryKeyword: "Event Service", services: eventServices,
+  },
+];
+
+export const getDivision = (slug: string): DivisionData | undefined =>
+  [...divisions, ...facilityCategories].find(d => d.slug === slug);
+
+export const getDivisionAndService = (divisionSlug: string, serviceSlug: string): { division: DivisionData; service: ServiceData } | undefined => {
   const division = getDivision(divisionSlug);
-  if (!division) return undefined;
-  const service = division.services.find((s) => s.slug === serviceSlug);
-  if (!service) return undefined;
+  const service = division?.services.find(s => s.slug === serviceSlug);
+  if (!division || !service) return undefined;
   return { division, service };
 };
 
-export const findServiceAnywhere = (
-  serviceSlug: string,
-): { division: DivisionData; service: ServiceData } | undefined => {
-  for (const d of divisions) {
-    const s = d.services.find((x) => x.slug === serviceSlug);
-    if (s) return { division: d, service: s };
+export const findServiceAnywhere = (serviceSlug: string): { division: DivisionData; service: ServiceData } | undefined => {
+  for (const division of divisions) {
+    const service = division.services.find(s => s.slug === serviceSlug);
+    if (service) return { division, service };
   }
   return undefined;
 };
 
 export const allServices = (): { division: DivisionData; service: ServiceData }[] =>
-  divisions.flatMap((d) => d.services.map((s) => ({ division: d, service: s })));
+  divisions.flatMap(division => division.services.map(service => ({ division, service })));

@@ -1,22 +1,21 @@
 # Sentinel Services
 
-> Objektbezogene Dienstleistungen aus einer Hand: Sicherheit & Bewachung, Gebäudereinigung, Garten- & Grünanlagenpflege sowie Infrastrukturelles Facility Management. Bundesweit einsatzbereit.
+> Sicherheit, Facility und operativer Event Service. Sitz in Magdeburg, Einsatzgebiet bundesweit.
 
-Sentinel Services (Inhaber Tim Fitzlaff, Magdeburg) bietet vier eigenständige Geschäftsbereiche an, die einzeln gebucht oder als integrierte Objektbetreuung kombiniert werden können. Im Sicherheitsbereich kommt geprüftes Fachpersonal mit IHK-Sachkunde zum Einsatz.
+Sentinel Services (Inhaber Tim Fitzlaff) übernimmt klar vereinbarte Leistungen einzeln oder kombiniert. Event Service umfasst keine vollständige Veranstaltungsplanung. Facility umfasst keine technische oder kaufmännische Gebäudeverwaltung.
 
-## Geschäftsbereiche
+## Fachgebiete
+- [Sicherheit](/sicherheit): Objektschutz, Veranstaltungsschutz, Baustellenbewachung, Empfangs- und Streifendienst sowie Sicherheitskonzepte.
+- [Facility](/facility): Gebäude- und Fensterreinigung, Grund- und Sonderreinigung, Grün- und Baumpflege, Winterdienst, Hausmeisterdienste, Abfallmanagement und Parkraumbewirtschaftung.
+- [Event Service](/event-service): Empfang und Akkreditierung, Gästebetreuung und operative Unterstützung vor Ort. Sicherheitsaufgaben werden getrennt beauftragt.
 
-- [Sicherheit & Bewachung](/sicherheit): Sicherheitsdienst und Wachdienst – Objektschutz, Veranstaltungsschutz, Baustellenbewachung, Empfangsdienst, Streifendienst, Sicherheitskonzepte.
-- [Gebäudereinigung](/reinigung): Unterhaltsreinigung, Glas- und Fensterreinigung, Grundreinigung, Bauschluss- und Sonderreinigung.
-- [Garten & Grünanlagen](/gruenanlagen): Grünanlagenpflege sowie Baumpflege und Baumkontrolle.
-- [Infrastrukturelles Facility Management](/facility-management): Winterdienst, Hausmeisterdienste, Entsorgungs- und Abfallmanagement sowie Parkraumbewirtschaftung.
-
-## Weitere Seiten
-
-- [Branchen](/branchen): Lösungen nach Branche.
-- [Arbeitsweise](/arbeitsweise): Vier Phasen vom Erstkontakt bis zum Reporting.
-- [Qualifikationen](/qualifikationen): Sachkunde, Erste Hilfe, Brandschutz, Deeskalation und branchenspezifische Nachweise.
-- [Karriere](/karriere): Offene Stellen und Anforderungen.
-- [Kontakt](/kontakt): Anfragen per Formular oder E-Mail.
+## Unternehmen
+- [Magdeburg](/magdeburg)
+- [Gebäudereinigung Magdeburg](/magdeburg/gebaeudereinigung)
+- [Branchen](/branchen)
+- [Arbeitsweise](/arbeitsweise): Vier Phasen: Analyse, Personal, Einsatzführung und Dokumentation.
+- [Qualifikationen](/qualifikationen): Nachweise und Einweisung je Fachgebiet.
+- [Karriere](/karriere)
+- [Kontakt](/kontakt)
 - [Impressum](/impressum)
 - [Datenschutz](/datenschutz)

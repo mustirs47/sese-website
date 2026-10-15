@@ -33,8 +33,8 @@ const PillarsSection = () => {
               <ul className="mt-5 space-y-2 border-t border-border pt-4 text-sm text-muted-fg">
                 {services.map((service) => <li key={service}>{service}</li>)}
               </ul>
-              <Link to="/kontakt" className="link-arrow mt-6" aria-label={`${title} anfragen`}>
-                Leistung anfragen <ArrowRight />
+              <Link to={`/${slug}`} className="link-arrow mt-6" aria-label={`${title} ansehen`}>
+                Leistungen ansehen <ArrowRight />
               </Link>
             </article>
           ))}

@@ -14,7 +14,7 @@ import {
 } from "@/components/StructuredData";
 import { BASE_URL } from "@/lib/seo";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { divisions, getDivision, type DivisionSlug } from "@/data/divisions";
+import { divisions, facilityCategories, getDivision, type DivisionSlug } from "@/data/divisions";
 import { divisionDetails } from "@/data/divisionDetails";
 
 interface Props {
@@ -22,16 +22,16 @@ interface Props {
 }
 
 const trustPoints = [
-  { icon: Shield, text: "Geprüftes, eingewiesenes Personal" },
+  { icon: Shield, text: "Eingewiesenes Personal" },
   { icon: Users, text: "Feste Ansprechpartner" },
   { icon: FileCheck, text: "Dokumentierte Leistung" },
 ];
 
-const hubFaqs = [
+const generalHubFaqs = [
   {
     question: "Können Sie mehrere Leistungen meines Objekts übernehmen?",
     answer:
-      "Ja. Unsere vier Bereiche – Sicherheit, Reinigung, Grünanlagen und Facility Management – lassen sich beliebig kombinieren. Sie haben einen Ansprechpartner statt mehrerer Dienstleister.",
+      "Ja. Sicherheit, Facility und Event Service lassen sich einzeln oder kombiniert beauftragen. Aufgaben und Zuständigkeiten halten wir vor dem Einsatz fest.",
   },
   {
     question: "Wie schnell erhalte ich ein Angebot?",
@@ -52,8 +52,14 @@ const DivisionHub = ({ division: slug }: Props) => {
 
   if (!division) return null;
 
-  const others = divisions.filter((d) => d.slug !== slug);
+  const others = divisions.filter((d) => d.slug !== (division.parent ?? slug));
   const details = divisionDetails[slug] ?? [];
+  const hubFaqs = slug === "event-service" ? [
+    { question: "Welche Aufgaben übernimmt Ihr Event Service?", answer: "Empfang und Akkreditierung, Gästebetreuung sowie vereinbarte operative Aufgaben an Service- und Informationspunkten. Umfang und Meldewege stimmen wir mit Ihrer Veranstaltungsleitung ab." },
+    { question: "Ist Veranstaltungsschutz enthalten?", answer: "Nein. Bewachung, Sicherheitskontrollen und Intervention gehören zum Fachgebiet Sicherheit. Eine kombinierte Beauftragung ist möglich; die Zuständigkeiten bleiben getrennt." },
+    { question: "Planen Sie auch die komplette Veranstaltung?", answer: "Nein. Wir unterstützen die Durchführung vor Ort. Programm, Buchungen und Gesamtorganisation bleiben beim Veranstalter." },
+    ...generalHubFaqs.slice(1),
+  ] : generalHubFaqs;
 
   return (
     <PageLayout>
@@ -82,13 +88,14 @@ const DivisionHub = ({ division: slug }: Props) => {
         items={division.services.map((s) => ({
           name: s.title,
           description: s.desc,
-          url: `${BASE_URL}/${division.slug}/${s.slug}`,
+          url: `${BASE_URL}/${division.parent ?? division.slug}/${s.slug}`,
         }))}
       />
       <FAQPageJsonLd faqs={hubFaqs} />
 
       <PageHero
-        badge={division.shortLabel}
+        backLink={division.parent ? { label: "Facility", href: "/facility" } : undefined}
+        badge={division.parent ? "Facility · " + division.shortLabel : "Fachgebiet"}
         title={division.h1}
         subtitle={division.intro}
       />
@@ -119,6 +126,13 @@ const DivisionHub = ({ division: slug }: Props) => {
         </div>
       </section>
 
+      {slug === "facility" && (
+        <section className="section-light border-b border-border">
+          <div className="section-shell !py-8 grid gap-4 md:grid-cols-3">
+            {facilityCategories.map(category => <Link key={category.slug} to={`/${category.slug}`} className="link-arrow">{category.title}<ArrowRight /></Link>)}
+          </div>
+        </section>
+      )}
       {/* Services */}
       <section className="section-light">
         <div
@@ -130,28 +144,19 @@ const DivisionHub = ({ division: slug }: Props) => {
               className="h-section mb-4"
               style={{ color: "hsl(var(--section-light-fg))" }}
             >
-              Leistungen im Bereich {division.shortLabel}
+              Unsere Leistungen: {division.shortLabel}
             </h2>
-            <p className="text-base leading-relaxed text-muted-fg">{division.intro}</p>
+            <p className="text-base leading-relaxed text-muted-fg">{division.parent ? "Einzelne Leistungen oder ein abgestimmter Turnus – wir halten Aufgaben, Zeiten und Zuständigkeiten vor dem Start fest." : "Wählen Sie die Aufgaben, die Sie beauftragen möchten. Den genauen Umfang und die Einsatzzeiten stimmen wir vor Beginn ab."}</p>
           </div>
 
           <div className="stagger-children grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {division.services.map(({ slug: sSlug, icon: Icon, title, context, desc, points }) => (
               <Link
                 key={sSlug}
-                to={`/${division.slug}/${sSlug}`}
-                className="card-accent group rounded-xl border p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col"
-                style={{
-                  background: "hsl(var(--section-light-card))",
-                  borderColor: "hsl(var(--section-light-border))",
-                }}
+                to={`/${division.parent ?? division.slug}/${sSlug}`}
+                className="surface-card surface-card--hover group flex flex-col"
               >
-                  <div
-                    className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl"
-                    style={{ background: "hsl(var(--primary) / 0.1)" }}
-                  >
-                    <Icon className="h-6 w-6 text-primary" />
-                  </div>
+                  <span className="icon-tile mb-5"><Icon /></span>
                 <h3
                   className="text-lg font-bold"
                   style={{ color: "hsl(var(--section-light-fg))" }}
@@ -227,7 +232,7 @@ const DivisionHub = ({ division: slug }: Props) => {
             Bedarf im Bereich {division.shortLabel}?
           </h2>
           <p className="text-muted-fg max-w-xl mx-auto mb-8">
-            Beschreiben Sie Ihr Objekt – wir melden uns mit einem passenden Konzept und transparentem Angebot.
+            Nennen Sie Aufgabe, Einsatzort und Zeitraum. Wir prüfen die Umsetzung und erstellen ein konkretes Angebot.
           </p>
           <Button asChild size="lg">
             <Link to="/kontakt">
@@ -247,7 +252,7 @@ const DivisionHub = ({ division: slug }: Props) => {
           <h2 className="text-xl font-bold text-foreground text-center mb-8">
             Ein Anbieter – weniger Schnittstellen
           </h2>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2">
             {others.map(({ slug: oSlug, icon: OIcon, title, claim }) => (
               <Link
                 key={oSlug}

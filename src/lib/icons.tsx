@@ -1,163 +1,75 @@
+import { Activity as BaseActivity, AlertTriangle as BaseAlertTriangle, ArrowLeft as BaseArrowLeft, ArrowRight as BaseArrowRight, Award as BaseAward, BarChart3 as BaseBarChart3, BookOpen as BaseBookOpen, Briefcase as BaseBriefcase, Brush as BaseBrush, Building as BaseBuilding, Building2 as BaseBuilding2, Calculator as BaseCalculator, CalendarCheck as BaseCalendarCheck, CalendarDays as BaseCalendarDays, Check as BaseCheck, CheckCircle as BaseCheckCircle, ChevronDown as BaseChevronDown, ChevronRight as BaseChevronRight, ClipboardCheck as BaseClipboardCheck, ClipboardList as BaseClipboardList, Cookie as BaseCookie, DoorOpen as BaseDoorOpen, Factory as BaseFactory, FileCheck as BaseFileCheck, FileText as BaseFileText, GraduationCap as BaseGraduationCap, Hammer as BaseHammer, Handshake as BaseHandshake, HardHat as BaseHardHat, HeartHandshake as BaseHeartHandshake, HeartPulse as BaseHeartPulse, Home as BaseHome, Hotel as BaseHotel, Landmark as BaseLandmark, Leaf as BaseLeaf, Mail as BaseMail, MapPin as BaseMapPin, Menu as BaseMenu, MessageSquare as BaseMessageSquare, PanelsTopLeft as BasePanelsTopLeft, Radio as BaseRadio, RefreshCw as BaseRefreshCw, Route as BaseRoute, Scale as BaseScale, Search as BaseSearch, Send as BaseSend, Settings as BaseSettings, Shield as BaseShield, ShieldCheck as BaseShieldCheck, ShoppingBag as BaseShoppingBag, Snowflake as BaseSnowflake, SprayCan as BaseSprayCan, Star as BaseStar, Target as BaseTarget, TreePine as BaseTreePine, Trees as BaseTrees, UserCheck as BaseUserCheck, Users as BaseUsers, Wrench as BaseWrench, X as BaseX } from "lucide-react";
 import type { ComponentProps, ComponentType } from "react";
-import {
-  Warning,
-  ArrowLeft as PhArrowLeft,
-  ArrowRight as PhArrowRight,
-  Medal,
-  ChartBar,
-  BookOpen as PhBookOpen,
-  Briefcase as PhBriefcase,
-  Buildings,
-  CalendarCheck as PhCalendarCheck,
-  Check as PhCheck,
-  CheckCircle as PhCheckCircle,
-  CaretDown,
-  CaretRight,
-  ClipboardText,
-  Cookie as PhCookie,
-  DoorOpen as PhDoorOpen,
-  Factory as PhFactory,
-  FileText as PhFileText,
-  Gift as PhGift,
-  GraduationCap as PhGraduationCap,
-  Handshake as PhHandshake,
-  HardHat as PhHardHat,
-  Heartbeat,
-  House,
-  Bank,
-  Envelope,
-  MapPin as PhMapPin,
-  List,
-  ChatCircle,
-  Confetti,
-  Radio as PhRadio,
-  ArrowsClockwise,
-  Scales,
-  MagnifyingGlass,
-  PaperPlaneTilt,
-  Gear,
-  Shield as PhShield,
-  ShieldCheck as PhShieldCheck,
-  ShoppingBag as PhShoppingBag,
-  Sparkle,
-  Star as PhStar,
-  Target as PhTarget,
-  UserCircleCheck,
-  Users as PhUsers,
-  X as PhX,
-  Lightning,
-  type IconProps,
-  type Icon as PhIcon,
-} from "@phosphor-icons/react";
-import {
-  SprayBottle,
-  Leaf as PhLeaf,
-  Path,
-  PaintBrush,
-  Wine,
-  Hammer as PhHammer,
-  Tree,
-  TreeEvergreen,
-  Snowflake as PhSnowflake,
-  Wrench as PhWrench,
-  ClipboardText as PhClipboardList,
-  Calculator as PhCalculator,
-} from "@phosphor-icons/react";
+export type LucideIcon = ComponentType<ComponentProps<typeof BaseShield>>;
 
-export type LucideIcon = ComponentType<ComponentProps<PhIcon>>;
-
-/**
- * Brand icon set: Phosphor Duotone.
- * Wrapped so existing call-sites that use Lucide-style names + Tailwind
- * h-/w- size classes keep working unchanged. Default weight is "duotone"
- * which renders a two-tone, professional look consistent with the brand.
- */
-const wrap = (Cmp: PhIcon, fallbackWeight: IconProps["weight"] = "regular") => {
-  const Wrapped = (props: ComponentProps<typeof Cmp>) => {
-    // Mark decorative icons as aria-hidden by default; call-sites that
-    // need an accessible name pass aria-label and explicitly override.
-    const hasA11yName =
-      (props as { "aria-label"?: string })["aria-label"] !== undefined ||
-      (props as { "aria-labelledby"?: string })["aria-labelledby"] !== undefined ||
-      (props as { role?: string }).role === "img";
-    return (
-      <Cmp
-        weight={fallbackWeight}
-        aria-hidden={hasA11yName ? undefined : true}
-        focusable={false}
-        {...props}
-      />
-    );
-  };
-  Wrapped.displayName = `Icon(${Cmp.displayName ?? "phosphor"})`;
-  return Wrapped as ComponentType<ComponentProps<typeof Cmp>>;
+// A single restrained line weight for all functional site icons.
+const lineIcon = (Icon: LucideIcon) => {
+  const Wrapped = (props: ComponentProps<LucideIcon>) => (
+    <Icon strokeWidth={1.5} aria-hidden={props["aria-label"] || props["aria-labelledby"] || props.role === "img" ? undefined : true} focusable={false} {...props} />
+  );
+  Wrapped.displayName = `LineIcon(${Icon.displayName ?? "icon"})`;
+  return Wrapped;
 };
 
-// Use regular (single-weight) for tiny chrome icons so they stay crisp.
-const wrapRegular = (Cmp: PhIcon) => wrap(Cmp, "regular");
-const wrapBold = (Cmp: PhIcon) => wrap(Cmp, "bold");
-
-export const AlertTriangle = wrap(Warning);
-export const ArrowLeft = wrapBold(PhArrowLeft);
-export const ArrowRight = wrapBold(PhArrowRight);
-export const Award = wrap(Medal);
-export const BarChart3 = wrap(ChartBar);
-export const BookOpen = wrap(PhBookOpen);
-export const Briefcase = wrap(PhBriefcase);
-export const Building = wrap(Buildings);
-export const Building2 = wrap(Buildings);
-export const CalendarCheck = wrap(PhCalendarCheck);
-export const Check = wrapBold(PhCheck);
-export const CheckCircle = wrap(PhCheckCircle);
-export const ChevronDown = wrapRegular(CaretDown);
-export const ChevronRight = wrapRegular(CaretRight);
-export const ClipboardCheck = wrap(ClipboardText);
-export const Cookie = wrap(PhCookie);
-export const DoorOpen = wrap(PhDoorOpen);
-export const Factory = wrap(PhFactory);
-export const FileCheck = wrap(PhFileText);
-export const FileText = wrap(PhFileText);
-export const Gift = wrap(PhGift);
-export const GraduationCap = wrap(PhGraduationCap);
-export const Handshake = wrap(PhHandshake);
-export const HardHat = wrap(PhHardHat);
-export const HeartHandshake = wrap(PhHandshake);
-export const HeartPulse = wrap(Heartbeat);
-export const Home = wrap(House);
-export const Hotel = wrap(Buildings);
-export const Landmark = wrap(Bank);
-export const Mail = wrap(Envelope);
-export const MapPin = wrap(PhMapPin);
-export const Menu = wrapRegular(List);
-export const MessageSquare = wrap(ChatCircle);
-export const PartyPopper = wrap(Confetti);
-export const Radio = wrap(PhRadio);
-export const RefreshCw = wrapRegular(ArrowsClockwise);
-export const Scale = wrap(Scales);
-export const Search = wrapRegular(MagnifyingGlass);
-export const Send = wrap(PaperPlaneTilt);
-export const Settings = wrap(Gear);
-export const Shield = wrap(PhShield);
-export const ShieldCheck = wrap(PhShieldCheck);
-export const ShoppingBag = wrap(PhShoppingBag);
-export const Sparkles = wrap(Sparkle);
-export const Star = wrap(PhStar);
-export const Target = wrap(PhTarget);
-export const UserCheck = wrap(UserCircleCheck);
-export const Users = wrap(PhUsers);
-export const X = wrapRegular(PhX);
-export const Zap = wrap(Lightning);
-
-// Extended set used by data/divisions.ts and similar.
-export const SprayCan = wrap(SprayBottle);
-export const Leaf = wrap(PhLeaf);
-export const Route = wrap(Path);
-export const Brush = wrap(PaintBrush);
-export const GlassWater = wrap(Wine);
-export const Hammer = wrap(PhHammer);
-export const Trees = wrap(Tree);
-export const TreePine = wrap(TreeEvergreen);
-export const Snowflake = wrap(PhSnowflake);
-export const Wrench = wrap(PhWrench);
-export const ClipboardList = wrap(PhClipboardList);
-export const Calculator = wrap(PhCalculator);
+export const AlertTriangle = lineIcon(BaseAlertTriangle);
+export const ArrowLeft = lineIcon(BaseArrowLeft);
+export const ArrowRight = lineIcon(BaseArrowRight);
+export const Award = lineIcon(BaseAward);
+export const BarChart3 = lineIcon(BaseBarChart3);
+export const BookOpen = lineIcon(BaseBookOpen);
+export const Briefcase = lineIcon(BaseBriefcase);
+export const Building = lineIcon(BaseBuilding);
+export const Building2 = lineIcon(BaseBuilding2);
+export const CalendarCheck = lineIcon(BaseCalendarCheck);
+export const Check = lineIcon(BaseCheck);
+export const CheckCircle = lineIcon(BaseCheckCircle);
+export const ChevronDown = lineIcon(BaseChevronDown);
+export const ChevronRight = lineIcon(BaseChevronRight);
+export const ClipboardCheck = lineIcon(BaseClipboardCheck);
+export const Cookie = lineIcon(BaseCookie);
+export const DoorOpen = lineIcon(BaseDoorOpen);
+export const Factory = lineIcon(BaseFactory);
+export const FileCheck = lineIcon(BaseFileCheck);
+export const FileText = lineIcon(BaseFileText);
+export const Gift = lineIcon(BaseBriefcase);
+export const GraduationCap = lineIcon(BaseGraduationCap);
+export const Handshake = lineIcon(BaseHandshake);
+export const HardHat = lineIcon(BaseHardHat);
+export const HeartHandshake = lineIcon(BaseHeartHandshake);
+export const HeartPulse = lineIcon(BaseHeartPulse);
+export const Home = lineIcon(BaseHome);
+export const Hotel = lineIcon(BaseHotel);
+export const Landmark = lineIcon(BaseLandmark);
+export const Mail = lineIcon(BaseMail);
+export const MapPin = lineIcon(BaseMapPin);
+export const Menu = lineIcon(BaseMenu);
+export const MessageSquare = lineIcon(BaseMessageSquare);
+export const PartyPopper = lineIcon(BaseCalendarDays);
+export const Radio = lineIcon(BaseRadio);
+export const RefreshCw = lineIcon(BaseRefreshCw);
+export const Scale = lineIcon(BaseScale);
+export const Search = lineIcon(BaseSearch);
+export const Send = lineIcon(BaseSend);
+export const Settings = lineIcon(BaseSettings);
+export const Shield = lineIcon(BaseShield);
+export const ShieldCheck = lineIcon(BaseShieldCheck);
+export const ShoppingBag = lineIcon(BaseShoppingBag);
+export const Sparkles = lineIcon(BaseBrush);
+export const Star = lineIcon(BaseStar);
+export const Target = lineIcon(BaseTarget);
+export const UserCheck = lineIcon(BaseUserCheck);
+export const Users = lineIcon(BaseUsers);
+export const X = lineIcon(BaseX);
+export const Zap = lineIcon(BaseActivity);
+export const SprayCan = lineIcon(BaseSprayCan);
+export const Leaf = lineIcon(BaseLeaf);
+export const Route = lineIcon(BaseRoute);
+export const Brush = lineIcon(BaseBrush);
+export const GlassWater = lineIcon(BasePanelsTopLeft);
+export const Hammer = lineIcon(BaseHammer);
+export const Trees = lineIcon(BaseTrees);
+export const TreePine = lineIcon(BaseTreePine);
+export const Snowflake = lineIcon(BaseSnowflake);
+export const Wrench = lineIcon(BaseWrench);
+export const ClipboardList = lineIcon(BaseClipboardList);
+export const Calculator = lineIcon(BaseCalculator);
