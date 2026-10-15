@@ -27,7 +27,7 @@ const trustPoints = [
   { icon: FileCheck, text: "Dokumentierte Leistung" },
 ];
 
-const hubFaqs = [
+const generalHubFaqs = [
   {
     question: "Können Sie mehrere Leistungen meines Objekts übernehmen?",
     answer:
@@ -54,6 +54,12 @@ const DivisionHub = ({ division: slug }: Props) => {
 
   const others = divisions.filter((d) => d.slug !== (division.parent ?? slug));
   const details = divisionDetails[slug] ?? [];
+  const hubFaqs = slug === "event-service" ? [
+    { question: "Welche Aufgaben übernimmt Ihr Event Service?", answer: "Empfang und Akkreditierung, Gästebetreuung sowie vereinbarte operative Aufgaben an Service- und Informationspunkten. Umfang und Meldewege stimmen wir mit Ihrer Veranstaltungsleitung ab." },
+    { question: "Ist Veranstaltungsschutz enthalten?", answer: "Nein. Bewachung, Sicherheitskontrollen und Intervention gehören zum Fachgebiet Sicherheit. Eine kombinierte Beauftragung ist möglich; die Zuständigkeiten bleiben getrennt." },
+    { question: "Planen Sie auch die komplette Veranstaltung?", answer: "Nein. Wir unterstützen die Durchführung vor Ort. Programm, Buchungen und Gesamtorganisation bleiben beim Veranstalter." },
+    ...generalHubFaqs.slice(1),
+  ] : generalHubFaqs;
 
   return (
     <PageLayout>
@@ -140,7 +146,7 @@ const DivisionHub = ({ division: slug }: Props) => {
             >
               Unsere Leistungen: {division.shortLabel}
             </h2>
-            <p className="text-base leading-relaxed text-muted-fg">{division.intro}</p>
+            <p className="text-base leading-relaxed text-muted-fg">{division.parent ? "Einzelne Leistungen oder ein abgestimmter Turnus – wir halten Aufgaben, Zeiten und Zuständigkeiten vor dem Start fest." : "Wählen Sie die Aufgaben, die Sie beauftragen möchten. Den genauen Umfang und die Einsatzzeiten stimmen wir vor Beginn ab."}</p>
           </div>
 
           <div className="stagger-children grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -148,18 +154,9 @@ const DivisionHub = ({ division: slug }: Props) => {
               <Link
                 key={sSlug}
                 to={`/${division.parent ?? division.slug}/${sSlug}`}
-                className="card-accent group rounded-xl border p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col"
-                style={{
-                  background: "hsl(var(--section-light-card))",
-                  borderColor: "hsl(var(--section-light-border))",
-                }}
+                className="surface-card surface-card--hover group flex flex-col"
               >
-                  <div
-                    className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl"
-                    style={{ background: "hsl(var(--primary) / 0.1)" }}
-                  >
-                    <Icon className="h-6 w-6 text-primary" />
-                  </div>
+                  <span className="icon-tile mb-5"><Icon /></span>
                 <h3
                   className="text-lg font-bold"
                   style={{ color: "hsl(var(--section-light-fg))" }}
@@ -255,7 +252,7 @@ const DivisionHub = ({ division: slug }: Props) => {
           <h2 className="text-xl font-bold text-foreground text-center mb-8">
             Ein Anbieter – weniger Schnittstellen
           </h2>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2">
             {others.map(({ slug: oSlug, icon: OIcon, title, claim }) => (
               <Link
                 key={oSlug}

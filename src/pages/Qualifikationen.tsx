@@ -107,8 +107,8 @@ const QualifikationenPage = () => {
               <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Qualifikationsgruppen</p>
             </div>
             <div>
-              <p className="stat-number">12+</p>
-              <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Einzelnachweise</p>
+              <p className="stat-number">12</p>
+              <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Anforderungen im Überblick</p>
             </div>
             <div>
               <p className="stat-number">3</p>

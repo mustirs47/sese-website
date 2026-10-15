@@ -21,7 +21,7 @@ interface Props {
 }
 
 const trustItems = [
-  { icon: Shield, text: "Geprüftes Fachpersonal" },
+  { icon: Shield, text: "Aufgabenspezifisch eingewiesenes Personal" },
   { icon: Users, text: "Feste Ansprechpartner" },
   { icon: FileCheck, text: "Nachvollziehbare Dokumentation" },
   { icon: CheckCircle, text: "Auf Ihren Einsatz abgestimmt" },
@@ -157,7 +157,7 @@ const ServiceDetail = ({ division: divisionSlug }: Props) => {
                   <p className="text-xs font-semibold mb-3" style={{ color: "hsl(var(--section-light-fg))" }}>Vertrauen Sie auf</p>
                   <ul className="space-y-2.5">
                     {trustItems.map(({ icon: TrustIcon, text }) => (
-                      <li key={text} className="flex items-center gap-2.5">
+                      <li key={text} className="flex items-start gap-2.5">
                         <TrustIcon className="h-4 w-4 text-primary shrink-0" />
                         <span className="text-sm text-muted-fg">{text}</span>
                       </li>
