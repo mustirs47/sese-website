@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Sheet,
   SheetContent,
@@ -8,7 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 import logoSymbol from "@/assets/sentinel-symbol-white.png";
 import { divisions } from "@/data/divisions";
-import { homepageFields } from "@/data/homepage";
+
 
 interface MobileMenuProps {
   open: boolean;
@@ -27,9 +27,7 @@ const secondary = [
 ];
 
 const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
-  const { pathname } = useLocation();
-  const isHomepage = pathname === "/" || pathname === "/index";
-  const fields = isHomepage ? homepageFields : divisions;
+  const fields = divisions;
   return (
   <Sheet open={open} onOpenChange={(v) => !v && onClose()}>
     <SheetContent
@@ -60,16 +58,8 @@ const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
             return (
               <Link
                 key={d.slug}
-                to={isHomepage ? `/#${d.slug}` : `/${d.slug}`}
-                onClick={() => {
-                  onClose();
-                  if (isHomepage) {
-                    requestAnimationFrame(() => {
-                      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-                      document.getElementById(d.slug)?.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
-                    });
-                  }
-                }}
+                to={`/${d.slug}`}
+                onClick={onClose}
                 className="flex items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-primary"
               >
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">

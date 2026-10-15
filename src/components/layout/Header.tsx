@@ -10,7 +10,7 @@ import {
 import MobileMenu from "./MobileMenu";
 import logoColor from "@/assets/sentinel-logo-white.png";
 import { divisions } from "@/data/divisions";
-import { homepageFields } from "@/data/homepage";
+
 
 const primaryNav = [
   { label: "Arbeitsweise", href: "/arbeitsweise" },
@@ -23,8 +23,7 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
-  const isHomepage = location.pathname === "/" || location.pathname === "/index";
-  const fields = isHomepage ? homepageFields : divisions;
+  const fields = divisions;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -57,7 +56,7 @@ const Header = () => {
           <nav className="hidden items-center gap-1 lg:flex">
             <Popover>
               <PopoverTrigger asChild>
-                <button
+                <Button variant="ghost"
                   className={`inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm xl:text-[15px] font-medium transition-colors hover:text-primary ${
                     divisionPathPrefixes.some((p) => location.pathname.startsWith(p))
                       ? "text-primary"
@@ -67,25 +66,21 @@ const Header = () => {
                 >
                   Bereiche
                   <ChevronDown className="h-3.5 w-3.5 opacity-70" />
-                </button>
+                </Button>
               </PopoverTrigger>
               <PopoverContent
                 align="start"
                 sideOffset={8}
-                className="w-[480px] p-2 bg-background/95 backdrop-blur-lg border-border/60"
+                className="w-[420px] p-2 bg-background/95 backdrop-blur-lg border-border/60"
               >
-                <div className="grid grid-cols-2 gap-1">
+                <div className="grid grid-cols-1 gap-1">
                   {fields.map((d) => {
                     const Icon = d.icon;
                     const active = location.pathname.startsWith(`/${d.slug}`);
                     return (
                       <Link
                         key={d.slug}
-                        to={isHomepage ? `/#${d.slug}` : `/${d.slug}`}
-                        onClick={isHomepage ? () => {
-                          const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-                          document.getElementById(d.slug)?.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
-                        } : undefined}
+                        to={`/${d.slug}`}
                         className={`group flex items-start gap-3 rounded-md p-3 transition-colors hover:bg-secondary ${
                           active ? "bg-secondary" : ""
                         }`}
@@ -146,13 +141,13 @@ const Header = () => {
             <Button asChild size="sm" className="hidden sm:inline-flex">
               <Link to="/kontakt">Anfrage stellen</Link>
             </Button>
-            <button
+            <Button variant="ghost" size="icon"
               onClick={() => setMobileOpen(true)}
               className="rounded-md p-2 text-muted-foreground transition-colors hover:text-primary lg:hidden"
               aria-label="Menü öffnen"
             >
               <Menu className="h-5 w-5" />
-            </button>
+            </Button>
           </div>
         </div>
       </header>

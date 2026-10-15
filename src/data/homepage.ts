@@ -1,6 +1,6 @@
 import { Building2, Shield, PartyPopper } from "@/lib/icons";
 
-// Homepage positioning is separate from the existing detail-page taxonomy.
+// Concise homepage teasers for the same three site-wide service fields.
 export const homepageFields = [
   {
     slug: "sicherheit",

@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { divisions, allServices } from "@/data/divisions";
 import { BASE_URL } from "@/lib/seo";
 import logoAsset from "@/assets/sentinel-logo.png.asset.json";
-import { homepageFields } from "@/data/homepage";
+
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -10,7 +10,7 @@ const localBusinessSchema = {
   "@id": `${BASE_URL}/#organization`,
   name: "Sentinel Services",
   description:
-    "Sentinel Services bietet Sicherheit & Bewachung, Gebäudereinigung, Garten- und Grünanlagenpflege sowie Facility Management aus einer Hand – bundesweit einsatzbereit.",
+    "Sentinel Services bietet Sicherheit, Facility und operativen Event Service. Sitz in Magdeburg, Einsatzgebiet bundesweit.",
   url: BASE_URL,
   logo: `${BASE_URL}${logoAsset.url}`,
   image: `${BASE_URL}${logoAsset.url}`,
@@ -55,28 +55,8 @@ const localBusinessSchema = {
   },
 };
 
-export const LocalBusinessJsonLd = ({ homepage = false }: { homepage?: boolean }) => (
-  <Helmet>
-    <script type="application/ld+json">
-      {JSON.stringify(homepage ? {
-        ...localBusinessSchema,
-        description: "Sentinel Services bietet Sicherheit, Facility und operativen Event Service. Sitz in Magdeburg, Einsatzgebiet bundesweit.",
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-          name: "Sicherheit, Facility und Event Service",
-          itemListElement: homepageFields.map((field) => ({
-            "@type": "OfferCatalog",
-            name: field.title,
-            url: `${BASE_URL}/#${field.slug}`,
-            itemListElement: field.services.map((name) => ({
-              "@type": "Offer",
-              itemOffered: { "@type": "Service", name },
-            })),
-          })),
-        },
-      } : localBusinessSchema)}
-    </script>
-  </Helmet>
+export const LocalBusinessJsonLd = (_props: { homepage?: boolean }) => (
+  <Helmet><script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script></Helmet>
 );
 
 export const BreadcrumbJsonLd = ({ items }: { items: { name: string; url: string }[] }) => {

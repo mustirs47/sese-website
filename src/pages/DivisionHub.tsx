@@ -14,7 +14,7 @@ import {
 } from "@/components/StructuredData";
 import { BASE_URL } from "@/lib/seo";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { divisions, getDivision, type DivisionSlug } from "@/data/divisions";
+import { divisions, facilityCategories, getDivision, type DivisionSlug } from "@/data/divisions";
 import { divisionDetails } from "@/data/divisionDetails";
 
 interface Props {
@@ -22,7 +22,7 @@ interface Props {
 }
 
 const trustPoints = [
-  { icon: Shield, text: "Geprüftes, eingewiesenes Personal" },
+  { icon: Shield, text: "Eingewiesenes Personal" },
   { icon: Users, text: "Feste Ansprechpartner" },
   { icon: FileCheck, text: "Dokumentierte Leistung" },
 ];
@@ -31,7 +31,7 @@ const hubFaqs = [
   {
     question: "Können Sie mehrere Leistungen meines Objekts übernehmen?",
     answer:
-      "Ja. Unsere vier Bereiche – Sicherheit, Reinigung, Grünanlagen und Facility Management – lassen sich beliebig kombinieren. Sie haben einen Ansprechpartner statt mehrerer Dienstleister.",
+      "Ja. Sicherheit, Facility und Event Service lassen sich einzeln oder kombiniert beauftragen. Aufgaben und Zuständigkeiten halten wir vor dem Einsatz fest.",
   },
   {
     question: "Wie schnell erhalte ich ein Angebot?",
@@ -52,7 +52,7 @@ const DivisionHub = ({ division: slug }: Props) => {
 
   if (!division) return null;
 
-  const others = divisions.filter((d) => d.slug !== slug);
+  const others = divisions.filter((d) => d.slug !== (division.parent ?? slug));
   const details = divisionDetails[slug] ?? [];
 
   return (
@@ -82,13 +82,14 @@ const DivisionHub = ({ division: slug }: Props) => {
         items={division.services.map((s) => ({
           name: s.title,
           description: s.desc,
-          url: `${BASE_URL}/${division.slug}/${s.slug}`,
+          url: `${BASE_URL}/${division.parent ?? division.slug}/${s.slug}`,
         }))}
       />
       <FAQPageJsonLd faqs={hubFaqs} />
 
       <PageHero
-        badge={division.shortLabel}
+        backLink={division.parent ? { label: "Facility", href: "/facility" } : undefined}
+        badge={division.parent ? "Facility · " + division.shortLabel : "Fachgebiet"}
         title={division.h1}
         subtitle={division.intro}
       />
@@ -119,6 +120,13 @@ const DivisionHub = ({ division: slug }: Props) => {
         </div>
       </section>
 
+      {slug === "facility" && (
+        <section className="section-light border-b border-border">
+          <div className="section-shell !py-8 grid gap-4 md:grid-cols-3">
+            {facilityCategories.map(category => <Link key={category.slug} to={`/${category.slug}`} className="link-arrow">{category.title}<ArrowRight /></Link>)}
+          </div>
+        </section>
+      )}
       {/* Services */}
       <section className="section-light">
         <div
@@ -130,7 +138,7 @@ const DivisionHub = ({ division: slug }: Props) => {
               className="h-section mb-4"
               style={{ color: "hsl(var(--section-light-fg))" }}
             >
-              Leistungen im Bereich {division.shortLabel}
+              Unsere Leistungen: {division.shortLabel}
             </h2>
             <p className="text-base leading-relaxed text-muted-fg">{division.intro}</p>
           </div>
@@ -139,7 +147,7 @@ const DivisionHub = ({ division: slug }: Props) => {
             {division.services.map(({ slug: sSlug, icon: Icon, title, context, desc, points }) => (
               <Link
                 key={sSlug}
-                to={`/${division.slug}/${sSlug}`}
+                to={`/${division.parent ?? division.slug}/${sSlug}`}
                 className="card-accent group rounded-xl border p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col"
                 style={{
                   background: "hsl(var(--section-light-card))",
@@ -227,7 +235,7 @@ const DivisionHub = ({ division: slug }: Props) => {
             Bedarf im Bereich {division.shortLabel}?
           </h2>
           <p className="text-muted-fg max-w-xl mx-auto mb-8">
-            Beschreiben Sie Ihr Objekt – wir melden uns mit einem passenden Konzept und transparentem Angebot.
+            Nennen Sie Aufgabe, Einsatzort und Zeitraum. Wir prüfen die Umsetzung und erstellen ein konkretes Angebot.
           </p>
           <Button asChild size="lg">
             <Link to="/kontakt">

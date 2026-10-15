@@ -44,6 +44,11 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
 
+            <Route path="/index" element={<Index />} />
+            <Route path="/facility" element={<DivisionHub division="facility" />} />
+            <Route path="/facility/:slug" element={<ServiceDetail division="facility" />} />
+            <Route path="/event-service" element={<DivisionHub division="event-service" />} />
+            <Route path="/event-service/:slug" element={<ServiceDetail division="event-service" />} />
             {/* Division hubs */}
             <Route path="/sicherheit" element={<DivisionHub division="sicherheit" />} />
             <Route path="/sicherheit/:slug" element={<ServiceDetail division="sicherheit" />} />
