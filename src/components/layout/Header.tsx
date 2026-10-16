@@ -45,7 +45,7 @@ const Header = () => {
             <img
               src={logoColor.url}
               alt="Sentinel Services"
-               className="block h-auto w-[min(72vw,18rem)] sm:w-72 lg:w-80 xl:w-[22rem]"
+               className="block h-auto w-[min(60vw,15rem)] sm:w-60 lg:w-64 xl:w-72"
                width={813}
                height={120}
               decoding="async"
