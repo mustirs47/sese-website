@@ -44,7 +44,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
 
-            <Route path="/index" element={<Index />} />
+            <Route path="/index" element={<LegacyRedirect to="/" title="Sentinel Services – Startseite" description="Diese Adresse ist eine ältere Variante der Startseite von Sentinel Services. Sicherheit, Facility und Event Service finden Sie auf der Startseite." intro="Die Startseite von Sentinel Services erreichen Sie unter der Hauptadresse." linkLabel="Zur Startseite" />} />
             <Route path="/facility" element={<DivisionHub division="facility" />} />
             <Route path="/facility/:slug" element={<ServiceDetail division="facility" />} />
             <Route path="/event-service" element={<DivisionHub division="event-service" />} />
