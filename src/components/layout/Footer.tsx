@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { divisions } from "@/data/divisions";
 import { Button } from "@/components/ui/button";
-import logoGrayscale from "@/assets/sentinel-logo-white.png";
+import logoGrayscale from "@/assets/brand/logo-white.png.asset.json";
 import { reopenCookieSettings } from "@/components/CookieBanner";
 
 const unternehmenNav = [
@@ -27,11 +27,11 @@ const Footer = () => {
         <div>
           <Link to="/" aria-label="Sentinel Services – Startseite" className="inline-block">
             <img
-              src={logoGrayscale}
+              src={logoGrayscale.url}
               alt="Sentinel Services"
-              className="h-auto w-full max-w-64 mb-4"
-              width={1377}
-              height={205}
+              className="block h-auto w-64 max-w-full mb-4"
+              width={813}
+              height={120}
               loading="lazy"
               decoding="async"
             />

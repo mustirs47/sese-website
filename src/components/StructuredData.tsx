@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { divisions, allServices } from "@/data/divisions";
 import { BASE_URL } from "@/lib/seo";
-import logoAsset from "@/assets/sentinel-logo.png.asset.json";
+import logoAsset from "@/assets/brand/logo-dark.png.asset.json";
 
 
 const localBusinessSchema = {

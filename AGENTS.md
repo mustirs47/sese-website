@@ -6,5 +6,5 @@
 - Define typography, corner radii, shadows and motion centrally; narrowly scoped main-content compatibility selectors unify legacy cards without changing their layout.
 - Serve fonts as project-hosted assets instead of runtime font-provider requests to preserve privacy and keep loading predictable.
 - Honor reduced-motion preferences in CSS animations and programmatic scrolling so presentation effects never prevent access to content.
-- Use shared transparent logo variants for navigation and the footer; derive browser and app icons from the same three-circle symbol to keep branding consistent.
+- Use cropped CDN-backed uploaded logo assets for navigation, footer and structured data; derive local browser and app icons from that same uploaded three-circle symbol to preserve proportions and branding.
 - PageHero is text-only and service cards use their functional icons; do not import decorative service illustration assets into page bundles.

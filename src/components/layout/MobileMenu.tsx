@@ -6,7 +6,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import logoSymbol from "@/assets/sentinel-symbol-white.png";
+import logoSymbol from "@/assets/brand/symbol-white.png.asset.json";
 import { divisions } from "@/data/divisions";
 
 
@@ -38,11 +38,11 @@ const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
         <SheetTitle asChild>
           <Link to="/" onClick={onClose} aria-label="Sentinel Services – Startseite">
             <img
-              src={logoSymbol}
+              src={logoSymbol.url}
               alt="Sentinel Services"
               className="h-10 w-auto shrink-0 object-contain"
-              width={234}
-              height={205}
+              width={133}
+              height={120}
             />
           </Link>
         </SheetTitle>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles, FileCheck, Users, ChevronRight, Building2 } from "@/lib/icons";
 import { Button } from "@/components/ui/button";
-import brandSymbol from "@/assets/sentinel-symbol-white.png";
+import brandSymbol from "@/assets/brand/symbol-white.png.asset.json";
 
 const trustSignals = [
   { icon: Building2, text: "Drei Fachgebiete – ein Anbieter" },
@@ -54,11 +54,11 @@ const HeroSection = () => (
 
         <div className="hidden lg:flex shrink-0 items-center justify-center" aria-hidden="true">
           <img
-            src={brandSymbol}
+            src={brandSymbol.url}
             alt=""
             className="w-48 xl:w-64 h-auto"
-            width={234}
-            height={205}
+            width={133}
+            height={120}
             decoding="async"
             loading="eager"
           />
