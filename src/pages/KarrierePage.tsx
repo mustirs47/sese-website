@@ -45,7 +45,7 @@ const steps = [
 const whyUs = [
   { icon: Shield, title: "Seriöser Arbeitgeber", desc: "Feste Verträge, transparente Bedingungen, keine Subunternehmer-Ketten – in allen drei Fachgebieten." },
   { icon: HeartPulse, title: "Regelmäßige Schulungen", desc: "Fachliche Weiterbildung, Arbeitssicherheit, Erste Hilfe und Brandschutz – wir investieren in Ihre Qualifikation." },
-  { icon: CalendarCheck, title: "Planbare Einsätze", desc: "Langfristige Planung, feste Touren oder Schichten, kein ständiges Hin und Her." },
+  { icon: CalendarCheck, title: "Planbare Einsätze", desc: "Feste Touren oder Schichten, wo der Bereich es zulässt; Eventeinsätze mit Vorlauf." },
   { icon: Star, title: "Wertschätzung", desc: "Ihre Arbeit ist wichtig – und wird bei uns auch so behandelt. Feste Ansprechpartner, offenes Ohr." },
 ];
 
@@ -65,7 +65,7 @@ const KarrierePage = () => {
     <PageLayout>
       <SEOHead
         title="Karriere bei Sentinel Services – Jobs bundesweit"
-        description="Jobs in Sicherheit, Facility und Event Service. Faire Bezahlung, planbare Einsätze, Weiterbildung. Jetzt bundesweit bewerben."
+        description="Jobs in Sicherheit, Facility und Event Service. Klare Einsatzplanung, Weiterbildung. Jetzt bundesweit bewerben."
         keywords="Gebäudereiniger Job, Facility Management Job, Gärtner Job, Hausmeister Job, Security Job, Sachkunde Job, Karriere Sentinel Services"
       />
       <FAQPageJsonLd faqs={careerFaqs} />

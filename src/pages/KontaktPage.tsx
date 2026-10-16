@@ -210,7 +210,7 @@ const KontaktPage = () => {
                     <Users className="h-4 w-4 text-primary shrink-0" /> Feste Ansprechpartner
                   </li>
                   <li className="flex items-center gap-2.5 text-sm text-muted-fg">
-                    <FileCheck className="h-4 w-4 text-primary shrink-0" /> Lückenlose Dokumentation
+                    <FileCheck className="h-4 w-4 text-primary shrink-0" /> Dokumentation je Einsatz
                   </li>
                 </ul>
               </div>
@@ -353,7 +353,7 @@ const KontaktPage = () => {
               },
               {
                 heading: "Was danach passiert",
-                body: "Nach Ihrer Anfrage prüfen wir Umfang und Verfügbarkeit und melden uns bei Ihnen. Bei größeren Objekten vereinbaren wir eine Begehung, sonst reicht meist ein kurzes Telefonat. Sie erhalten anschließend ein schriftliches Angebot mit Leistungsverzeichnis, Intervallen und Preisen – mit klar benannten Vertragsbedingungen.",
+                body: "Nach Ihrer Anfrage prüfen wir Umfang und Verfügbarkeit und melden uns bei Ihnen. Bei größeren Objekten vereinbaren wir eine Begehung, sonst klären wir offene Punkte per E-Mail oder Rückruf. Sie erhalten anschließend ein schriftliches Angebot mit Leistungsverzeichnis, Intervallen und Preisen – mit klar benannten Vertragsbedingungen.",
               },
               {
                 heading: "Mehrere Bereiche gleichzeitig",
@@ -361,7 +361,7 @@ const KontaktPage = () => {
               },
               {
                 heading: "Datenschutz",
-                body: "Wir verwenden Ihre Angaben zur Bearbeitung der Anfrage. Die technische Formularzustellung erfolgt über FormSubmit; Hinweise dazu stehen in der Datenschutzerklärung. Details dazu stehen in unserer Datenschutzerklärung. Wenn Sie lieber ohne Formular starten: eine kurze E-Mail mit Objekt und Bedarf genügt.",
+                body: "Wir verwenden Ihre Angaben zur Bearbeitung der Anfrage. Die technische Formularzustellung erfolgt über FormSubmit; Hinweise dazu stehen in der Datenschutzerklärung. Wenn Sie lieber ohne Formular starten: eine kurze E-Mail mit Objekt und Bedarf genügt.",
               },
             ].map(({ heading, body }) => (
               <article key={heading} className="min-w-0">

@@ -38,7 +38,7 @@ export const legacyRoutes: LegacyRoute[] = [
     to: "/facility/winterdienst",
     title: "Winterdienst – neue Adresse | Sentinel Services",
     description:
-      "Der Winterdienst gehört jetzt zum infrastrukturellen Facility Management: Räum- und Streupflicht, Dokumentation und Bereitschaft rund um die Uhr.",
+      "Der Winterdienst gehört jetzt zum infrastrukturellen Facility Management: Räum- und Streupflicht, Dokumentation und Bereitschaft nach vereinbartem Einsatzplan.",
     intro:
       "Der Winterdienst ist vom Bereich Grünanlagen in das infrastrukturelle Facility Management gewechselt. Sie finden ihn jetzt dort.",
     linkLabel: "Zum Winterdienst",

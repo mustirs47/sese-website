@@ -79,7 +79,7 @@ const sicherheitServices: ServiceData[] = [
     faqs: [
       { question: "Welche Qualifikationen haben Ihre Objektschutzkräfte?", answer: "Unsere Einsatzkräfte haben die IHK-Sachkundeprüfung für das Bewachungsgewerbe, werden regelmäßig in Deeskalation und Erste Hilfe geschult und vor dem ersten Einsatz objektspezifisch eingewiesen." },
       { question: "Wie schnell kann ein Objektschutz-Einsatz starten?", answer: "Bei kurzfristigem Bedarf können wir zügig einsatzbereit sein. Für planbare Einsätze erstellen wir vorab ein individuelles Konzept." },
-      { question: "Bieten Sie auch Nacht- und Wochenendbewachung an?", answer: "Ja, wir bieten Objektschutz rund um die Uhr, einschließlich Nacht-, Wochenend- und Feiertagsdiensten." },
+      { question: "Bieten Sie auch Nacht- und Wochenendbewachung an?", answer: "Ja. Objektschutz ist nach vereinbarten Zeiten möglich, auch nachts, am Wochenende und an Feiertagen." },
       { question: "Was ist der Unterschied zwischen Objektschutz und Werkschutz?", answer: "Werkschutz ist eine Sonderform des Objektschutzes für Industriebetriebe und Produktionsstätten – mit zusätzlichem Fokus auf Werkstor-Kontrolle, Brandwache und Schutz sensibler Anlagen." },
     ],
   },
@@ -91,16 +91,16 @@ const sicherheitServices: ServiceData[] = [
     desc: "Einlassmanagement, Besucherlenkung und Deeskalation – in direkter Abstimmung mit dem Veranstalter.",
     points: ["Personalisiertes Einlassmanagement", "Deeskalation und Intervention", "Abstimmung mit Ordnungsbehörden"],
     longDesc:
-      "Veranstaltungsschutz und Eventsecurity für Konzerte, Messen, Firmenevents und Stadtfeste – mit qualifizierten Türstehern und erfahrener Einsatzleitung. Wir liefern Einlasssteuerung, Besucherlenkung, VIP-Betreuung und Deeskalationsbereitschaft, immer in enger Abstimmung mit dem Veranstalter und den zuständigen Ordnungsbehörden.",
+      "Veranstaltungsschutz und Eventsecurity für Konzerte, Messen, Firmenevents und Stadtfeste – mit sachkundigem Sicherheitspersonal und erfahrener Einsatzleitung. Wir liefern Einlasssteuerung, Besucherlenkung, Schutz von VIP-Bereichen und Deeskalationsbereitschaft, immer in enger Abstimmung mit dem Veranstalter und den zuständigen Ordnungsbehörden.",
     typicalClients: "Veranstalter, Agenturen, Unternehmen mit Firmenevents, Kommunen und öffentliche Träger.",
     h1: "Veranstaltungsschutz & Eventsecurity",
     metaTitle: "Veranstaltungsschutz & Eventsecurity | Sentinel Services",
     metaDescription:
-      "Veranstaltungsschutz mit erfahrenen Türstehern: Einlasskontrolle, Besucherlenkung, Deeskalation – für Firmenevents, Messen und Großveranstaltungen.",
+      "Veranstaltungsschutz mit sachkundigem Sicherheitspersonal: Einlasskontrolle, Besucherlenkung, Deeskalation – für Firmenevents, Messen und Großveranstaltungen.",
     faqs: [
       { question: "Ab welcher Veranstaltungsgröße bieten Sie Schutz an?", answer: "Wir sichern Veranstaltungen jeder Größe – von Firmenfeiern mit 50 Gästen bis zu Großveranstaltungen mit mehreren tausend Besuchern." },
       { question: "Übernehmen Sie auch die Abstimmung mit dem Ordnungsamt?", answer: "Ja, wir unterstützen bei der Erstellung von Sicherheitskonzepten und koordinieren uns direkt mit den zuständigen Behörden." },
-      { question: "Stellen Sie auch Türsteher für einzelne Abendveranstaltungen?", answer: "Ja, wir stellen geprüfte Türsteher und Ordner – inklusive Einlasskontrolle, Alterskontrolle und Konfliktbewältigung." },
+      { question: "Stellen Sie auch Personal für einzelne Abendveranstaltungen?", answer: "Ja, wir stellen Sicherheitspersonal mit Sachkunde und Ordner – inklusive Einlasskontrolle, Alterskontrolle und Konfliktbewältigung." },
     ],
   },
   {
@@ -109,7 +109,7 @@ const sicherheitServices: ServiceData[] = [
     title: "Baustellenbewachung",
     context: "Für Projektflächen mit hohem Materialwert oder Zugang außerhalb der Bauzeiten.",
     desc: "Nacht- und Wochenendbewachung mit dokumentierten Kontrollgängen und Zugangssicherung.",
-    points: ["Nacht-/Wochenendpräsenz", "Materialschutz und Zufahrtskontrolle", "Sofortmeldung bei Vorfällen"],
+    points: ["Nacht-/Wochenendpräsenz", "Materialschutz und Zufahrtskontrolle", "Meldung nach festgelegter Meldekette"],
     longDesc:
       "Baustellenbewachung, Brandwache und Nachtwache schützen Ihre Projektflächen genau dann, wenn keine Bauleitung vor Ort ist. Bei hohem Materialwert, offenen Zugängen und steigendem Risiko durch Metalldiebstahl sichern wir Zufahrten, kontrollieren Zugänge, dokumentieren Kontrollgänge und schützen Baumaterial sowie Gerätschaften.",
     typicalClients: "Bauunternehmen, Projektentwickler, Generalunternehmer, kommunale Bauträger.",
@@ -119,7 +119,7 @@ const sicherheitServices: ServiceData[] = [
       "Baustellenbewachung in Nacht- und Wochenendlage, Brandwache nach DGUV und Nachtwache – geprüftes Personal, klare Meldekette bei Vorfällen.",
     faqs: [
       { question: "Welche Baustellen sichern Sie?", answer: "Wir sichern Baustellen jeder Größe – vom Einfamilienhaus bis zur Großbaustelle. Der Fokus liegt auf Flächen mit hohem Materialwert oder offenem Zugang." },
-      { question: "Was passiert bei einem Vorfall auf der Baustelle?", answer: "Unsere Einsatzkräfte melden jeden Vorfall sofort an den Bauleiter und dokumentieren den Sachverhalt lückenlos." },
+      { question: "Was passiert bei einem Vorfall auf der Baustelle?", answer: "Unsere Einsatzkräfte melden Vorfälle nach der vereinbarten Meldekette an die Bauleitung und dokumentieren den Sachverhalt schriftlich." },
       { question: "Übernehmen Sie auch Brandwachen?", answer: "Ja, wir stellen Brandwachen für Schweiß- und Heißarbeiten sowie als Sicherheitswache nach Bränden – mit entsprechend geschultem Personal nach DGUV-Vorgaben." },
     ],
   },
@@ -158,7 +158,7 @@ const sicherheitServices: ServiceData[] = [
       "Revierdienst, Streifendienst und Nachtwache mit geplanten Kontrollfahrten, Alarmverfolgung und Schließrunden – Bewachung ohne permanente Besetzung.",
     faqs: [
       { question: "Wie oft finden die Kontrollfahrten statt?", answer: "Die Häufigkeit wird individuell festgelegt – von einmal täglich bis zu mehrfachen Kontrollen pro Nacht, je nach Risikoprofil und Bedarf." },
-      { question: "Werden die Kontrollgänge dokumentiert?", answer: "Ja, jeder Kontrollgang wird lückenlos dokumentiert. Sie erhalten regelmäßige Berichte über durchgeführte Kontrollen und festgestellte Abweichungen." },
+      { question: "Werden die Kontrollgänge dokumentiert?", answer: "Ja, Kontrollgänge werden im vereinbarten Umfang dokumentiert. Sie erhalten regelmäßige Berichte über durchgeführte Kontrollen und festgestellte Abweichungen." },
     ],
   },
   {
@@ -285,15 +285,15 @@ const gruenServices: ServiceData[] = [
     icon: TreePine,
     title: "Baumpflege & Baumkontrolle",
     context: "Sachkundige Pflege, Schnitt und Verkehrssicherungsprüfung.",
-    desc: "Kronenpflege, Totholzentfernung und Baumkontrolle nach FLL-Richtlinie.",
+    desc: "Kronenpflege, Totholzentfernung und Baumkontrolle zur Verkehrssicherung.",
     points: ["Kronen- und Erziehungsschnitt", "Totholzentfernung", "Baumkontrolle (Verkehrssicherung)"],
     longDesc:
-      "Baumpflege und Baumkontrolle durch geschultes Personal: Kronen- und Erziehungsschnitt, Totholzentfernung sowie regelmäßige Baumkontrollen zur Verkehrssicherungspflicht – nach den Vorgaben der FLL-Baumkontroll­richtlinie.",
+      "Baumpflege und Baumkontrolle durch geschultes Personal: Kronen- und Erziehungsschnitt, Totholzentfernung sowie regelmäßige Baumkontrollen zur Verkehrssicherungspflicht.",
     typicalClients: "Kommunen, Wohnungsunternehmen, Industriegelände, Hotellerie.",
     h1: "Baumpflege & Baumkontrolle",
     metaTitle: "Baumpflege & Baumkontrolle | Sentinel Services",
     metaDescription:
-      "Baumpflege, Kronenschnitt und Baumkontrollen zur Verkehrssicherung – nach FLL-Richtlinie und mit dokumentiertem Ergebnis.",
+      "Baumpflege, Kronenschnitt und Baumkontrollen zur Verkehrssicherung – mit dokumentiertem Ergebnis.",
     faqs: [
       { question: "Erstellen Sie Baumkataster?", answer: "Ja, auf Wunsch übernehmen wir auch die digitale Erfassung und Pflege Ihres Baumbestands." },
     ],
@@ -309,7 +309,7 @@ const facilityServices: ServiceData[] = [
     desc: "Schneeräumung und Streudienst auf Wegen, Zufahrten und Parkflächen – rechtzeitig vor Arbeitsbeginn.",
     points: ["Schneeräumung", "Streudienst gemäß Vorgaben", "Dokumentation der Einsätze"],
     longDesc:
-      "Winterdienst zur sicheren Erfüllung Ihrer Räum- und Streupflicht: Schnee räumen, Streumittel ausbringen, Wege und Zufahrten frei halten – vor Arbeits- und Schulbeginn und mit lückenloser Einsatzdokumentation als Nachweis.",
+      "Winterdienst zur sicheren Erfüllung Ihrer Räum- und Streupflicht: Schnee räumen, Streumittel ausbringen, Wege und Zufahrten frei halten – vor Arbeits- und Schulbeginn und mit Einsatzprotokoll als Nachweis.",
     typicalClients: "Hausverwaltungen, Gewerbeobjekte, Logistik, öffentliche Träger.",
     h1: "Winterdienst – Räum- und Streupflicht zuverlässig erfüllt",
     metaTitle: "Winterdienst für Gewerbe & Wohnobjekte | Sentinel Services",
@@ -439,7 +439,7 @@ const existingDivisions: DivisionData[] = [
     h1: "Garten- & Grünanlagenpflege",
     metaTitle: "Grünanlagenpflege & Baumpflege | Sentinel Services",
     metaDescription:
-      "Pflege von Grünanlagen und Baumpflege nach FLL. Ganzjährige Pflegeverträge mit dokumentierter Leistung.",
+      "Pflege von Grünanlagen und Baumpflege. Ganzjährige Pflegeverträge mit dokumentierter Leistung.",
     keywords: "Grünanlagenpflege, Gartenpflege gewerblich, Landschaftspflege, Baumpflege, Baumkontrolle",
     services: gruenServices,
   },

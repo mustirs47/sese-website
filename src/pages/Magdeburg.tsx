@@ -133,8 +133,8 @@ const MagdeburgPage = () => {
               Was wir in Magdeburg übernehmen
             </h2>
             <p className="prose-lead text-muted-fg">
-              Die meisten unserer Magdeburger Kunden starten mit einem Bereich – meist Unterhaltsreinigung oder
-              Objektschutz – und geben nach und nach weitere Aufgaben dazu. Weil Personal, Einsatzleitung und
+              Viele Auftraggeber starten mit einem Bereich – etwa Unterhaltsreinigung oder
+              Objektschutz – und ergänzen später weitere Aufgaben. Weil Personal, Einsatzleitung und
               Disposition in der Stadt sitzen, lassen sich Turnus, Uhrzeiten und kurzfristige Zusatzeinsätze ohne lange
               Abstimmungswege ändern.
             </p>

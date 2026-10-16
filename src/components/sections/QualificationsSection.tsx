@@ -36,7 +36,7 @@ const groups = [
     icon: Settings,
     title: "Betriebliche Standards",
     items: [
-      "Lückenlose Einsatzdokumentation",
+      "Schriftliche Einsatzdokumentation",
       "Standardisierte Übergabe- und Meldeprotokolle",
       "Interne Qualitätskontrollen und Audits",
     ],
