@@ -187,7 +187,7 @@ const KontaktPage = () => {
               </div>
 
               {/* Guarantees */}
-              <div className="rounded-xl p-5" style={{ background: "hsl(var(--primary) / 0.05)", border: "1px solid hsl(var(--section-light-border))" }}>
+              <div className="rounded-xl p-5" style={{ background: "hsl(var(--section-light-card))", border: "1px solid hsl(var(--section-light-border))" }}>
                 <p className="text-xs font-bold text-primary mb-3 uppercase tracking-wider">Was Sie von uns erhalten</p>
                 <ul className="space-y-2.5">
                   {guarantees.map((g) => (
@@ -260,7 +260,7 @@ const KontaktPage = () => {
                   </div>
                   <div>
                     <label htmlFor={id("service")} className="text-xs font-medium mb-1.5 block" style={{ color: "hsl(var(--section-light-fg))" }}>Gewünschte Leistung</label>
-                    <Input id={id("service")} name="service" maxLength={150} placeholder="z.B. Objektschutz, Gebäudereinigung oder Gästebetreuung" />
+                    <Input id={id("service")} name="service" maxLength={150} placeholder="z. B. Objektschutz oder Reinigung" />
                   </div>
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div>
@@ -269,7 +269,7 @@ const KontaktPage = () => {
                     </div>
                     <div>
                       <label htmlFor={id("period")} className="text-xs font-medium mb-1.5 block" style={{ color: "hsl(var(--section-light-fg))" }}>Zeitraum</label>
-                      <Input id={id("period")} name="period" maxLength={80} placeholder="z.B. ab November oder am Veranstaltungstag" />
+                      <Input id={id("period")} name="period" maxLength={80} placeholder="z. B. ab November" />
                     </div>
                   </div>
                   <div>

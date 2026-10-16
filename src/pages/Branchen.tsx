@@ -117,7 +117,7 @@ const BranchenPage = () => {
                     </div>
                     <h2 className="text-base font-bold" style={{ color: "hsl(var(--section-light-fg))" }}>{title}</h2>
                   </div>
-                  <p className="prose-body text-muted-fg mb-5">{detail}</p>
+                  <p className="text-sm leading-relaxed text-muted-fg mb-5">{detail}</p>
                   
                   {/* Risks */}
                   {risks[slug] && (
@@ -140,7 +140,7 @@ const BranchenPage = () => {
                   )}
 
                   <div>
-                    <p className="eyebrow !mb-2 inline-flex items-center gap-1.5">
+                    <p className="text-xs font-bold uppercase tracking-widest text-accent mb-2 flex items-center gap-1.5">
                       <CheckCircle className="h-3 w-3" /> Passende Leistungen
                     </p>
                     <div className="flex flex-wrap gap-2">

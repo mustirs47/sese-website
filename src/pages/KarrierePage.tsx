@@ -22,8 +22,8 @@ const benefits = [
   "Einsätze in Sicherheit, Facility und Event Service",
   "Feste Ansprechpartner und strukturierte Einarbeitung am Objekt",
   "Regelmäßige Weiterbildung – fachlich, sicherheitstechnisch, gesundheitlich",
-  "Langfristige Einsatzplanung statt kurzfristiger Abrufarbeit",
-  "Faire Vergütung und transparente Arbeitsbedingungen",
+  "Einsatzplanung mit Vorlauf, soweit der Bereich es zulässt",
+  "Klare Arbeitsbedingungen, schriftlich vereinbart",
   "Aufstiegsmöglichkeiten zur Objekt- oder Einsatzleitung",
 ];
 
@@ -43,10 +43,10 @@ const steps = [
 ];
 
 const whyUs = [
-  { icon: Shield, title: "Seriöser Arbeitgeber", desc: "Feste Verträge, transparente Bedingungen, keine Subunternehmer-Ketten – in allen drei Fachgebieten." },
-  { icon: HeartPulse, title: "Regelmäßige Schulungen", desc: "Fachliche Weiterbildung, Arbeitssicherheit, Erste Hilfe und Brandschutz – wir investieren in Ihre Qualifikation." },
+  { icon: Shield, title: "Seriöser Arbeitgeber", desc: "Feste Verträge, transparente Bedingungen, klare Zuständigkeiten – in allen drei Fachgebieten." },
+  { icon: HeartPulse, title: "Regelmäßige Schulungen", desc: "Fachliche Weiterbildung, Arbeitssicherheit, Erste Hilfe und Brandschutz – passend zu Ihrem Einsatzbereich." },
   { icon: CalendarCheck, title: "Planbare Einsätze", desc: "Feste Touren oder Schichten, wo der Bereich es zulässt; Eventeinsätze mit Vorlauf." },
-  { icon: Star, title: "Wertschätzung", desc: "Ihre Arbeit ist wichtig – und wird bei uns auch so behandelt. Feste Ansprechpartner, offenes Ohr." },
+  { icon: Star, title: "Wertschätzung", desc: "Feste Ansprechpartner und ein offenes Ohr für Rückmeldungen aus dem Einsatz." },
 ];
 
 const careerFaqs = [
@@ -187,8 +187,7 @@ const KarrierePage = () => {
               Das unterscheidet uns als Arbeitgeber
             </h2>
             <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
-              Wir wissen: Gute Arbeit beginnt bei zufriedenen Mitarbeitern. Deshalb setzen wir auf faire Bedingungen, 
-              Entwicklung und echte Wertschätzung.
+              Gute Arbeit braucht klare Bedingungen, eine ordentliche Einweisung und Ansprechpartner, die erreichbar sind.
             </p>
           </div>
           <div className="stagger-children grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
