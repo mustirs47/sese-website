@@ -1,6 +1,6 @@
 import { useId, useState } from "react";
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Send, Shield, FileCheck, Users, Search, UserCheck, Radio, ClipboardCheck, ArrowRight, CheckCircle } from "@/lib/icons";
+import { Mail, MapPin, Send } from "@/lib/icons";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -11,20 +11,6 @@ import FAQSection from "@/components/sections/FAQSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { BreadcrumbJsonLd, FAQPageJsonLd, WebPageJsonLd } from "@/components/StructuredData";
 import { BASE_URL } from "@/lib/seo";
-
-const processSteps = [
-  { icon: Search, title: "Analyse", desc: "Wir erfassen Ihren Bedarf" },
-  { icon: UserCheck, title: "Konzept", desc: "Individueller Einsatzplan" },
-  { icon: Radio, title: "Einsatz", desc: "Strukturierter Start" },
-  { icon: ClipboardCheck, title: "Reporting", desc: "Laufende Dokumentation" },
-];
-
-const guarantees = [
-  "Schnellstmögliche Rückmeldung auf Ihre Anfrage",
-  "Konkretes Angebot statt allgemeiner Beratung",
-  "Kein Standardangebot – individuelles Konzept für Ihren Bedarf",
-  "Transparente Kostenaufstellung ohne versteckte Gebühren",
-];
 
 const kontaktFaqs = [
   { question: "Wie schnell melden Sie sich auf meine Anfrage?", answer: "Wir melden uns schnellstmöglich auf Ihre Anfrage per E-Mail." },
@@ -37,7 +23,6 @@ const KontaktPage = () => {
   const [submitting, setSubmitting] = useState(false);
   const { toast } = useToast();
   const ref = useScrollAnimation();
-  const ref2 = useScrollAnimation();
   const fid = useId();
   const id = (k: string) => `${fid}-${k}`;
 
