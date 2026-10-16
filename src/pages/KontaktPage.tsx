@@ -187,7 +187,7 @@ const KontaktPage = () => {
               </div>
 
               {/* Guarantees */}
-              <div className="rounded-xl p-5" style={{ background: "hsl(var(--primary) / 0.05)", border: "1px solid hsl(var(--section-light-border))" }}>
+              <div className="rounded-xl p-5" style={{ background: "hsl(var(--section-light-card))", border: "1px solid hsl(var(--section-light-border))" }}>
                 <p className="text-xs font-bold text-primary mb-3 uppercase tracking-wider">Was Sie von uns erhalten</p>
                 <ul className="space-y-2.5">
                   {guarantees.map((g) => (

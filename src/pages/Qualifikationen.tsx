@@ -46,9 +46,9 @@ const groups = [
     items: [
       { name: "Schriftliche Einsatzdokumentation", detail: "Protokolle zu Vorfällen und Kontrollgängen im vereinbarten Umfang" },
       { name: "Standardisierte Übergabe- und Meldeprotokolle", detail: "Einheitliche Formulare für reibungslose Schichtwechsel" },
-      { name: "Interne Qualitätskontrollen und Audits", detail: "Regelmäßige Überprüfung durch Einsatzleitung und Geschäftsführung" },
+      { name: "Qualitätskontrollen vor Ort", detail: "Stichproben durch die Objekt- bzw. Einsatzleitung" },
     ],
-    relevance: "Transparenz und Nachvollziehbarkeit jedes Einsatzes – Sie wissen immer, was auf Ihrem Objekt passiert.",
+    relevance: "Nachvollziehbare Einsätze: Sie sehen anhand der Protokolle, was auf Ihrem Objekt erledigt wurde.",
   },
 ];
 
@@ -146,16 +146,13 @@ const QualifikationenPage = () => {
                 className="card-accent rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg"
                 style={{ background: "hsl(var(--section-light-card))", border: "1px solid hsl(var(--section-light-border))" }}
               >
-                <div className="flex items-center justify-between mb-5">
-                  <div className="flex items-center gap-3">
+                <div className="mb-5">
+                  <div className="flex items-start gap-3">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl" style={{ background: "hsl(var(--primary) / 0.1)" }}>
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
-                    <h2 className="text-base font-bold" style={{ color: "hsl(var(--section-light-fg))" }}>{title}</h2>
+                    <h2 className="text-base font-bold leading-snug pt-2.5 min-w-0" style={{ color: "hsl(var(--section-light-fg))" }}>{title}</h2>
                   </div>
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary">
-                    {items.length}
-                  </span>
                 </div>
                 <ul className="space-y-4 mb-5">
                   {items.map((item) => (
@@ -221,19 +218,19 @@ const QualifikationenPage = () => {
                   Was bedeutet das für Sie als Auftraggeber?
                 </h2>
                 <p className="text-base leading-relaxed text-muted-fg">
-                  Qualifiziertes Personal bedeutet nicht nur besseren Schutz – es reduziert auch Ihr Haftungsrisiko erheblich. 
+                  Qualifiziertes Personal sorgt für verlässliche Abläufe und klare Zuständigkeiten. 
                   Als Auftraggeber profitieren Sie von:
                 </p>
               </div>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 pl-0 sm:pl-16">
               {[
-                "Rechtssichere Einsätze durch geschultes Personal",
-                "Reduziertes Haftungsrisiko bei Vorfällen",
+                "Eingewiesenes Personal für die jeweilige Aufgabe",
+                "Dokumentierte Abläufe bei Vorfällen",
                 "Professionelles Auftreten gegenüber Ihren Kunden und Mitarbeitern",
-                "Nachweisbare Qualifikationen für Audits und Versicherungen",
+                "Qualifikationsnachweise auf Anfrage",
                 "Klare Abläufe für Notfälle",
-                "Dokumentierte Prozesse für volle Transparenz",
+                "Protokolle zu vereinbarten Leistungen",
               ].map((point) => (
                 <div key={point} className="flex items-start gap-2.5">
                   <Award className="h-4 w-4 text-primary shrink-0 mt-0.5" />
