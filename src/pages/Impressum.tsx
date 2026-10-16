@@ -6,7 +6,7 @@ const Impressum = () => (
   <PageLayout>
     <SEOHead
       title="Impressum – Sentinel Services, Magdeburg"
-      description="Impressum von Sentinel Services aus Magdeburg: Anbieterkennzeichnung nach § 5 TMG mit Inhaber, Anschrift, Kontaktdaten, Umsatzsteuer-Identifikationsnummer, zuständiger Aufsichtsbehörde und Hinweisen zur Haftung."
+      description="Impressum von Sentinel Services, Magdeburg: Anbieterangaben nach § 5 TMG mit Inhaber, Anschrift, Kontakt, USt-ID und Aufsichtsbehörde."
     />
 
     <PageHero

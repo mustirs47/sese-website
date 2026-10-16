@@ -109,7 +109,7 @@ const Footer = () => {
         </p>
         <p className="text-xs text-muted-foreground">
           Webdesign:{" "}
-          <a href="https://www.ovarna.de/?utm_source=sentinel-services.de&utm_medium=referral&utm_campaign=footer-credit" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+          <a href="https://www.ovarna.de/de/?utm_source=sentinel-services.de&utm_medium=referral&utm_campaign=footer-credit" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
             Ovarna
           </a>
         </p>
