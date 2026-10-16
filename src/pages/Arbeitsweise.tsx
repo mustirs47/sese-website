@@ -38,7 +38,7 @@ const phases = [
     icon: ClipboardCheck,
     step: "04",
     title: "Dokumentation & Reporting",
-    desc: "Lückenlose Einsatzdokumentation, regelmäßige Berichte und Nachsteuerung bei Abweichungen.",
+    desc: "Schriftliche Einsatzdokumentation, regelmäßige Berichte und Nachsteuerung bei Abweichungen.",
     detail: "Standardisierte Protokolle, regelmäßige Einsatzberichte und strukturierte Nachbesprechungen. Volle Transparenz.",
     deliverables: ["Digitale Einsatzprotokolle", "Regelmäßige Statusberichte", "Nachbesprechung und Optimierung"],
   },
@@ -107,8 +107,8 @@ const ArbeitsweisePage = () => {
               <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Fester Ansprechpartner</p>
             </div>
             <div>
-              <p className="stat-number">100%</p>
-              <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Dokumentierte Einsätze</p>
+              <p className="stat-number">1</p>
+              <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Protokoll je Einsatz</p>
             </div>
           </div>
         </div>

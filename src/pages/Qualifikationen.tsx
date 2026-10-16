@@ -44,7 +44,7 @@ const groups = [
     icon: Settings,
     title: "Betriebliche Standards",
     items: [
-      { name: "Lückenlose Einsatzdokumentation", detail: "Digitale Protokollierung aller Vorfälle und Kontrollgänge" },
+      { name: "Schriftliche Einsatzdokumentation", detail: "Protokolle zu Vorfällen und Kontrollgängen im vereinbarten Umfang" },
       { name: "Standardisierte Übergabe- und Meldeprotokolle", detail: "Einheitliche Formulare für reibungslose Schichtwechsel" },
       { name: "Interne Qualitätskontrollen und Audits", detail: "Regelmäßige Überprüfung durch Einsatzleitung und Geschäftsführung" },
     ],
@@ -54,7 +54,7 @@ const groups = [
 
 const qualFaqs = [
   { question: "Gilt die Sachkundeanforderung für alle Fachgebiete?", answer: "Die Sachkundeprüfung nach §34a GewO (IHK) ist unsere Voraussetzung für Kräfte im Sicherheitsdienst. Facility und Event Service haben eigene, auf die Tätigkeit abgestimmte Anforderungen. Servicepersonal übernimmt keine Bewachungsaufgaben." },
-  { question: "Wie stellen Sie die Qualität dauerhaft sicher?", answer: "Durch regelmäßige interne Audits, verpflichtende Auffrischungsschulungen und standardisierte Einsatzdokumentation. Zusätzlich führen wir Kundenzufriedenheitsbefragungen durch." },
+  { question: "Wie stellen Sie die Qualität dauerhaft sicher?", answer: "Durch Kontrollen der Objektleitung vor Ort, Auffrischungen in regelmäßigen Abständen und eine einheitliche Einsatzdokumentation. Rückmeldungen von Auftraggebern fließen direkt in die Nachsteuerung ein." },
   { question: "Welche Zusatzausbildungen hat Ihr Personal?", answer: "Erste-Hilfe, Brandschutzhelfer und Deeskalationstraining – alles regelmäßig aufgefrischt. Je nach Einsatz kommen weitere Qualifikationen hinzu." },
   { question: "Wie oft werden Schulungen durchgeführt?", answer: "Wir schulen unser Personal mindestens zweimal jährlich in den Kernbereichen. Zusätzlich gibt es objektspezifische Einweisungen vor jedem neuen Einsatz." },
 ];
@@ -62,8 +62,8 @@ const qualFaqs = [
 const certProcess = [
   { icon: BookOpen, title: "Grundausbildung", desc: "Nachweise entsprechend der Tätigkeit prüfen" },
   { icon: GraduationCap, title: "Fachschulung", desc: "Spezialisierung nach Einsatzbereich" },
-  { icon: RefreshCw, title: "Auffrischung", desc: "Regelmäßige Weiterbildung und Re-Zertifizierung" },
-  { icon: Shield, title: "Qualitätskontrolle", desc: "Interne Audits und Leistungsbewertung" },
+  { icon: RefreshCw, title: "Auffrischung", desc: "Weiterbildung in regelmäßigen Abständen" },
+  { icon: Shield, title: "Qualitätskontrolle", desc: "Stichproben der Objektleitung vor Ort" },
 ];
 
 const QualifikationenPage = () => {
@@ -76,7 +76,7 @@ const QualifikationenPage = () => {
       <SEOHead
         title="Qualifikationen & Nachweise unseres Personals | Sentinel Services"
         description="Qualifikationen für Sicherheit, Facility und Event Service: gesetzliche Nachweise im Sicherheitsdienst, fachliche Einweisung und klar getrennte Aufgaben."
-        keywords="Gebäudereinigung Qualifikation, FLL Baumpflege, Facility Management Nachweise, Sachkundeprüfung 34a, §34a GewO, Fachpersonal Objektbetreuung"
+        keywords="Gebäudereinigung Qualifikation, Baumpflege Qualifikation, Facility Management Nachweise, Sachkundeprüfung 34a, §34a GewO, Fachpersonal Objektbetreuung"
       />
       <BreadcrumbJsonLd
         items={[
@@ -232,7 +232,7 @@ const QualifikationenPage = () => {
                 "Reduziertes Haftungsrisiko bei Vorfällen",
                 "Professionelles Auftreten gegenüber Ihren Kunden und Mitarbeitern",
                 "Nachweisbare Qualifikationen für Audits und Versicherungen",
-                "Sofortige Handlungsfähigkeit bei Notfällen",
+                "Klare Abläufe für Notfälle",
                 "Dokumentierte Prozesse für volle Transparenz",
               ].map((point) => (
                 <div key={point} className="flex items-start gap-2.5">

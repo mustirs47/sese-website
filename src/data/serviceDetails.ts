@@ -125,7 +125,7 @@ export const serviceDetails: Record<string, ServiceDetailBlock[]> = {
     },
     {
       heading: "Qualitätskontrolle",
-      body: "Eine Objektleitung prüft die Ausführung in festen Abständen vor Ort und nimmt Stichproben nach einem Prüfbogen. Auffälligkeiten werden mit der Kraft direkt besprochen. Reklamationen nehmen wir telefonisch oder per E-Mail an und bearbeiten sie in der Regel bis zum nächsten Reinigungstag.",
+      body: "Eine Objektleitung prüft die Ausführung in festen Abständen vor Ort und nimmt Stichproben nach einem Prüfbogen. Auffälligkeiten werden mit der Kraft direkt besprochen. Reklamationen nehmen wir per E-Mail oder im vereinbarten Rückruf an und bearbeiten sie in der Regel bis zum nächsten Reinigungstag.",
     },
   ],
   "glas-und-fensterreinigung": [

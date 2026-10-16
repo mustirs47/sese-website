@@ -23,7 +23,7 @@ const competences = [
   {
     icon: BookOpen,
     title: "Fachliche Weiterbildung",
-    desc: "Regelmäßige Schulungen in Deeskalation, Brandschutz, Erste Hilfe und branchenspezifischen Anforderungen. Kein Einsatz ohne aktuelle Qualifikation.",
+    desc: "Regelmäßige Schulungen in Deeskalation, Brandschutz, Erste Hilfe und branchenspezifischen Anforderungen. Wir achten darauf, dass Nachweise vor jedem Einsatz aktuell sind.",
     focus: ["Pflichtschulungen und Auffrischungen", "Branchenspezifische Zusatzqualifikationen", "Einweisung neuer Einsatzkräfte"],
   },
 ];

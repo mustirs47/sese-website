@@ -5,7 +5,7 @@ const items = [
   { icon: Building2, value: "3 Fachgebiete", label: "Sicherheit · Facility · Event Service" },
   { icon: Users, value: "Feste Teams", label: "Persönliche Ansprechpartner" },
   { icon: FileCheck, value: "Klare Abläufe", label: "Abgestimmt und dokumentiert" },
-  { icon: MapPin, value: "Bundesweit", label: "Auf Anfrage einsatzbereit" },
+  { icon: MapPin, value: "Bundesweit", label: "Nach Prüfung von Ort und Umfang" },
 ];
 
 const TrustBar = () => {

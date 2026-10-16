@@ -46,7 +46,7 @@ const faqs = [
   {
     question: "Was kostet Gebäudereinigung in Magdeburg?",
     answer:
-      "Der Preis hängt an Fläche, Bodenbelag, Turnus und Uhrzeit. Wir sehen uns das Objekt vor Ort an, nehmen die Flächen auf und schicken Ihnen ein schriftliches Angebot mit Leistungsverzeichnis. Pauschalpreise am Telefon nennen wir bewusst nicht, weil sie später nie passen.",
+      "Der Preis hängt an Fläche, Bodenbelag, Turnus und Uhrzeit. Wir sehen uns das Objekt vor Ort an, nehmen die Flächen auf und schicken Ihnen ein schriftliches Angebot mit Leistungsverzeichnis. Pauschalpreise ohne Objektkenntnis nennen wir bewusst nicht, weil sie selten passen.",
   },
   {
     question: "Reinigen Sie auch außerhalb der Geschäftszeiten?",

@@ -48,7 +48,7 @@ export const divisionDetails: Record<string, DivisionDetailBlock[]> = {
     },
     {
       heading: "Qualitätskontrolle und Reklamationen",
-      body: "Eine Objektleitung prüft die Ausführung in festen Abständen vor Ort und nimmt Stichproben nach Prüfbogen. Auffälligkeiten bespricht sie direkt mit der Kraft. Reklamationen nehmen wir telefonisch oder per E-Mail an und bearbeiten sie in der Regel bis zum nächsten Reinigungstag.",
+      body: "Eine Objektleitung prüft die Ausführung in festen Abständen vor Ort und nimmt Stichproben nach Prüfbogen. Auffälligkeiten bespricht sie direkt mit der Kraft. Reklamationen nehmen wir per E-Mail oder im vereinbarten Rückruf an und bearbeiten sie in der Regel bis zum nächsten Reinigungstag.",
     },
     {
       heading: "Verbrauchsmaterial und Technik",

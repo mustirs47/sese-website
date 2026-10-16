@@ -25,7 +25,7 @@ const risks: Record<string, string[]> = {
 const branchenFaqs = [
   { question: "Arbeiten Sie nur in bestimmten Branchen?", answer: "Nein, wir sind branchenübergreifend aufgestellt. Die aufgeführten Branchen sind Schwerpunkte – Sicherheit, Facility und Event Service lassen sich auch für andere Bereiche kombinieren." },
   { question: "Wie passen Sie Ihre Leistungen an die Branche an?", answer: "Jede Branche hat eigene Abläufe und Hygiene-, Pflege- oder Sicherheitsanforderungen. Wir führen eine objektspezifische Analyse durch und stimmen Personal, Frequenzen und Maßnahmen darauf ab." },
-  { question: "Können Sie mehrere Standorte gleichzeitig betreuen?", answer: "Ja, wir betreuen auch Kunden mit mehreren Standorten – mit einheitlichen Standards, zentraler Koordination und einem Ansprechpartner über alle Leistungsbereiche hinweg." },
+  { question: "Können Sie mehrere Standorte gleichzeitig betreuen?", answer: "Ja. Bei mehreren Standorten koordinieren wir zentral, mit gemeinsamem Leistungsverzeichnis und einem Ansprechpartner über alle Leistungsbereiche hinweg." },
 ];
 
 const BranchenPage = () => {
@@ -73,12 +73,12 @@ const BranchenPage = () => {
               <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Fachgebiete</p>
             </div>
             <div>
-              <p className="stat-number">100%</p>
-              <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Individuell angepasst</p>
+              <p className="stat-number">1</p>
+              <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Leistungsverzeichnis je Objekt</p>
             </div>
             <div>
               <p className="stat-number">DE</p>
-              <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Bundesweit einsetzbar</p>
+              <p className="text-sm font-medium mt-1" style={{ color: "hsl(var(--section-light-fg))" }}>Bundesweit nach Prüfung</p>
             </div>
           </div>
         </div>
