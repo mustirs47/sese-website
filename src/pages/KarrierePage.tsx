@@ -187,8 +187,7 @@ const KarrierePage = () => {
               Das unterscheidet uns als Arbeitgeber
             </h2>
             <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
-              Wir wissen: Gute Arbeit beginnt bei zufriedenen Mitarbeitern. Deshalb setzen wir auf faire Bedingungen, 
-              Entwicklung und echte Wertschätzung.
+              Gute Arbeit braucht klare Bedingungen, eine ordentliche Einweisung und Ansprechpartner, die erreichbar sind.
             </p>
           </div>
           <div className="stagger-children grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
