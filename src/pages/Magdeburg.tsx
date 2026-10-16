@@ -9,7 +9,7 @@ import FAQSection from "@/components/sections/FAQSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { BreadcrumbJsonLd, FAQPageJsonLd, WebPageJsonLd } from "@/components/StructuredData";
 import { BASE_URL } from "@/lib/seo";
-import logoAsset from "@/assets/sentinel-logo.png.asset.json";
+import logoAsset from "@/assets/brand/logo-dark.png.asset.json";
 
 const leistungen = [
   { icon: Shield, title: "Sicherheit in Magdeburg", href: "/sicherheit", text: "Objektschutz, Baustellenbewachung, Empfangs- und Pfortendienst sowie Kontrollgänge – mit abgestimmten Dienstzeiten und Meldewegen." },

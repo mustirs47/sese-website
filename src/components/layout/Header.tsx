@@ -8,7 +8,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import MobileMenu from "./MobileMenu";
-import logoColor from "@/assets/sentinel-logo-white.png";
+import logoColor from "@/assets/brand/logo-white.png.asset.json";
 import { divisions } from "@/data/divisions";
 
 
@@ -43,11 +43,11 @@ const Header = () => {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 sm:px-6 sm:py-3 lg:py-4">
           <Link to="/" className="flex items-center min-w-0 shrink-0" aria-label="Sentinel Services – Startseite">
             <img
-              src={logoColor}
+              src={logoColor.url}
               alt="Sentinel Services"
-               className="h-auto w-[min(66vw,18rem)] sm:w-72 lg:w-80 xl:w-[22rem]"
-               width={1377}
-               height={205}
+               className="block h-auto w-[min(72vw,18rem)] sm:w-72 lg:w-80 xl:w-[22rem]"
+               width={813}
+               height={120}
               decoding="async"
               {...({ fetchpriority: "high" } as Record<string, string>)}
             />
