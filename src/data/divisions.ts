@@ -293,7 +293,7 @@ const gruenServices: ServiceData[] = [
     h1: "Baumpflege & Baumkontrolle",
     metaTitle: "Baumpflege & Baumkontrolle | Sentinel Services",
     metaDescription:
-      "Baumpflege, Kronenschnitt und Baumkontrollen zur Verkehrssicherung – mit dokumentiertem Ergebnis.",
+      "Baumpflege für Gewerbe, Wohnanlagen und Kommunen: Kronenschnitt, Totholzentfernung und Baumkontrollen zur Verkehrssicherung – mit Protokoll.",
     faqs: [
       { question: "Erstellen Sie Baumkataster?", answer: "Ja, auf Wunsch übernehmen wir auch die digitale Erfassung und Pflege Ihres Baumbestands." },
     ],
@@ -439,7 +439,7 @@ const existingDivisions: DivisionData[] = [
     h1: "Garten- & Grünanlagenpflege",
     metaTitle: "Grünanlagenpflege & Baumpflege | Sentinel Services",
     metaDescription:
-      "Pflege von Grünanlagen und Baumpflege. Ganzjährige Pflegeverträge mit dokumentierter Leistung.",
+      "Grünanlagenpflege und Baumpflege für Gewerbe- und Wohnobjekte: Rasen, Hecken, Beete und Bäume nach festem Pflegeplan, ganzjährig und dokumentiert.",
     keywords: "Grünanlagenpflege, Gartenpflege gewerblich, Landschaftspflege, Baumpflege, Baumkontrolle",
     services: gruenServices,
   },
