@@ -88,7 +88,7 @@ const MagdeburgPage = () => {
     <PageLayout>
       <SEOHead
         title="Gebäudereinigung & Sicherheitsdienst Magdeburg | Sentinel Services"
-        description="Gebäudereinigung, Sicherheitsdienst, Grünpflege und Winterdienst in Magdeburg – aus einer Hand, mit Sitz in der Grusonstraße und festen Ansprechpartnern vor Ort."
+        description="Gebäudereinigung, Sicherheitsdienst, Grünpflege und Winterdienst in Magdeburg – aus einer Hand, mit festen Ansprechpartnern vor Ort."
         keywords="Gebäudereinigung Magdeburg, Sicherheitsdienst Magdeburg, Reinigungsfirma Magdeburg, Winterdienst Magdeburg, Hausmeisterservice Magdeburg, Grünanlagenpflege Magdeburg"
       />
       <BreadcrumbJsonLd

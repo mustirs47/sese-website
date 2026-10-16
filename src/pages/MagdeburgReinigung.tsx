@@ -98,8 +98,8 @@ const MagdeburgReinigungPage = () => {
   return (
     <PageLayout>
       <SEOHead
-        title="Gebäudereinigung Magdeburg – Büro, Fenster, Grundreinigung | Sentinel Services"
-        description="Gebäudereinigung in Magdeburg: Unterhaltsreinigung für Büros und Praxen, Glas- und Fensterreinigung, Grund- und Bauschlussreinigung. Festes Personal, fester Turnus, Sitz in der Grusonstraße."
+        title="Gebäudereinigung Magdeburg | Sentinel Services"
+        description="Gebäudereinigung in Magdeburg: Unterhalts-, Fenster-, Grund- und Bauschlussreinigung für Büros und Praxen. Festes Personal und fester Turnus."
         keywords="Gebäudereinigung Magdeburg, Reinigungsfirma Magdeburg, Büroreinigung Magdeburg, Fensterreinigung Magdeburg, Unterhaltsreinigung Magdeburg, Grundreinigung Magdeburg"
       />
       <BreadcrumbJsonLd

@@ -35,7 +35,7 @@ const BranchenPage = () => {
   return (
     <PageLayout>
       <SEOHead
-        title="Objektbetreuung nach Branche – 8 Einsatzbereiche | Sentinel Services"
+        title="Branchen & Einsatzbereiche | Sentinel Services"
         description="Sicherheit, Facility und Event Service nach Branche: Gewerbe, Industrie, Baustelle, Handel, Events, Hotel, Wohnanlagen, Behörden."
         keywords="Gebäudereinigung Branche, Facility Management Branche, Grünanlagenpflege gewerblich, Werkschutz Logistik, Eventsecurity, Hotelobjektbetreuung, Wohnanlagen Service"
       />
