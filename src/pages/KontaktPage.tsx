@@ -134,89 +134,33 @@ const KontaktPage = () => {
       <PageHero
         badge="Kontakt"
         title="Anfrage stellen"
-        subtitle="Nennen Sie Leistung, Einsatzort und Zeitraum. Wir prüfen Ihre Anfrage und melden uns mit einer konkreten Einschätzung zur Umsetzung."
+        subtitle="Leistung, Ort und Zeitraum genügen – wir melden uns mit einem Angebot."
       />
 
-      {/* Process steps row */}
-      <section className="section-light border-b" style={{ borderColor: "hsl(var(--section-light-border))" }}>
-        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
-          <p className="eyebrow text-center !mb-5">So läuft es ab</p>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {processSteps.map(({ icon: Icon, title, desc }, i) => (
-              <div key={title} className="text-center relative">
-                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 mb-2 relative">
-                  <Icon className="h-5 w-5 text-primary" />
-                  <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[9px] font-bold text-primary-foreground">
-                    {i + 1}
-                  </span>
-                </div>
-                <p className="text-xs font-semibold" style={{ color: "hsl(var(--section-light-fg))" }}>{title}</p>
-                <p className="text-[11px] text-muted-fg mt-0.5 hidden sm:block">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="section-light">
-        <div ref={ref} className="fade-in-section mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
+        <div ref={ref} className="fade-in-section mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16">
           <div className="grid gap-10 lg:grid-cols-5">
-            <div className="lg:col-span-2 space-y-6">
+            <div className="order-2 lg:order-1 lg:col-span-2 space-y-6">
               <div>
                 <h2 className="text-sm font-bold mb-4" style={{ color: "hsl(var(--section-light-fg))" }}>
-                  Kontaktinformationen
+                  Lieber per E-Mail?
                 </h2>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <Mail className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-                    <div>
-                      <p className="text-sm font-medium" style={{ color: "hsl(var(--section-light-fg))" }}>E-Mail</p>
-                      <a href="mailto:info@sentinel-services.de" className="text-sm text-muted-fg hover:text-primary transition-colors">
-                        info@sentinel-services.de
-                      </a>
-                    </div>
+                    <a href="mailto:info@sentinel-services.de" className="text-sm text-muted-fg hover:text-primary transition-colors">
+                      info@sentinel-services.de
+                    </a>
                   </li>
                   <li className="flex items-start gap-3">
                     <MapPin className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-                    <div>
-                      <p className="text-sm font-medium" style={{ color: "hsl(var(--section-light-fg))" }}>Einsatzgebiet</p>
-                      <p className="text-sm text-muted-fg">Bundesweit</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Guarantees */}
-              <div className="rounded-xl p-5" style={{ background: "hsl(var(--section-light-card))", border: "1px solid hsl(var(--section-light-border))" }}>
-                <p className="text-xs font-bold text-primary mb-3 uppercase tracking-wider">Was Sie von uns erhalten</p>
-                <ul className="space-y-2.5">
-                  {guarantees.map((g) => (
-                    <li key={g} className="flex items-start gap-2.5 text-sm text-muted-fg">
-                      <CheckCircle className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                      {g}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Trust signals */}
-              <div className="rounded-xl p-5" style={{ background: "hsl(var(--section-light-card))", border: "1px solid hsl(var(--section-light-border))" }}>
-                <p className="text-xs font-bold text-primary mb-3 uppercase tracking-wider">Darauf können Sie sich verlassen</p>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-2.5 text-sm text-muted-fg">
-                    <Shield className="h-4 w-4 text-primary shrink-0" /> Eingewiesenes Fachpersonal je Bereich
-                  </li>
-                  <li className="flex items-center gap-2.5 text-sm text-muted-fg">
-                    <Users className="h-4 w-4 text-primary shrink-0" /> Feste Ansprechpartner
-                  </li>
-                  <li className="flex items-center gap-2.5 text-sm text-muted-fg">
-                    <FileCheck className="h-4 w-4 text-primary shrink-0" /> Dokumentation je Einsatz
+                    <p className="text-sm text-muted-fg">Sitz in Magdeburg, bundesweit im Einsatz</p>
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div className="lg:col-span-3">
+            <div className="order-1 lg:order-2 lg:col-span-3 min-w-0">
               {submitted ? (
                 <div className="rounded-xl p-8 text-center" style={{ background: "hsl(var(--section-light-card))", border: "1px solid hsl(var(--section-light-border))" }}>
                   <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
@@ -229,13 +173,10 @@ const KontaktPage = () => {
                   </Button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="card-accent rounded-xl p-6 sm:p-8 space-y-4" style={{ background: "hsl(var(--section-light-card))", border: "1px solid hsl(var(--section-light-border))" }} noValidate>
-                  <h2 className="text-base font-bold mb-2" style={{ color: "hsl(var(--section-light-fg))" }}>
+                <form onSubmit={handleSubmit} className="card-accent rounded-xl p-5 sm:p-8 space-y-4" style={{ background: "hsl(var(--section-light-card))", border: "1px solid hsl(var(--section-light-border))" }} noValidate>
+                  <h2 className="text-base font-bold" style={{ color: "hsl(var(--section-light-fg))" }}>
                     Kontaktformular
                   </h2>
-                  <p className="text-sm text-muted-fg mb-4">
-                    Beschreiben Sie Ihren Bedarf – je genauer, desto besser können wir Ihnen helfen.
-                  </p>
                   {/* Honeypot - für Bots */}
                   <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
                   <div className="grid gap-4 sm:grid-cols-2">
@@ -378,38 +319,6 @@ const KontaktPage = () => {
         </div>
       </section>
 
-      {/* Additional CTA */}
-      <section className="bg-background border-t border-border/50">
-        <div ref={ref2} className="fade-in-section mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
-          <div className="text-center mb-10">
-            <h2 className="h-section mb-3">
-              Leistungen und Abläufe im Überblick
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Erfahren Sie mehr über unsere Leistungen, Qualifikationen und Arbeitsweise – oder schreiben Sie uns eine Nachricht.
-            </p>
-          </div>
-          <div className="stagger-children grid gap-4 sm:grid-cols-3">
-            {[
-              { title: "Unsere Bereiche", desc: "Sicherheit, Facility und Event Service", href: "/#leistungen" },
-              { title: "Qualifikationen", desc: "Nachweise und Zertifizierungen unseres Personals", href: "/qualifikationen" },
-              { title: "Arbeitsweise", desc: "Unser strukturierter 4-Phasen-Prozess", href: "/arbeitsweise" },
-            ].map(({ title, desc, href }) => (
-              <Link
-                key={href}
-                to={href}
-                className="group rounded-xl border border-border/50 p-6 text-center transition-all hover:shadow-md hover:border-primary/30"
-              >
-                <h3 className="text-base font-bold text-foreground mb-1">{title}</h3>
-                <p className="text-sm text-muted-foreground mb-3">{desc}</p>
-                <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary">
-                  Mehr erfahren <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <FAQSection faqs={kontaktFaqs} title="Häufige Fragen zum Kontakt" emitJsonLd={false} />
     </PageLayout>
