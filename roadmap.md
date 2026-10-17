@@ -1,4 +1,5 @@
 # Unterseiten: drei Fachgebiete
+- [ ] Magdeburger Reinigungsseite: bestehendes Angebot, Einsatzgebiet, belegbare Abläufe und direkten Anfrageweg präzisieren; Darstellung, Leistungslinks und FAQ prüfen.
 - [x] Überarbeitete hochgeladene Logos überall eingebunden; Zuschnitt und Proportionen angepasst, Browser- und App-Icons aus dem Kreissymbol erzeugt; Bildauslieferung und Navigation auf 320, 390 und 1280 Pixeln geprüft. Nicht veröffentlicht.
 - [x] Sicherheit, Facility und Event Service mit passenden Leistungsseiten, Navigation und bestehenden Links verbunden; alte Facility-Leistungsadressen bleiben erreichbar.
 - [x] Unterseiten auf die drei Fachgebiete abgestimmt; Event Service und Bewachung klar getrennt, rechtliche Inhalte nicht werblich umgeschrieben.
