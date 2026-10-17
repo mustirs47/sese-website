@@ -1,4 +1,5 @@
 # Unterseiten: drei Fachgebiete
+- [ ] Optischen Fehler aus dem Screenshot beheben: Zurücklink und Bereichszeile auf allen PageHero-Seiten trennen; mobile und Desktop-Darstellung prüfen.
 - [x] Magdeburger Reinigungsseite: Angebot, bestehendes Einsatzgebiet, Leistungsverzeichnis und Kontrollen präzisiert; unbelegte Zeit- und Personalversprechen entfernt. Vier Leistungslinks, FAQ, Suchdaten und Weg ins ausgefüllte Anfrageformular auf 320, 390 und 1280 Pixeln geprüft; vier Tests bestanden. Veröffentlichung und erneute SEO-Prüfung ausstehend.
 - [x] Überarbeitete hochgeladene Logos überall eingebunden; Zuschnitt und Proportionen angepasst, Browser- und App-Icons aus dem Kreissymbol erzeugt; Bildauslieferung und Navigation auf 320, 390 und 1280 Pixeln geprüft. Nicht veröffentlicht.
 - [x] Sicherheit, Facility und Event Service mit passenden Leistungsseiten, Navigation und bestehenden Links verbunden; alte Facility-Leistungsadressen bleiben erreichbar.

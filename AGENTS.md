@@ -8,4 +8,5 @@
 - Honor reduced-motion preferences in CSS animations and programmatic scrolling so presentation effects never prevent access to content.
 - Use cropped CDN-backed uploaded logo assets for navigation, footer and structured data; derive local browser and app icons from that same uploaded three-circle symbol to preserve proportions and branding.
 - PageHero is text-only and service cards use their functional icons; do not import decorative service illustration assets into page bundles.
+- Keep PageHero back navigation and eyebrow labels on separate, wrapping rows so adjacent inline content cannot run together on any page.
 - Derive the local cleaning page's structured offer catalog from its visible service list; this keeps search data and displayed scope consistent.
