@@ -138,7 +138,7 @@ const MagdeburgPage = () => {
         </div>
       </PageHero>
 
-      <section className="section-light border-b border-section-light-border">
+      <section className="section-light border-b border-border">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
           <div className="mb-10 max-w-3xl">
             <span className="eyebrow">Bewachung und Kontrolldienste</span>
@@ -151,7 +151,7 @@ const MagdeburgPage = () => {
           </div>
           <div className="grid gap-x-10 md:grid-cols-2">
             {sicherheitsleistungen.map(({ slug, title, desc, icon: Icon }) => (
-              <Link key={slug} to={`/sicherheit/${slug}`} className="group flex min-w-0 items-start gap-4 border-t border-section-light-border py-6 text-section-light-fg">
+              <Link key={slug} to={`/sicherheit/${slug}`} className="group flex min-w-0 items-start gap-4 border-t border-border py-6 text-foreground">
                 <Icon className="mt-1 h-5 w-5 shrink-0" />
                 <div className="min-w-0 flex-1">
                   <h3 className="mb-2 text-base font-bold group-hover:underline">{title}</h3>
@@ -235,9 +235,11 @@ const MagdeburgPage = () => {
               <span className="eyebrow">Einsatzgebiet</span>
               <h2 className="h-section mb-4">Einsätze im Stadtgebiet Magdeburg</h2>
               <p className="prose-body text-muted-foreground mb-6">
-                Wir fahren Touren im gesamten Stadtgebiet, von der Altstadt über Stadtfeld und Buckau bis in die
-                Gewerbegebiete im Norden. Weitere Einsatzorte prüfen wir anhand Ihres Auftrags und der verfügbaren Kräfte. Für Winterdienst planen wir die Routen vor Saisonbeginn, damit Räum- und
-                Streupflichten morgens fristgerecht erfüllt und dokumentiert sind.
+                Für ein Objekt in der Altstadt, in Stadtfeld, Buckau oder einem anderen Stadtteil
+                nennen Sie uns die genaue Adresse und den gewünschten Leistungsumfang.
+                Wir prüfen den Einsatz anhand der Dienstzeiten und verfügbaren Kräfte.
+                Sicherheitsleistungen, Reinigung und Winterdienst werden jeweils mit den
+                zum Objekt passenden Abläufen vereinbart.
               </p>
               <ul className="flex flex-wrap gap-2">
                 {stadtteile.map((s) => (
