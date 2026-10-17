@@ -15,16 +15,20 @@ const PageHero = ({ title, subtitle, backLink, badge, children }: PageHeroProps)
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
       <div>
         <div className="max-w-3xl min-w-0">
-          {backLink && (
-            <Link
-              to={backLink.href}
-              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors mb-6"
-            >
-              <ArrowLeft className="h-3.5 w-3.5" />
-              {backLink.label}
-            </Link>
+          {(backLink || badge) && (
+            <div className="mb-6 flex min-w-0 flex-col items-start gap-3">
+              {backLink && (
+                <Link
+                  to={backLink.href}
+                  className="inline-flex max-w-full items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <ArrowLeft className="h-3.5 w-3.5 shrink-0" />
+                  <span className="min-w-0 break-words">{backLink.label}</span>
+                </Link>
+              )}
+              {badge && <span className="eyebrow !mb-0 max-w-full break-words">{badge}</span>}
+            </div>
           )}
-          {badge && <span className="eyebrow">{badge}</span>}
           <h1 className="h-display text-foreground">{title}</h1>
           <p className="mt-5 prose-lead text-muted-foreground">{subtitle}</p>
           {children}
