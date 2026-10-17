@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, MapPin, Shield, SprayCan, Leaf, Building2, Users, CheckCircle } from "@/lib/icons";
+import { ArrowRight, MapPin, Shield, Building2, Users, CheckCircle } from "@/lib/icons";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import PageHero from "@/components/layout/PageHero";
@@ -10,9 +10,12 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { BreadcrumbJsonLd, FAQPageJsonLd, WebPageJsonLd } from "@/components/StructuredData";
 import { BASE_URL } from "@/lib/seo";
 import logoAsset from "@/assets/brand/logo-dark.png.asset.json";
+import { divisions } from "@/data/divisions";
+
+const sicherheitsleistungen = divisions.find((division) => division.slug === "sicherheit")?.services ?? [];
 
 const leistungen = [
-  { icon: Shield, title: "Sicherheit in Magdeburg", href: "/sicherheit", text: "Objektschutz, Baustellenbewachung, Empfangs- und Pfortendienst sowie Kontrollgänge – mit abgestimmten Dienstzeiten und Meldewegen." },
+  { icon: Shield, title: "Sicherheitsdienst Magdeburg", href: "/sicherheit", text: "Objektschutz, Baustellenbewachung, Empfangs- und Pfortendienst sowie Kontrollgänge – mit abgestimmten Dienstzeiten und Meldewegen." },
   { icon: Building2, title: "Facility in Magdeburg", href: "/facility", text: "Gebäude- und Fensterreinigung, Grünpflege, Hausmeister- und Winterdienst. Wir bündeln den vereinbarten Umfang und stimmen Turnus, Zugang und Dokumentation ab." },
   { icon: Users, title: "Event Service in Magdeburg", href: "/event-service", text: "Empfang, Gästebetreuung und operative Unterstützung bei Veranstaltungen. Aufgaben vor Ort werden mit Ihrer Veranstaltungsleitung festgelegt; Veranstaltungsschutz wird getrennt beauftragt." },
 ];
@@ -32,14 +35,24 @@ const stadtteile = [
 
 const faqs = [
   {
+    question: "Welche Sicherheitsleistungen kann ich in Magdeburg beauftragen?",
+    answer:
+      "Objektschutz, Baustellenbewachung, Empfangs- und Pfortendienst, Kontroll- und Streifendienst sowie Veranstaltungsschutz und Sicherheitskonzepte. Geben Sie in Ihrer Anfrage den Einsatzort, die benötigte Leistung und die Dienstzeiten an. Aufgaben, Zugänge und Meldewege werden vor dem Einsatz abgestimmt.",
+  },
+  {
+    question: "Ist eine Bewachung nachts oder am Wochenende möglich?",
+    answer:
+      "Ja, nach vereinbarten Dienstzeiten. Für Objekt- und Baustellenbewachung stimmen wir Zeitraum, Kontrollpunkte und Zuständigkeiten mit Ihnen ab. Ob der gewünschte Einsatz übernommen werden kann, prüfen wir anhand Ihrer Anfrage; eine sofortige Verfügbarkeit wird nicht zugesagt.",
+  },
+  {
     question: "Betreuen Sie auch kleinere Objekte in Magdeburg?",
     answer:
       "Ja. Wir übernehmen einzelne Treppenhäuser und Praxisräume genauso wie ganze Gewerbeobjekte. Entscheidend ist ein fester Turnus, den wir zuverlässig einhalten können – nicht die Objektgröße.",
   },
   {
-    question: "Wie schnell sind Sie in Magdeburg vor Ort?",
+    question: "Wo sitzt Sentinel Services in Magdeburg?",
     answer:
-      "Unser Sitz ist in der Grusonstraße 9 in 39112 Magdeburg. Für Objekte im Stadtgebiet und im direkten Umland sind unsere Kräfte in der Regel innerhalb kurzer Anfahrt am Einsatzort; feste Touren planen wir ohnehin nach Stadtgebiet.",
+      "Unser Sitz ist in der Grusonstraße 9 in 39112 Magdeburg. Wir übernehmen Aufträge im Stadtgebiet. Beginn, Dienstzeiten und Personalbedarf stimmen wir für das jeweilige Objekt ab – eine pauschale Anfahrts- oder Reaktionszeit nennen wir nicht.",
   },
   {
     question: "Arbeiten Sie nur in Magdeburg?",
@@ -59,7 +72,7 @@ const localSchema = {
   "@id": `${BASE_URL}/magdeburg#localbusiness`,
   name: "Sentinel Services – Magdeburg",
   description:
-    "Sicherheit, Facility und operativer Event Service in Magdeburg. Gebäudereinigung, Bewachung und Gästebetreuung mit klaren Zuständigkeiten.",
+    "Sicherheitsdienst in Magdeburg: Objektschutz, Baustellenbewachung und Kontrollgänge. Dazu Facility und operativer Event Service mit klaren Zuständigkeiten.",
   url: `${BASE_URL}/magdeburg`,
   image: `${BASE_URL}${logoAsset.url}`,
   email: "info@sentinel-services.de",
@@ -87,9 +100,9 @@ const MagdeburgPage = () => {
   return (
     <PageLayout>
       <SEOHead
-        title="Gebäudereinigung & Sicherheitsdienst Magdeburg | Sentinel Services"
-        description="Gebäudereinigung, Sicherheitsdienst, Grünpflege und Winterdienst in Magdeburg – aus einer Hand, mit festen Ansprechpartnern vor Ort."
-        keywords="Gebäudereinigung Magdeburg, Sicherheitsdienst Magdeburg, Reinigungsfirma Magdeburg, Winterdienst Magdeburg, Hausmeisterservice Magdeburg, Grünanlagenpflege Magdeburg"
+        title="Sicherheitsdienst Magdeburg | Sentinel Services"
+        description="Sicherheitsdienst Magdeburg: Objektschutz, Baustellenbewachung und Kontrollgänge. Sentinel Services, Grusonstraße 9 – fragen Sie Ihren Einsatz konkret an."
+        keywords="Sicherheitsdienst Magdeburg, Objektschutz Magdeburg, Baustellenbewachung Magdeburg, Veranstaltungsschutz Magdeburg"
       />
       <BreadcrumbJsonLd
         items={[
@@ -98,8 +111,8 @@ const MagdeburgPage = () => {
         ]}
       />
       <WebPageJsonLd
-        name="Gebäudereinigung & Sicherheitsdienst in Magdeburg"
-        description="Leistungen von Sentinel Services für Objekte in Magdeburg und Umgebung."
+        name="Sicherheitsdienst Magdeburg"
+        description="Sicherheitsleistungen von Sentinel Services für Objekte und Veranstaltungen in Magdeburg; ergänzend Facility und Event Service."
         url={`${BASE_URL}/magdeburg`}
       />
       <Helmet>
@@ -109,8 +122,8 @@ const MagdeburgPage = () => {
 
       <PageHero
         badge="Standort Magdeburg"
-        title="Gebäudereinigung und Sicherheitsdienst in Magdeburg"
-        subtitle="Unser Sitz liegt in der Grusonstraße in Magdeburg. Von dort betreuen wir Büro- und Gewerbeobjekte, Wohnanlagen, Baustellen und Außenflächen im gesamten Stadtgebiet – Sicherheit, Facility und Event Service mit festen Zuständigkeiten."
+        title="Sicherheitsdienst Magdeburg"
+        subtitle="Objektschutz, Baustellenbewachung und Kontrollgänge für Ihr Objekt. Sentinel Services sitzt in der Grusonstraße 9 in Magdeburg. Wir stimmen Aufgaben, Dienstzeiten und Meldewege mit Ihnen ab; Facility und Event Service können Sie ergänzend anfragen."
       >
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild size="lg">
@@ -120,10 +133,49 @@ const MagdeburgPage = () => {
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <Link to="/arbeitsweise">So arbeiten wir</Link>
+            <Link to="/sicherheit">Sicherheitsleistungen ansehen</Link>
           </Button>
         </div>
       </PageHero>
+
+      <section className="section-light border-b border-border">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
+          <div className="mb-10 max-w-3xl">
+            <span className="eyebrow">Bewachung und Kontrolldienste</span>
+            <h2 className="h-section mb-4">Welche Aufgabe soll Ihr Sicherheitsdienst übernehmen?</h2>
+            <p className="prose-lead text-muted-fg">
+              Ein Werkstor braucht andere Abläufe als eine Baustelle oder ein Veranstaltungseingang.
+              Wählen Sie die passende Leistung: Auf den Detailseiten finden Sie Aufgaben,
+              typische Einsatzorte und den jeweiligen Umfang.
+            </p>
+          </div>
+          <div className="grid gap-x-10 md:grid-cols-2">
+            {sicherheitsleistungen.map(({ slug, title, desc, icon: Icon }) => (
+              <Link key={slug} to={`/sicherheit/${slug}`} className="group flex min-w-0 items-start gap-4 border-t border-border py-6 text-foreground">
+                <Icon className="mt-1 h-5 w-5 shrink-0" />
+                <div className="min-w-0 flex-1">
+                  <h3 className="mb-2 text-base font-bold group-hover:underline">{title}</h3>
+                  <p className="prose-body text-muted-fg">{desc}</p>
+                </div>
+                <ArrowRight className="mt-1 h-4 w-4 shrink-0" />
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10 max-w-3xl">
+            <h3 className="mb-3 text-lg font-bold">Vor dem ersten Dienst</h3>
+            <p className="prose-body text-muted-fg">
+              Gemeinsam legen wir fest, wer Zugang erhält, welche Punkte kontrolliert werden und
+              wer bei Auffälligkeiten informiert wird. Die Einsatzkräfte werden auf das Objekt
+              eingewiesen; Kontrollgänge und Vorfälle werden dokumentiert. Für Ihr Angebot brauchen
+              wir Einsatzort, Leistung, Zeitraum und gewünschte Dienstzeiten.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3">
+              <Link to="/arbeitsweise" className="link-arrow">Ablauf und Dokumentation <ArrowRight /></Link>
+              <Link to="/qualifikationen" className="link-arrow">Qualifikationen des Personals <ArrowRight /></Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="section-light">
         <div ref={ref} className="fade-in-section mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
@@ -133,10 +185,10 @@ const MagdeburgPage = () => {
               Was wir in Magdeburg übernehmen
             </h2>
             <p className="prose-lead text-muted-fg">
-              Viele Auftraggeber starten mit einem Bereich – etwa Unterhaltsreinigung oder
-              Objektschutz – und ergänzen später weitere Aufgaben. Weil Personal, Einsatzleitung und
-              Disposition in der Stadt sitzen, lassen sich Turnus, Uhrzeiten und kurzfristige Zusatzeinsätze ohne lange
-              Abstimmungswege ändern.
+              Neben Sicherheitsleistungen übernehmen wir Reinigung, Grünpflege und weitere
+              infrastrukturelle Aufgaben. Für Veranstaltungen bieten wir auch Empfang und
+              Gästebetreuung an. Sie können einen einzelnen Bereich anfragen oder mehrere
+              Leistungen für denselben Standort abstimmen.
             </p>
           </div>
 
@@ -181,11 +233,13 @@ const MagdeburgPage = () => {
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
             <div className="min-w-0">
               <span className="eyebrow">Einsatzgebiet</span>
-              <h2 className="h-section mb-4">Magdeburg und Umland</h2>
+              <h2 className="h-section mb-4">Einsätze im Stadtgebiet Magdeburg</h2>
               <p className="prose-body text-muted-foreground mb-6">
-                Wir fahren Touren im gesamten Stadtgebiet, von der Altstadt über Stadtfeld und Buckau bis in die
-                Gewerbegebiete im Norden. Weitere Einsatzorte prüfen wir anhand Ihres Auftrags und der verfügbaren Kräfte. Für Winterdienst planen wir die Routen vor Saisonbeginn, damit Räum- und
-                Streupflichten morgens fristgerecht erfüllt und dokumentiert sind.
+                Für ein Objekt in der Altstadt, in Stadtfeld, Buckau oder einem anderen Stadtteil
+                nennen Sie uns die genaue Adresse und den gewünschten Leistungsumfang.
+                Wir prüfen den Einsatz anhand der Dienstzeiten und verfügbaren Kräfte.
+                Sicherheitsleistungen, Reinigung und Winterdienst werden jeweils mit den
+                zum Objekt passenden Abläufen vereinbart.
               </p>
               <ul className="flex flex-wrap gap-2">
                 {stadtteile.map((s) => (
@@ -220,9 +274,9 @@ const MagdeburgPage = () => {
               <ul className="space-y-2.5">
                 {[
                   "Eine feste Ansprechperson für alle Bereiche",
-                  "Eingewiesenes Personal statt wechselnder Subunternehmer",
-                  "Nachvollziehbare Berichte zu jedem Einsatz",
-                  "Angebot schriftlich, ohne Verkaufsgespräch",
+                  "Objektspezifische Einweisung vor dem Einsatz",
+                  "Dokumentierte Kontrollgänge und Meldung von Vorfällen",
+                  "Schriftliches Angebot zum angefragten Leistungsumfang",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-sm text-muted-foreground">
                     <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
