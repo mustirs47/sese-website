@@ -1,4 +1,5 @@
 # Unterseiten: drei Fachgebiete
+- [x] Kontaktseite: Formular fast ohne Scrollen erreichbar – kompakter Kopfbereich (PageHero `compact`), engerer Abstand vor dem Formular; auf dem Handy startet das Formular im ersten Bildschirm, Build OK. Nicht veröffentlicht.
 - [x] Optischen Fehler aus dem Screenshot behoben: Zurücklink und Bereichszeile auf allen PageHero-Seiten getrennt; alle Sitemap-Seiten bei 320, 402 und 1280 Pixeln geprüft, zwölf gemeinsame Bereichszeilen ohne Zusammenlaufen; Facility-Zurücklink funktioniert. Nicht veröffentlicht.
 - [x] Magdeburger Reinigungsseite: Angebot, bestehendes Einsatzgebiet, Leistungsverzeichnis und Kontrollen präzisiert; unbelegte Zeit- und Personalversprechen entfernt. Vier Leistungslinks, FAQ, Suchdaten und Weg ins ausgefüllte Anfrageformular auf 320, 390 und 1280 Pixeln geprüft; vier Tests bestanden. Veröffentlichung und erneute SEO-Prüfung ausstehend.
 - [x] Überarbeitete hochgeladene Logos überall eingebunden; Zuschnitt und Proportionen angepasst, Browser- und App-Icons aus dem Kreissymbol erzeugt; Bildauslieferung und Navigation auf 320, 390 und 1280 Pixeln geprüft. Nicht veröffentlicht.
