@@ -117,13 +117,14 @@ const KontaktPage = () => {
       <FAQPageJsonLd faqs={kontaktFaqs} />
 
       <PageHero
+        compact
         badge="Kontakt"
         title="Anfrage stellen"
         subtitle="Leistung, Ort und Zeitraum genügen – wir melden uns mit einem Angebot."
       />
 
       <section className="section-light">
-        <div ref={ref} className="fade-in-section mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16">
+        <div ref={ref} className="fade-in-section mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-10">
           <div className="grid gap-10 lg:grid-cols-5">
             <div className="order-2 lg:order-1 lg:col-span-2 space-y-6">
               <div>

@@ -7,16 +7,23 @@ interface PageHeroProps {
   subtitle: string;
   backLink?: { label: string; href: string };
   badge?: string;
+  compact?: boolean;
   children?: ReactNode;
 }
 
-const PageHero = ({ title, subtitle, backLink, badge, children }: PageHeroProps) => (
+const PageHero = ({ title, subtitle, backLink, badge, compact, children }: PageHeroProps) => (
   <section className="bg-background border-b border-border/50">
-    <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
+    <div
+      className={
+        compact
+          ? "mx-auto max-w-7xl px-4 py-7 sm:px-6 sm:py-9"
+          : "mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:py-20"
+      }
+    >
       <div>
         <div className="max-w-3xl min-w-0">
           {(backLink || badge) && (
-            <div className="mb-6 flex min-w-0 flex-col items-start gap-3">
+            <div className={compact ? "mb-3 flex min-w-0 flex-col items-start gap-2" : "mb-6 flex min-w-0 flex-col items-start gap-3"}>
               {backLink && (
                 <Link
                   to={backLink.href}
@@ -30,7 +37,7 @@ const PageHero = ({ title, subtitle, backLink, badge, children }: PageHeroProps)
             </div>
           )}
           <h1 className="h-display text-foreground">{title}</h1>
-          <p className="mt-5 prose-lead text-muted-foreground">{subtitle}</p>
+          <p className={`prose-lead text-muted-foreground ${compact ? "mt-3" : "mt-5"}`}>{subtitle}</p>
           {children}
         </div>
       </div>
