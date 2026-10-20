@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
@@ -51,6 +51,7 @@ export function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [consent, setConsent] = useState<CookieConsent>(defaultConsent);
+  const location = useLocation();
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -98,7 +99,10 @@ export function CookieBanner() {
   const acceptNecessary = () => save({ necessary: true, analytics: false, timestamp: Date.now() });
   const saveSettings = () => save(consent);
 
-  if (!isVisible) return null;
+  // Auf Rechtstexten ausblenden, damit sie lesbar sind. Ohne Entscheidung
+  // bleibt Analytics abgelehnt; auf der nächsten Seite erscheint der Hinweis wieder.
+  const onLegalPage = /^\/(datenschutz|impressum)\/?$/.test(location.pathname);
+  if (!isVisible || (onLegalPage && !showSettings)) return null;
 
   return (
     <div
