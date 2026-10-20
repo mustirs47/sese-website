@@ -52,6 +52,8 @@ export function CookieBanner() {
   const [showSettings, setShowSettings] = useState(false);
   const [consent, setConsent] = useState<CookieConsent>(defaultConsent);
   const location = useLocation();
+  const [openedHere, setOpenedHere] = useState(false);
+  useEffect(() => setOpenedHere(false), [location.pathname]);
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -81,6 +83,7 @@ export function CookieBanner() {
       }
       setShowSettings(true);
       setIsVisible(true);
+      setOpenedHere(true);
     };
     window.addEventListener("cookie-settings-open", handleOpen);
     return () => window.removeEventListener("cookie-settings-open", handleOpen);
@@ -102,7 +105,7 @@ export function CookieBanner() {
   // Auf Rechtstexten ausblenden, damit sie lesbar sind. Ohne Entscheidung
   // bleibt Analytics abgelehnt; auf der nächsten Seite erscheint der Hinweis wieder.
   const onLegalPage = /^\/(datenschutz|impressum)\/?$/.test(location.pathname);
-  if (!isVisible || onLegalPage) return null;
+  if (!isVisible || (onLegalPage && !openedHere)) return null;
 
   return (
     <div
