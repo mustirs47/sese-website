@@ -10,4 +10,4 @@ export const buildCanonical = (path: string) => {
 };
 
 export const DEFAULT_OG_IMAGE =
-  "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/5805f762-a72e-4db1-b511-31484bfd1afe";
+  "https://www.sentinel-services.de/og-image.jpg";
