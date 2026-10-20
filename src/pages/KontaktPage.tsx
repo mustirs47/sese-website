@@ -126,7 +126,7 @@ const KontaktPage = () => {
       <section className="section-light">
         <div ref={ref} className="fade-in-section mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-10">
           <div className="grid gap-10 lg:grid-cols-5">
-            <div className="order-2 lg:order-1 lg:col-span-2 space-y-6">
+            <div className="order-2 lg:order-1 lg:col-span-2 space-y-6 border-t border-border pt-7 sm:border-0 sm:pt-0">
               <div>
                 <h2 className="text-sm font-bold mb-4" style={{ color: "hsl(var(--section-light-fg))" }}>
                   Lieber per E-Mail?
@@ -148,7 +148,7 @@ const KontaktPage = () => {
 
             <div className="order-1 lg:order-2 lg:col-span-3 min-w-0">
               {submitted ? (
-                <div className="rounded-xl p-8 text-center" style={{ background: "hsl(var(--section-light-card))", border: "1px solid hsl(var(--section-light-border))" }}>
+                <div className="text-center sm:rounded-xl sm:border sm:border-border sm:bg-card sm:p-8">
                   <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                     <Send className="h-5 w-5 text-primary" />
                   </div>
@@ -159,7 +159,7 @@ const KontaktPage = () => {
                   </Button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="card-accent rounded-xl p-5 sm:p-8 space-y-4" style={{ background: "hsl(var(--section-light-card))", border: "1px solid hsl(var(--section-light-border))" }} noValidate>
+                <form onSubmit={handleSubmit} className="space-y-4 sm:rounded-xl sm:border sm:border-border sm:bg-card sm:p-8" noValidate>
                   <h2 className="text-base font-bold" style={{ color: "hsl(var(--section-light-fg))" }}>
                     Kontaktformular
                   </h2>
@@ -221,7 +221,7 @@ const KontaktPage = () => {
                       Kurzfristiger Einsatzbedarf
                     </label>
                   </div>
-                  <div className="rounded-md border p-3" style={{ borderColor: "hsl(var(--section-light-border))", background: "hsl(var(--section-light-card))" }}>
+                  <div className="sm:rounded-md sm:border sm:border-border sm:bg-card sm:p-3">
                     <label className="flex items-start gap-2.5 cursor-pointer text-xs text-muted-fg">
                       <input
                         type="checkbox"
