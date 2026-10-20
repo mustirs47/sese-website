@@ -102,7 +102,7 @@ export function CookieBanner() {
   // Auf Rechtstexten ausblenden, damit sie lesbar sind. Ohne Entscheidung
   // bleibt Analytics abgelehnt; auf der nächsten Seite erscheint der Hinweis wieder.
   const onLegalPage = /^\/(datenschutz|impressum)\/?$/.test(location.pathname);
-  if (!isVisible || (onLegalPage && !showSettings)) return null;
+  if (!isVisible || onLegalPage) return null;
 
   return (
     <div
