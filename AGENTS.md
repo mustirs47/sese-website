@@ -10,3 +10,4 @@
 - PageHero is text-only and service cards use their functional icons; do not import decorative service illustration assets into page bundles.
 - Keep PageHero back navigation and eyebrow labels on separate, wrapping rows so adjacent inline content cannot run together on any page.
 - Derive the local cleaning page's structured offer catalog from its visible service list; this keeps search data and displayed scope consistent.
+- Keep private credentials exclusively in managed secrets, never in browser environment variables or public files; production builds must run the public-exposure guard and emit no source maps. Intentionally public verification and measurement identifiers are not secrets.

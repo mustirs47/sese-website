@@ -1,4 +1,5 @@
 # Unterseiten: drei Fachgebiete
+- [x] Öffentliche Website-Dateien geprüft: keine bestätigten privaten Zugangsdaten; vorhandene private Schlüssel im verwalteten Secret-Speicher. Veröffentlichungsschutz für erkannte private Schlüssel/Dateien und deaktivierte Source-Maps ergänzt; öffentliche Verifikationskennungen bleiben funktionsfähig.
 - [x] Kontaktseite auf Handys: umschließender Formularrahmen entfernt, stattdessen Trennlinien über der E-Mail-Zeile und vor „Vor der Anfrage"; Felder nutzen die volle Breite (358 px bei 390 px, 288 px bei 320 px). Desktop behält die Karte. Auf 320, 390 und 1280 px geprüft. Nicht veröffentlicht.
 - [x] Kontaktseite: Formular fast ohne Scrollen erreichbar – kompakter Kopfbereich (PageHero `compact`), engerer Abstand vor dem Formular; auf dem Handy startet das Formular im ersten Bildschirm, Build OK. Nicht veröffentlicht.
 - [x] Optischen Fehler aus dem Screenshot behoben: Zurücklink und Bereichszeile auf allen PageHero-Seiten getrennt; alle Sitemap-Seiten bei 320, 402 und 1280 Pixeln geprüft, zwölf gemeinsame Bereichszeilen ohne Zusammenlaufen; Facility-Zurücklink funktioniert. Nicht veröffentlicht.
