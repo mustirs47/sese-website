@@ -18,8 +18,8 @@ const credentialPatterns = [
 
 export function findPublicExposure(files: PublicFile[]): string[] {
   return files.filter(file => {
-    const segments = file.path.replaceAll("\\", "/").split("/");
-    const basename = segments.at(-1) || "";
+    const segments = file.path.replace(/\\/g, "/").split("/");
+    const basename = segments[segments.length - 1] || "";
     const sensitiveFile = /^\.env(?:\.|$)/i.test(basename)
       || /\.(?:pem|key|p12|pfx|jks|keystore|map)$/i.test(basename)
       || segments.some(segment => [".git", ".ssh", ".aws"].includes(segment));
